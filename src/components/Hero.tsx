@@ -36,16 +36,10 @@ export default function Hero() {
           your first one built and running in as little as a week.
         </p>
 
-        {/* Pricing pill */}
+        {/* Value pill */}
         <div className="inline-flex items-center gap-[10px] flex-wrap justify-center mb-7 py-3 px-[22px] bg-mist rounded-full">
           <span className="font-sans font-semibold text-sm text-ink">
-            Your custom AI Roadmap
-          </span>
-          <span className="font-mono text-[13px] text-ink/50 line-through decoration-[1.5px]">
-            was £750
-          </span>
-          <span className="font-sans font-bold text-base text-verdant-deep tracking-[-0.01em]">
-            now £500
+            Free 15-min discovery call — leave with your biggest bottleneck named, and your first AI fix to try.
           </span>
         </div>
 
@@ -61,8 +55,7 @@ export default function Hero() {
 
         {/* Reassure */}
         <div className="font-mono text-[11px] lowercase tracking-[0.08em] text-ink/50">
-          free 15-min call · no pitch · we&apos;ll only sell you the roadmap if
-          it&apos;s a fit
+          no pitch · no prep · we&apos;ll only sell you the roadmap if it&apos;s a fit
         </div>
       </div>
     </section>

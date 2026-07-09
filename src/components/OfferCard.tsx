@@ -17,109 +17,80 @@ export default function OfferCard() {
         </span>
 
         <div className="bg-snow border border-ink/10 rounded-[20px] p-12 text-left max-w-[800px] mx-auto shadow-[0_1px_2px_rgba(26,31,37,0.04),0_12px_32px_rgba(26,31,37,0.06),0_32px_80px_rgba(26,31,37,0.08)] max-[600px]:py-8 max-[600px]:px-6 max-[600px]:rounded-2xl">
-          {/* Header */}
-          <div className="flex justify-between items-start gap-6 pb-8 mb-8 border-b border-ink/8 max-[600px]:flex-col max-[600px]:items-start">
-            <div>
-              <div className="font-mono text-[11px] lowercase tracking-[0.1em] text-verdant-deep mb-[6px] font-semibold">
-                AI Opportunity Roadmap
-              </div>
-              <div className="font-sans font-bold text-2xl text-ink tracking-[-0.02em]">
-                Your custom roadmap and your first AI agent — included.
-              </div>
-            </div>
-            <div className="text-right shrink-0 max-[600px]:text-left">
-              <div className="font-mono text-[11px] lowercase tracking-[0.1em] text-ink/55 mb-[2px] font-medium">
-                Usually
-              </div>
-              <div className="font-mono text-lg text-ink/40 line-through decoration-2 mb-[2px]">
-                £750
-              </div>
-              <div className="font-sans font-bold text-[44px] text-ink tracking-[-0.03em] leading-none mb-2">
-                £500
-              </div>
-              <div className="bg-butter text-ink font-mono text-[10px] font-bold uppercase tracking-[0.12em] py-[5px] px-[10px] rounded inline-block">
-                Launch price · Save £250
-              </div>
+          {/* Rung 01 */}
+          <div className="flex items-start gap-[18px] mb-8">
+            <span className="font-mono font-bold text-[13px] text-verdant-deep bg-mist w-9 h-9 rounded-full flex items-center justify-center shrink-0 mt-[2px]">
+              01
+            </span>
+            <div className="flex-1 pt-1">
+              <strong className="block font-sans font-semibold text-[17px] text-ink mb-1 tracking-[-0.01em]">
+                Free discovery call · 15 mins
+              </strong>
+              <span className="block text-sm text-ink/72 leading-[1.5]">
+                We find your single biggest bottleneck — live — and you leave
+                with your first AI fix: a simple starter agent you can try that
+                week.
+              </span>
             </div>
           </div>
 
-          {/* Steps */}
-          <ul className="list-none flex flex-col gap-[18px] mb-10 p-0">
-            <li className="flex items-start gap-[18px]">
-              <span className="font-mono font-bold text-[13px] text-verdant-deep bg-mist w-9 h-9 rounded-full flex items-center justify-center shrink-0 mt-[2px]">
-                01
-              </span>
-              <div className="flex-1 pt-1">
-                <strong className="block font-sans font-semibold text-[17px] text-ink mb-1 tracking-[-0.01em]">
-                  Free discovery call · 15 mins
-                </strong>
-                <span className="block text-sm text-ink/72 leading-[1.5]">
-                  We make sure we&apos;re a fit before you spend a penny.
+          {/* Rung 02 */}
+          <div className="flex items-start gap-[18px] mb-8">
+            <span className="font-mono font-bold text-[13px] text-verdant-deep bg-mist w-9 h-9 rounded-full flex items-center justify-center shrink-0 mt-[2px]">
+              02
+            </span>
+            <div className="flex-1 pt-1">
+              <strong className="block font-sans font-semibold text-[17px] text-ink mb-1 tracking-[-0.01em]">
+                The AI Opportunity Roadmap
+              </strong>
+              <div className="flex items-center gap-[10px] flex-wrap mb-3">
+                <span className="font-mono text-[13px] text-ink/50 line-through decoration-[1.5px]">
+                  was £750
+                </span>
+                <span className="font-sans font-bold text-base text-ink tracking-[-0.01em]">
+                  now £500
+                </span>
+                <span className="bg-butter text-ink font-mono text-[10px] font-bold uppercase tracking-[0.12em] py-[5px] px-[10px] rounded inline-block">
+                  Launch price · Save £250
                 </span>
               </div>
-            </li>
+              <ul className="list-none p-0 m-0 flex flex-col gap-2">
+                <li className="text-sm text-ink/72 leading-[1.5]">
+                  — AI Audit call · 45 mins — we talk about your business, your
+                  week, and where time and money are slipping away.
+                </li>
+                <li className="text-sm text-ink/72 leading-[1.5]">
+                  — Your custom AI Roadmap — delivered in 48 hours. Practical
+                  steps, ranked by impact, with real numbers on what each one is
+                  worth.
+                </li>
+                <li className="text-sm text-ink/72 leading-[1.5]">
+                  — Activation call · 1 hour — we walk through the roadmap
+                  together. Pick the first agent to build. Plan it out.
+                </li>
+                <li className="text-sm text-ink/72 leading-[1.5]">
+                  — Your first AI agent — built, deployed, and live. Included.
+                  Pay only when you&apos;re happy with the results.
+                </li>
+              </ul>
+            </div>
+          </div>
 
-            <li className="flex items-start gap-[18px]">
-              <span className="font-mono font-bold text-[13px] text-verdant-deep bg-mist w-9 h-9 rounded-full flex items-center justify-center shrink-0 mt-[2px]">
-                02
+          {/* Rung 03 */}
+          <div className="flex items-start gap-[18px] mb-10">
+            <span className="font-mono font-bold text-[13px] text-verdant-deep bg-mist w-9 h-9 rounded-full flex items-center justify-center shrink-0 mt-[2px]">
+              03
+            </span>
+            <div className="flex-1 pt-1">
+              <strong className="block font-sans font-semibold text-[17px] text-ink mb-1 tracking-[-0.01em]">
+                Going forward
+              </strong>
+              <span className="block text-sm text-ink/72 leading-[1.5]">
+                Custom AI agents and workflows, or ongoing advisory — scoped
+                together once your roadmap is live.
               </span>
-              <div className="flex-1 pt-1">
-                <strong className="block font-sans font-semibold text-[17px] text-ink mb-1 tracking-[-0.01em]">
-                  AI Audit · 45 mins
-                </strong>
-                <span className="block text-sm text-ink/72 leading-[1.5]">
-                  We talk about your business, your week, and where time and
-                  money are slipping away.
-                </span>
-              </div>
-            </li>
-
-            <li className="flex items-start gap-[18px]">
-              <span className="font-mono font-bold text-[13px] text-verdant-deep bg-mist w-9 h-9 rounded-full flex items-center justify-center shrink-0 mt-[2px]">
-                03
-              </span>
-              <div className="flex-1 pt-1">
-                <strong className="block font-sans font-semibold text-[17px] text-ink mb-1 tracking-[-0.01em]">
-                  Your custom AI Roadmap
-                </strong>
-                <span className="block text-sm text-ink/72 leading-[1.5]">
-                  Delivered in 48 hours. Practical steps, ranked by impact, with
-                  real numbers on what each one is worth.
-                </span>
-              </div>
-            </li>
-
-            <li className="flex items-start gap-[18px]">
-              <span className="font-mono font-bold text-[13px] text-verdant-deep bg-mist w-9 h-9 rounded-full flex items-center justify-center shrink-0 mt-[2px]">
-                04
-              </span>
-              <div className="flex-1 pt-1">
-                <strong className="block font-sans font-semibold text-[17px] text-ink mb-1 tracking-[-0.01em]">
-                  Activation call · 1 hour
-                </strong>
-                <span className="block text-sm text-ink/72 leading-[1.5]">
-                  We walk through the roadmap together. Pick the first agent to
-                  build. Plan it out.
-                </span>
-              </div>
-            </li>
-
-            <li className="flex items-start gap-[18px]">
-              <span className="font-mono font-bold text-[13px] text-ink bg-verdant w-9 h-9 rounded-full flex items-center justify-center shrink-0 mt-[2px]">
-                05
-              </span>
-              <div className="flex-1 pt-1">
-                <strong className="block font-sans font-semibold text-[17px] text-verdant-deep mb-1 tracking-[-0.01em]">
-                  Your first AI agent — built free, included
-                </strong>
-                <span className="block text-sm text-ink/72 leading-[1.5]">
-                  A real working agent inside your business — before we even
-                  talk about the next step. Pay only when you&apos;re happy with
-                  the results.
-                </span>
-              </div>
-            </li>
-          </ul>
+            </div>
+          </div>
 
           {/* Footer */}
           <div className="pt-8 border-t border-ink/8 text-center">

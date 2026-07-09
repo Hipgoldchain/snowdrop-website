@@ -42,6 +42,20 @@ export const caseStudies: CaseStudy[] = [
     tags: ["Lead funnel", "Custom CRM", "PR agent", "Content pipeline"],
   },
   {
+    sector: "Property",
+    sectorColor: "bluebell",
+    title: "AI renovation cost platform",
+    context:
+      "Homeowners wait weeks for builder quotes. Renovation costs are a black box.",
+    stats: [
+      { stat: "Live", label: "built and launched" },
+      { stat: "Minutes", label: "to a realistic cost estimate" },
+      { stat: "AI", label: "powered pricing engine" },
+    ],
+    body: "We built an AI tool that estimates renovation costs in minutes \u2014 describe the job, get a realistic price range. Designed, built, and shipped end to end, and live today.",
+    tags: ["AI estimator", "Cost modelling", "Rapid build", "Live product"],
+  },
+  {
     sector: "Travel & Leisure",
     sectorColor: "butter",
     title: "Multi-site hospitality operator",

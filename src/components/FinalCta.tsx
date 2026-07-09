@@ -22,9 +22,9 @@ export default function FinalCta() {
           Ready to use AI to grow your business?
         </h2>
         <p className="text-xl text-snow/70 mb-12 max-w-[600px] mx-auto">
-          Book a free 15-minute discovery call. If we&apos;re a fit, you can
-          book the AI Roadmap. If not, we&apos;ll point you in the right
-          direction. No pressure, no pitch.
+          Book a free 15-minute discovery call. We&apos;ll name your biggest
+          bottleneck live and give you your first AI fix to try. If we&apos;re a
+          fit, you can book the roadmap. If not, no pressure, no pitch.
         </p>
 
         {/* Calendly placeholder */}
@@ -41,7 +41,7 @@ export default function FinalCta() {
         </div>
 
         <div className="font-mono text-[11px] lowercase tracking-[0.08em] text-verdant mb-4">
-          £500 launch price · save £250 · 48hr delivery
+          free · 15 mins · no prep needed
         </div>
         <a
           href="mailto:hello@snowdropgrowth.com"

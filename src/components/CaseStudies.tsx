@@ -37,7 +37,7 @@ export default function CaseStudies() {
           UK businesses achieve their ambitions.
         </h2>
         <p className="text-lg text-ink/70 max-w-[720px] mb-16">
-          Five jobs across four sectors. The same problems come up again and
+          Six jobs across four sectors. The same problems come up again and
           again — too much admin, lost sales, founders stretched too thin. The
           wins stack up fast.
         </p>
