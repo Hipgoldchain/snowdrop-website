@@ -17,53 +17,57 @@
   --font-mono: var(--font-jetbrains-mono);
 }
 
-/* Global resets & base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/*
+ * Base styles — placed inside @layer base so Tailwind utility
+ * classes (in @layer utilities) correctly override them.
+ * The * reset is omitted because Tailwind v4's base already resets
+ * margin, padding, and box-sizing on all elements.
+ */
+@layer base {
+  ::selection {
+    background: var(--color-verdant);
+    color: var(--color-ink);
+  }
 
-::selection {
-  background: var(--color-verdant);
-  color: var(--color-ink);
-}
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--color-verdant-deep);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
 
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--color-verdant-deep);
-  outline-offset: 3px;
-  border-radius: 4px;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: reduce) {
   html {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
   }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-snow);
+    color: var(--color-ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 }
 
-body {
-  font-family: var(--font-sans);
-  background: var(--color-snow);
-  color: var(--color-ink);
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
-
-/* Responsive — non-standard breakpoints from mockup */
+/*
+ * Responsive overrides — intentionally UNLAYERED so they override
+ * Tailwind's layered grid-cols-3 utility on .case-grid.
+ */
 @media (max-width: 1100px) {
   .case-grid {
     grid-template-columns: repeat(2, 1fr);
