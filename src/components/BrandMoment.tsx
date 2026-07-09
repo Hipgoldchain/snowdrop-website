@@ -1,6 +1,6 @@
 export default function BrandMoment() {
   return (
-    <section className="bg-ink text-snow py-[140px] px-8 relative overflow-hidden text-center max-sm:py-24 max-sm:px-6">
+    <section className="bg-ink text-snow py-[140px] px-8 relative overflow-hidden text-center max-[600px]:py-24 max-[600px]:px-6">
       {/* Dot grid */}
       <div
         className="absolute inset-0 opacity-[0.12] pointer-events-none"
@@ -22,11 +22,17 @@ export default function BrandMoment() {
 
       <div className="relative z-1 max-w-[1100px] mx-auto">
         <div className="inline-block leading-[0.92]">
-          <div className="font-sans font-bold text-[clamp(72px,14vw,200px)] text-snow tracking-[-0.04em] after:content-['.'] after:text-verdant">
+          <div
+            className="font-sans font-bold text-snow tracking-[-0.04em] after:content-['.'] after:text-verdant"
+            style={{ fontSize: "clamp(72px, 14vw, 200px)" }}
+          >
             Snowdrop
           </div>
         </div>
-        <p className="font-sans font-normal text-[clamp(16px,1.5vw,20px)] text-snow/65 mt-12 tracking-[0.02em]">
+        <p
+          className="font-sans font-normal text-snow/65 mt-12 tracking-[0.02em]"
+          style={{ fontSize: "clamp(16px, 1.5vw, 20px)" }}
+        >
           Growth systems for small businesses that work in weeks, not months.
         </p>
       </div>

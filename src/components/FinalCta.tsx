@@ -1,6 +1,6 @@
 export default function FinalCta() {
   return (
-    <section id="book" className="bg-ink text-snow text-center relative overflow-hidden py-[120px] px-8 max-md:py-20 max-md:px-6">
+    <section id="book" className="bg-ink text-snow text-center relative overflow-hidden py-[120px] px-8 max-[968px]:py-20 max-[968px]:px-6">
       {/* Dot grid */}
       <div
         className="absolute inset-0 opacity-[0.18] pointer-events-none"
@@ -15,7 +15,10 @@ export default function FinalCta() {
         <span className="font-mono text-[11px] font-medium lowercase tracking-[0.1em] text-verdant mb-6 block">
           book your free call
         </span>
-        <h2 className="font-sans font-bold text-[clamp(36px,5.5vw,72px)] leading-[1.05] tracking-[-0.03em] mb-6">
+        <h2
+          className="font-sans font-bold leading-[1.05] tracking-[-0.03em] mb-6"
+          style={{ fontSize: "clamp(36px, 5.5vw, 72px)" }}
+        >
           Ready to use AI to grow your business?
         </h2>
         <p className="text-xl text-snow/70 mb-12 max-w-[600px] mx-auto">

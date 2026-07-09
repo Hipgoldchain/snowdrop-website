@@ -21,7 +21,7 @@ const sectorColorMap = {
 
 export default function CaseStudies() {
   return (
-    <section id="case-studies" className="bg-mist py-[120px] px-8 max-md:py-20 max-md:px-6">
+    <section id="case-studies" className="bg-mist relative py-[120px] px-8 max-[968px]:py-20 max-[968px]:px-6">
       <div className="max-w-[1280px] mx-auto">
         <span className="font-mono text-[11px] font-medium lowercase tracking-[0.1em] text-verdant-deep mb-6 block">
           our experience
@@ -29,8 +29,11 @@ export default function CaseStudies() {
         <span className="font-mono text-[11px] lowercase tracking-[0.08em] text-ink/55 mb-5 block">
           property · travel &amp; leisure · construction · consumer
         </span>
-        <h2 className="font-sans font-bold text-[clamp(36px,5vw,64px)] leading-[1.02] tracking-[-0.03em] mb-5">
-          How we&apos;ve used AI to help real <br className="max-md:hidden" />
+        <h2
+          className="font-sans font-bold leading-[1.02] tracking-[-0.03em] mb-5"
+          style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
+        >
+          How we&apos;ve used AI to help real <br className="max-[968px]:hidden" />
           UK businesses achieve their ambitions.
         </h2>
         <p className="text-lg text-ink/70 max-w-[720px] mb-16">
@@ -45,7 +48,7 @@ export default function CaseStudies() {
             return (
               <div
                 key={i}
-                className="bg-snow rounded-2xl py-8 px-7 border border-ink/6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(26,31,37,0.1)] max-sm:p-7"
+                className="bg-snow rounded-2xl py-8 px-7 border border-ink/6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(26,31,37,0.1)] case-card"
               >
                 <span
                   className="font-mono text-[11px] tracking-[0.04em] py-[6px] px-3 rounded-full inline-block mb-5 font-semibold"

@@ -2,7 +2,7 @@ import Wordmark from "./Wordmark";
 
 export default function Nav() {
   return (
-    <nav className="fixed top-0 left-0 right-0 h-[68px] bg-snow/85 backdrop-blur-[12px] border-b border-ink/6 z-100 flex items-center px-8 max-md:px-5">
+    <nav className="fixed top-0 left-0 right-0 h-[68px] bg-snow/85 backdrop-blur-[12px] border-b border-ink/6 z-100 flex items-center px-8 max-[600px]:px-5">
       <div className="max-w-[1280px] mx-auto w-full flex items-center justify-between">
         <a href="#" className="no-underline">
           <Wordmark size="sm" />

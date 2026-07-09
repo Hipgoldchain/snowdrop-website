@@ -1,15 +1,18 @@
 export default function About() {
   return (
-    <section id="about" className="bg-snow py-[120px] px-8 max-md:py-20 max-md:px-6">
+    <section id="about" className="bg-snow relative py-[120px] px-8 max-[968px]:py-20 max-[968px]:px-6">
       <div className="max-w-[1040px] mx-auto">
         {/* Top section */}
         <div className="mb-24">
           <span className="font-mono text-[11px] font-medium lowercase tracking-[0.1em] text-verdant-deep mb-6 block">
             about
           </span>
-          <h2 className="font-sans font-bold text-[clamp(32px,4.8vw,60px)] leading-[1.05] tracking-[-0.025em] max-w-[900px] mb-12">
+          <h2
+            className="font-sans font-bold leading-[1.05] tracking-[-0.025em] max-w-[900px] mb-12"
+            style={{ fontSize: "clamp(32px, 4.8vw, 60px)" }}
+          >
             Built for small businesses.{" "}
-            <br className="max-md:hidden" />
+            <br className="max-[968px]:hidden" />
             Not the <span className="text-verdant-deep">FTSE 100.</span>
           </h2>
 
@@ -42,9 +45,12 @@ export default function About() {
             <span className="font-mono text-[11px] lowercase tracking-[0.12em] text-verdant-deep mb-5 block">
               why trust us
             </span>
-            <h3 className="font-sans font-bold text-[clamp(28px,4vw,48px)] leading-[1.05] tracking-[-0.025em] mb-6 text-ink">
+            <h3
+              className="font-sans font-bold leading-[1.05] tracking-[-0.025em] mb-6 text-ink"
+              style={{ fontSize: "clamp(28px, 4vw, 48px)" }}
+            >
               Sasha has worked in some of the UK&apos;s{" "}
-              <br className="max-md:hidden" />
+              <br className="max-[968px]:hidden" />
               biggest companies — on their biggest projects.
             </h3>
             <p className="text-[17px] text-ink/70 leading-[1.6] max-w-[680px] mx-auto">
