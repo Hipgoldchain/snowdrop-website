@@ -20,7 +20,7 @@ export default function About() {
             <div>
               <h4 className="text-lg font-semibold mb-3">What we do</h4>
               <p className="text-ink/85 text-base leading-[1.65]">
-                We help UK SMEs adopt AI to grow their business — fast. A
+                We help ambitious UK businesses adopt AI to grow their business — fast. A
                 focused discovery call, a custom AI Roadmap, and your first AI
                 agent built by us. Optional ongoing support to ship the rest.
               </p>
@@ -31,9 +31,10 @@ export default function About() {
               </h4>
               <p className="text-ink/85 text-base leading-[1.65]">
                 We&apos;re not enterprise consultants in disguise. No PowerPoint
-                factory. No three-month diagnostic phase. No tool you&apos;ll
-                never log into again. Workflow-first, tool-second, honest about
-                what AI can and can&apos;t do for your business.
+                factory. No three-month discovery phase. No tool you&apos;ll
+                never log into again. We start with how you work, pick the
+                right tool, and stay honest about what AI can and can&apos;t do
+                for your business.
               </p>
             </div>
           </div>
@@ -54,7 +55,7 @@ export default function About() {
               biggest companies — on their biggest projects.
             </h3>
             <p className="text-[17px] text-ink/70 leading-[1.6] max-w-[680px] mx-auto">
-              That same thinking now works for small businesses: clear plans,
+              That same thinking now works for growing businesses: clear plans,
               honest numbers, real wins in weeks.
             </p>
           </div>

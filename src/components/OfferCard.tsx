@@ -68,7 +68,7 @@ export default function OfferCard() {
                   — Activation call · 1 hour — we walk through the roadmap
                   together. Pick the first agent to build. Plan it out.
                 </li>
-                <li className="text-sm text-ink/72 leading-[1.5]">
+                <li className="text-sm text-verdant-deep font-medium leading-[1.5]">
                   — Your first AI agent — built, deployed, and live. Included.
                   Pay only when you&apos;re happy with the results.
                 </li>
