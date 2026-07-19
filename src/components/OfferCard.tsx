@@ -70,7 +70,6 @@ export default function OfferCard() {
                 </li>
                 <li className="text-sm text-verdant-deep font-medium leading-[1.5]">
                   — Your first AI agent — built, deployed, and live. Included.
-                  Pay only when you&apos;re happy with the results.
                 </li>
               </ul>
             </div>
@@ -103,7 +102,9 @@ export default function OfferCard() {
               </a>
             </div>
             <a
-              href="#book"
+              href={process.env.NEXT_PUBLIC_CALENDLY_AUDIT_URL || "#book"}
+              target={process.env.NEXT_PUBLIC_CALENDLY_AUDIT_URL ? "_blank" : undefined}
+              rel={process.env.NEXT_PUBLIC_CALENDLY_AUDIT_URL ? "noopener noreferrer" : undefined}
               className="inline-block mt-4 text-[13px] text-ink/55 no-underline border-b border-dashed border-ink/25 pb-px transition-colors duration-200 hover:text-verdant-deep hover:border-verdant-deep"
             >
               Already sold? Skip ahead and book the £500 roadmap →

@@ -50,7 +50,7 @@ export default function About() {
               className="font-sans font-bold leading-[1.05] tracking-[-0.025em] mb-6 text-ink"
               style={{ fontSize: "clamp(28px, 4vw, 48px)" }}
             >
-              Sasha has worked in some of the UK&apos;s{" "}
+              We&apos;ve worked in some of the UK&apos;s{" "}
               <br className="max-[968px]:hidden" />
               biggest companies — on their biggest projects.
             </h3>
@@ -88,13 +88,13 @@ export default function About() {
 
             <div className="bg-snow border border-ink/10 rounded-xl py-7 px-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-[3px] hover:border-verdant hover:shadow-[0_12px_28px_rgba(26,31,37,0.08)]">
               <div className="font-sans font-bold text-2xl text-ink tracking-[-0.02em] mb-[6px]">
-                GSK &amp; Haleon
+                GSK
               </div>
               <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-verdant-deep font-semibold pb-[14px] mb-[14px] border-b border-ink/8">
                 £35B+ separation
               </div>
               <div className="text-[13px] text-ink/75 leading-[1.5]">
-                Separation lead across the GSK and Haleon split.
+                Separation lead across the GSK demerger.
               </div>
             </div>
 
@@ -130,8 +130,6 @@ export default function About() {
               ))}
             </div>
             <p className="text-sm text-ink/65 max-w-[620px] mx-auto leading-[1.5]">
-              Snowdrop is founded by{" "}
-              <strong className="text-ink font-semibold">Sasha</strong> — with
               8+ years inside FTSE 100 and FTSE 20 businesses, working on
               enterprise AI and transformation.
             </p>
