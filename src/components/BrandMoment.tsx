@@ -1,14 +1,16 @@
+import Image from "next/image";
+
 export default function BrandMoment() {
   return (
     <section className="bg-ink text-snow py-[140px] px-8 relative overflow-hidden text-center max-[600px]:py-24 max-[600px]:px-6">
       {/* Snowdrop photo background */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.18]"
-        style={{
-          backgroundImage: "url('/snowdrop-bg.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center 40%",
-        }}
+      <Image
+        src="/snowdrop-bg.jpg"
+        alt=""
+        fill
+        className="object-cover object-[center_40%] pointer-events-none opacity-[0.18]"
+        sizes="100vw"
+        priority={false}
       />
 
       {/* Dot grid — over the photo for brand consistency */}
