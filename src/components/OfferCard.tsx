@@ -1,3 +1,5 @@
+const CALENDLY_DISCOVERY_URL = "https://calendly.com/snowdropgrowth/ai-discovery-call";
+
 export default function OfferCard() {
   return (
     <section id="audit-offer" className="bg-mist py-[100px] px-8 relative overflow-hidden max-[600px]:py-16 max-[600px]:px-5">
@@ -24,12 +26,11 @@ export default function OfferCard() {
             </span>
             <div className="flex-1 pt-1">
               <strong className="block font-sans font-semibold text-[17px] text-ink mb-1 tracking-[-0.01em]">
-                Free discovery call · 15 mins
+                Free Discovery Call · 15 mins
               </strong>
               <span className="block text-sm text-ink/72 leading-[1.5]">
-                We find your single biggest bottleneck — live — and you leave
-                with your first AI fix: a simple starter agent you can try that
-                week.
+                We find your biggest bottleneck, live. You leave with your first
+                growth fix outlined — simple enough to set up yourself that week.
               </span>
             </div>
           </div>
@@ -41,14 +42,14 @@ export default function OfferCard() {
             </span>
             <div className="flex-1 pt-1">
               <strong className="block font-sans font-semibold text-[17px] text-ink mb-1 tracking-[-0.01em]">
-                The AI Opportunity Roadmap
+                The AI Audit
               </strong>
               <div className="flex items-center gap-[10px] flex-wrap mb-3">
                 <span className="font-mono text-[13px] text-ink/50 line-through decoration-[1.5px]">
-                  was £750
+                  Usually £750
                 </span>
                 <span className="font-sans font-bold text-base text-ink tracking-[-0.01em]">
-                  now £500
+                  £500
                 </span>
                 <span className="bg-butter text-ink font-mono text-[10px] font-bold uppercase tracking-[0.12em] py-[5px] px-[10px] rounded inline-block">
                   Launch price · Save £250
@@ -56,22 +57,25 @@ export default function OfferCard() {
               </div>
               <ul className="list-none p-0 m-0 flex flex-col gap-2">
                 <li className="text-sm text-ink/72 leading-[1.5]">
-                  — AI Audit call · 45 mins — we talk about your business, your
+                  — 45-minute audit call — we talk about your business, your
                   week, and where time and money are slipping away.
                 </li>
                 <li className="text-sm text-ink/72 leading-[1.5]">
-                  — Your custom AI Roadmap — delivered in 48 hours. Practical
+                  — Your Opportunity Roadmap — delivered in 48 hours. Practical
                   steps, ranked by impact, with real numbers on what each one is
                   worth.
                 </li>
                 <li className="text-sm text-ink/72 leading-[1.5]">
-                  — Activation call · 1 hour — we walk through the roadmap
-                  together. Pick the first agent to build. Plan it out.
+                  — 1-hour activation call — we walk through the roadmap
+                  together. Pick the first fix to build. Plan it out.
                 </li>
                 <li className="text-sm text-verdant-deep font-medium leading-[1.5]">
-                  — Your first AI agent — built, deployed, and live. Included.
+                  — Your first AI agent or solution — built, live, included.
                 </li>
               </ul>
+              <p className="text-sm text-ink/72 leading-[1.5] mt-3 italic">
+                Not happy with the results? You get your money back.
+              </p>
             </div>
           </div>
 
@@ -95,7 +99,9 @@ export default function OfferCard() {
           <div className="pt-8 border-t border-ink/8 text-center">
             <div>
               <a
-                href="#book"
+                href={CALENDLY_DISCOVERY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-verdant text-ink py-[18px] px-10 rounded-[10px] font-semibold text-[17px] no-underline transition-all duration-200 inline-block border-none cursor-pointer hover:bg-verdant-deep hover:text-snow hover:-translate-y-px"
               >
                 Book Your Free Discovery Call
@@ -107,7 +113,7 @@ export default function OfferCard() {
               rel={process.env.NEXT_PUBLIC_CALENDLY_AUDIT_URL ? "noopener noreferrer" : undefined}
               className="inline-block mt-4 text-[13px] text-ink/55 no-underline border-b border-dashed border-ink/25 pb-px transition-colors duration-200 hover:text-verdant-deep hover:border-verdant-deep"
             >
-              Already sold? Skip ahead and book the £500 roadmap →
+              Already sold? Skip ahead and book the £500 AI Audit →
             </a>
             <div className="mt-[18px] text-[13px] text-ink/62 leading-[1.5] max-w-[480px] mx-auto">
               We&apos;ll only sell you the roadmap if it&apos;s a fit. No pitch,

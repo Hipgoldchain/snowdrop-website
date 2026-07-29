@@ -18,14 +18,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Snowdrop — The AI Opportunity Roadmap for UK small businesses",
+  title: "Snowdrop — The AI Audit for UK small businesses",
   description:
-    "Growth systems for small businesses that work in weeks, not months. The AI Opportunity Roadmap — a custom plan plus your first AI agent, built by us. £500 launch price.",
+    "Growth systems for small businesses that work in weeks, not months. The AI Audit — your Opportunity Roadmap plus your first AI agent, built by us. £500 launch price.",
   metadataBase: new URL("https://snowdropgrowth.com"),
   openGraph: {
-    title: "Snowdrop — The AI Opportunity Roadmap for UK small businesses",
+    title: "Snowdrop — The AI Audit for UK small businesses",
     description:
-      "Growth systems for small businesses that work in weeks, not months. The AI Opportunity Roadmap — a custom plan plus your first AI agent, built by us. £500 launch price.",
+      "Growth systems for small businesses that work in weeks, not months. The AI Audit — your Opportunity Roadmap plus your first AI agent, built by us. £500 launch price.",
     url: "https://snowdropgrowth.com",
     siteName: "Snowdrop",
     images: [
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Snowdrop — The AI Opportunity Roadmap for UK small businesses",
+    title: "Snowdrop — The AI Audit for UK small businesses",
     description:
-      "Growth systems for small businesses that work in weeks, not months. The AI Opportunity Roadmap — a custom plan plus your first AI agent, built by us. £500 launch price.",
+      "Growth systems for small businesses that work in weeks, not months. The AI Audit — your Opportunity Roadmap plus your first AI agent, built by us. £500 launch price.",
     images: ["/og-image.png"],
   },
   icons: {

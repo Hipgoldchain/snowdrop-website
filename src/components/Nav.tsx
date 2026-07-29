@@ -12,7 +12,7 @@ export default function Nav() {
             href="#audit-offer"
             className="text-ink no-underline font-medium text-sm transition-colors duration-200 hover:text-verdant-deep hidden md:inline"
           >
-            The Roadmap
+            The AI Audit
           </a>
           <a
             href="#case-studies"
@@ -27,7 +27,9 @@ export default function Nav() {
             About
           </a>
           <a
-            href="#book"
+            href="https://calendly.com/snowdropgrowth/ai-discovery-call"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-verdant text-ink px-[22px] py-[10px] rounded-lg font-semibold text-sm no-underline transition-all duration-200 inline-block border-none cursor-pointer hover:bg-verdant-deep hover:text-snow hover:-translate-y-px"
           >
             Book Free Call

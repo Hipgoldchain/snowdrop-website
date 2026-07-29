@@ -1,3 +1,16 @@
+"use client";
+
+import dynamic from "next/dynamic";
+
+const CalendlyEmbed = dynamic(() => import("./CalendlyEmbed"), {
+  ssr: false,
+  loading: () => (
+    <div className="bg-snow text-ink rounded-xl py-20 px-8 mb-8 border border-ink/8 text-center">
+      <p className="text-ink/50 text-sm">Loading booking widget&hellip;</p>
+    </div>
+  ),
+});
+
 export default function FinalCta() {
   return (
     <section id="book" className="bg-ink text-snow text-center relative overflow-hidden py-[120px] px-8 max-[968px]:py-20 max-[968px]:px-6">
@@ -19,25 +32,17 @@ export default function FinalCta() {
           className="font-sans font-bold leading-[1.05] tracking-[-0.03em] mb-6"
           style={{ fontSize: "clamp(36px, 5.5vw, 72px)" }}
         >
-          Ready to use AI to grow your business?
+          Ready to grow your business?
         </h2>
         <p className="text-xl text-snow/70 mb-12 max-w-[600px] mx-auto">
-          Book a free 15-minute discovery call. We&apos;ll name your biggest
-          bottleneck live and give you your first AI fix to try. If we&apos;re a
-          fit, you can book the roadmap. If not, no pressure, no pitch.
+          Book a free 15-minute discovery call. One bottleneck named, one growth
+          fix, free. If we&apos;re a fit, you can book the audit. If not, no
+          pressure, no pitch.
         </p>
 
-        {/* Calendly placeholder */}
-        <div className="bg-snow text-ink rounded-xl py-20 px-8 mb-8 border-2 border-dashed border-verdant">
-          <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-verdant-deep mb-3">
-            Calendly Embed
-          </div>
-          <h3 className="text-2xl font-bold mb-2">
-            Book your free 15-minute call
-          </h3>
-          <p className="text-ink/60 text-sm">
-            Calendly inline widget will load here once the URL is configured.
-          </p>
+        {/* Calendly inline embed */}
+        <div className="mb-8">
+          <CalendlyEmbed />
         </div>
 
         <div className="font-mono text-[11px] lowercase tracking-[0.08em] text-verdant mb-4">

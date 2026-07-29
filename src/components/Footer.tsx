@@ -8,7 +8,7 @@ export default function Footer() {
           <Wordmark size="md" light />
           <p className="text-snow/65 text-sm mt-4 max-w-[320px] leading-[1.5]">
             Growth systems for small businesses that work in weeks, not months.
-            The AI Opportunity Roadmap, plus your first AI agent built in.
+            The AI Audit, plus your first AI agent built in.
           </p>
         </div>
 
@@ -22,7 +22,7 @@ export default function Footer() {
                 href="#audit-offer"
                 className="text-snow/75 no-underline text-sm transition-colors duration-200 hover:text-verdant"
               >
-                The Roadmap
+                The AI Audit
               </a>
             </li>
             <li className="mb-[10px]">

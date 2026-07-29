@@ -1,9 +1,19 @@
 export default function BrandMoment() {
   return (
     <section className="bg-ink text-snow py-[140px] px-8 relative overflow-hidden text-center max-[600px]:py-24 max-[600px]:px-6">
-      {/* Dot grid */}
+      {/* Snowdrop photo background */}
       <div
-        className="absolute inset-0 opacity-[0.12] pointer-events-none"
+        className="absolute inset-0 pointer-events-none opacity-[0.18]"
+        style={{
+          backgroundImage: "url('/snowdrop-bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center 40%",
+        }}
+      />
+
+      {/* Dot grid — over the photo for brand consistency */}
+      <div
+        className="absolute inset-0 opacity-[0.18] pointer-events-none"
         style={{
           backgroundImage:
             "radial-gradient(circle, #3FE174 1px, transparent 1px)",

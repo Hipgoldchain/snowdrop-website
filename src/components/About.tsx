@@ -21,7 +21,7 @@ export default function About() {
               <h4 className="text-lg font-semibold mb-3">What we do</h4>
               <p className="text-ink/85 text-base leading-[1.65]">
                 We help ambitious UK businesses adopt AI to grow their business — fast. A
-                focused discovery call, a custom AI Roadmap, and your first AI
+                focused discovery call, your Opportunity Roadmap, and your first AI
                 agent built by us. Optional ongoing support to ship the rest.
               </p>
             </div>
