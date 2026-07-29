@@ -1,3 +1,7 @@
+"use client";
+
+import InteractiveDotGrid from "./InteractiveDotGrid";
+
 const CALENDLY_DISCOVERY_URL = "https://calendly.com/snowdropgrowth/ai-discovery-call";
 
 export default function Hero() {
@@ -6,19 +10,15 @@ export default function Hero() {
       id="hero"
       className="min-h-[calc(100vh-68px)] mt-[68px] flex items-center justify-center relative overflow-hidden py-20 px-6"
     >
-      {/* Verdant dot grid background */}
-      <div
-        className="absolute inset-0 opacity-[0.22] pointer-events-none"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, #3FE174 1px, transparent 1px)",
-          backgroundSize: "22px 22px",
-        }}
-      />
+      {/* Interactive dot grid background */}
+      <InteractiveDotGrid />
 
       {/* Hero card */}
       <div className="relative z-1 bg-snow border border-ink/8 rounded-[20px] py-[72px] px-16 max-w-[760px] w-full text-center shadow-[0_1px_2px_rgba(26,31,37,0.04),0_8px_24px_rgba(26,31,37,0.06),0_24px_60px_rgba(26,31,37,0.08)] max-[600px]:py-12 max-[600px]:px-7 max-[600px]:rounded-2xl">
-        <span className="font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-verdant-deep mb-4 block">
+        <span
+          className="font-mono font-bold uppercase text-verdant-deep mb-4 block tracking-[0.1em] max-[390px]:text-[13px] max-[390px]:tracking-[0.08em]"
+          style={{ fontSize: "clamp(13px, 1.1vw, 15px)" }}
+        >
           The AI Audit · For ambitious UK businesses
         </span>
 
@@ -27,14 +27,16 @@ export default function Hero() {
           style={{ fontSize: "clamp(38px, 5.5vw, 64px)" }}
         >
           <span className="text-verdant-deep">Grow</span> your business.
+          <br className="max-[600px]:hidden" />
+          {" "}With AI.
         </h1>
 
         <p
           className="text-ink/72 leading-[1.55] max-w-[540px] mx-auto mb-10"
           style={{ fontSize: "clamp(17px, 1.5vw, 19px)" }}
         >
-          We find what&apos;s holding your business back — then use AI to fix it,
-          fast. Your first fix live in as little as a week.
+          We get under the hood of your business to find what&apos;s holding it
+          back — then fix it, fast. Your first fix live in as little as a week.
         </p>
 
         {/* Value pill */}
@@ -58,7 +60,7 @@ export default function Hero() {
 
         {/* Reassure */}
         <div className="font-mono text-[11px] lowercase tracking-[0.08em] text-ink/50">
-          no pitch · no prep · we&apos;ll only sell you the roadmap if it&apos;s a fit
+          no prep required · we won&apos;t sell you the full audit unless it&apos;s the right fit
         </div>
       </div>
     </section>

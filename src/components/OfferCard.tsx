@@ -116,8 +116,8 @@ export default function OfferCard() {
               Already sold? Skip ahead and book the £500 AI Audit →
             </a>
             <div className="mt-[18px] text-[13px] text-ink/62 leading-[1.5] max-w-[480px] mx-auto">
-              We&apos;ll only sell you the roadmap if it&apos;s a fit. No pitch,
-              no pressure.
+              No prep required — we won&apos;t sell you the full audit unless
+              it&apos;s the right fit.
             </div>
           </div>
         </div>

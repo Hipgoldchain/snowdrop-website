@@ -37,7 +37,7 @@ export default function FinalCta() {
         <p className="text-xl text-snow/70 mb-12 max-w-[600px] mx-auto">
           Book a free 15-minute discovery call. One bottleneck named, one growth
           fix, free. If we&apos;re a fit, you can book the audit. If not, no
-          pressure, no pitch.
+          pressure — we won&apos;t sell you the full audit unless it&apos;s the right fit.
         </p>
 
         {/* Calendly inline embed */}
@@ -46,7 +46,7 @@ export default function FinalCta() {
         </div>
 
         <div className="font-mono text-[11px] lowercase tracking-[0.08em] text-verdant mb-4">
-          free · 15 mins · no prep needed
+          free · 15 mins · no prep required
         </div>
         <a
           href="mailto:hello@snowdropgrowth.com"
