@@ -1,6 +1,7 @@
 "use client";
 
 import InteractiveDotGrid from "./InteractiveDotGrid";
+import WalkingFigures from "./WalkingFigures";
 
 const CALENDLY_DISCOVERY_URL = "https://calendly.com/snowdropgrowth/ai-discovery-call";
 
@@ -12,6 +13,9 @@ export default function Hero() {
     >
       {/* Interactive dot grid background */}
       <InteractiveDotGrid />
+
+      {/* Walking figures - ambient decoration */}
+      <WalkingFigures />
 
       {/* Hero card */}
       <div className="relative z-1 bg-snow border border-ink/8 rounded-[20px] py-[72px] px-16 max-w-[760px] w-full text-center shadow-[0_1px_2px_rgba(26,31,37,0.04),0_8px_24px_rgba(26,31,37,0.06),0_24px_60px_rgba(26,31,37,0.08)] max-[600px]:py-12 max-[600px]:px-7 max-[600px]:rounded-2xl">
