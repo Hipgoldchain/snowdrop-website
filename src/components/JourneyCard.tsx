@@ -40,9 +40,9 @@ export default function JourneyCard({
     artRef.current.style.transform = "";
   };
 
-  // Parse markdown bold syntax (**text**) to HTML
+  // Parse markdown bold syntax (**text**) to HTML with brand green color
   const parseDescription = (text: string) => {
-    return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    return text.replace(/\*\*(.*?)\*\*/g, '<strong class="text-verdant-deep font-bold">$1</strong>');
   };
 
   return (

@@ -39,15 +39,8 @@ export default function Hero() {
           back — then fix it, fast. Your first fix live in as little as a week.
         </p>
 
-        {/* Value pill */}
-        <div className="inline-flex items-center gap-[10px] flex-wrap justify-center mb-7 py-3 px-[22px] bg-mist rounded-full">
-          <span className="font-mono text-[13px] lowercase tracking-[0.04em] text-ink/80">
-            free 15-min discovery call · one bottleneck named · one growth fix, free
-          </span>
-        </div>
-
         {/* CTA */}
-        <div className="mb-7">
+        <div className="flex gap-4 justify-center items-center mb-7 flex-wrap">
           <a
             href={CALENDLY_DISCOVERY_URL}
             target="_blank"
@@ -56,12 +49,19 @@ export default function Hero() {
           >
             Book Your Free Discovery Call
           </a>
+          <a
+            href="#journey"
+            className="border-2 border-verdant-deep text-ink py-[16px] px-8 rounded-[10px] font-semibold text-[17px] no-underline transition-all duration-200 inline-block bg-transparent hover:-translate-y-px hover:bg-verdant/12"
+          >
+            How it works
+          </a>
         </div>
 
         {/* Reassure */}
         <div className="font-mono text-[11px] lowercase tracking-[0.08em] text-ink/50">
           no prep required · we won&apos;t sell you the full audit unless it&apos;s the right fit
         </div>
+
       </div>
     </section>
   );
