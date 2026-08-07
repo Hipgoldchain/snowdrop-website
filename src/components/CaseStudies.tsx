@@ -59,9 +59,23 @@ export default function CaseStudies() {
                 >
                   {study.sector}
                 </span>
-                <h3 className="text-[22px] font-bold tracking-[-0.02em] mb-2 leading-[1.15]">
+                {study.url ? (
+                  <a
+                    href={study.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[22px] font-bold tracking-[-0.02em] mb-1 leading-[1.15] block text-ink no-underline hover:text-verdant-deep transition-colors"
+                  >
+                    {study.name}
+                  </a>
+                ) : (
+                  <h3 className="text-[22px] font-bold tracking-[-0.02em] mb-1 leading-[1.15]">
+                    {study.name}
+                  </h3>
+                )}
+                <p className="text-ink/55 text-[13px] mb-2 font-medium">
                   {study.title}
-                </h3>
+                </p>
                 <p className="text-ink/65 text-sm mb-7 italic">
                   {study.context}
                 </p>
