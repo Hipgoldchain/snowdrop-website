@@ -1,8 +1,7 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import TrustBand from "@/components/TrustBand";
 import Journey from "@/components/Journey";
-import OfferCard from "@/components/OfferCard";
+import TrustBand from "@/components/TrustBand";
 import CaseStudies from "@/components/CaseStudies";
 import BrandMoment from "@/components/BrandMoment";
 import About from "@/components/About";
@@ -15,9 +14,8 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <TrustBand />
         <Journey />
-        <OfferCard />
+        <TrustBand />
         <CaseStudies />
         <BrandMoment />
         <About />

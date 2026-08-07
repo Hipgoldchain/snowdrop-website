@@ -46,7 +46,7 @@ export default function Journey() {
             svgContent={svg1}
             number="01 · Free Discovery Call"
             title="Free Discovery Call"
-            description="Fifteen minutes. We find your biggest bottleneck live, and you leave with your first growth fix outlined."
+            description="Fifteen minutes. We find your biggest bottleneck live. **You leave with your first growth fix outlined.**"
             ctaLabel="Book Your Free Discovery Call"
             ctaHref={CALENDLY_DISCOVERY_URL}
             ctaStyle="solid"
@@ -56,7 +56,7 @@ export default function Journey() {
             svgContent={svg2}
             number="02 · The AI Audit"
             title="The AI Audit"
-            description="Forty-five minutes. Systems mapped, opportunities priced, your Opportunity Roadmap back in 48 hours."
+            description="Forty-five minutes. Systems mapped, opportunities priced. **Your Opportunity Roadmap back in 48 hours.**"
             ctaLabel="Skip ahead — book the £500 AI Audit"
             ctaHref={CALENDLY_AUDIT_URL}
             ctaStyle="outline"
@@ -66,7 +66,7 @@ export default function Journey() {
             svgContent={svg3}
             number="03 · Built and live"
             title="Built and live"
-            description="Days, not months. Your first agents and workflows running — and the outcomes arriving from outside."
+            description="Days, not months. **Your first AI agents and workflows running** — and the outcomes arriving from outside."
             ctaLabel="Know what you need? Tell us what to build →"
             ctaHref="mailto:hello@snowdropgrowth.com"
             ctaStyle="text"

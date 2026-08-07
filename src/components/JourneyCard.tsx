@@ -40,6 +40,11 @@ export default function JourneyCard({
     artRef.current.style.transform = "";
   };
 
+  // Parse markdown bold syntax (**text**) to HTML
+  const parseDescription = (text: string) => {
+    return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  };
+
   return (
     <div
       ref={cardRef}
@@ -62,9 +67,10 @@ export default function JourneyCard({
         <h3 className="text-[19px] font-bold tracking-[-0.01em] mt-[6px] mb-2">
           {title}
         </h3>
-        <p className="text-sm leading-[1.55] text-ink/72 mb-[18px]">
-          {description}
-        </p>
+        <p
+          className="text-sm leading-[1.55] text-ink/72 mb-[18px]"
+          dangerouslySetInnerHTML={{ __html: parseDescription(description) }}
+        />
 
         <div className="mt-auto">
           {ctaStyle === "solid" && (
