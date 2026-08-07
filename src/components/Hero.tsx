@@ -39,7 +39,7 @@ export default function Hero() {
         </p>
 
         {/* CTA */}
-        <div className="flex gap-4 justify-center items-center mb-7 flex-wrap">
+        <div className="flex gap-3 justify-center items-center mb-7 flex-wrap">
           <a
             href={CALENDLY_DISCOVERY_URL}
             target="_blank"
