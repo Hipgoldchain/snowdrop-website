@@ -35,8 +35,7 @@ export default function Hero() {
           className="text-ink/72 leading-[1.55] max-w-[540px] mx-auto mb-10"
           style={{ fontSize: "clamp(17px, 1.5vw, 19px)" }}
         >
-          We get under the hood of your business to find what&apos;s holding it
-          back — then fix it, fast. Your first fix live in as little as a week.
+          We bring deep expertise in AI and hands-on experience with businesses across the UK — to help yours grow, faster.
         </p>
 
         {/* CTA */}
@@ -59,7 +58,8 @@ export default function Hero() {
 
         {/* Reassure */}
         <div className="font-mono text-[11px] lowercase tracking-[0.08em] text-ink/50">
-          no prep required · we won&apos;t sell you the full audit unless it&apos;s the right fit
+          <span className="max-[390px]:hidden">no prep · no pitch · leave with your first growth fix, free</span>
+          <span className="hidden max-[390px]:inline">no prep · leave with your first growth fix, free</span>
         </div>
 
       </div>
