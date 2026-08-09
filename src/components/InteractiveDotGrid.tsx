@@ -110,16 +110,43 @@ export default function InteractiveDotGrid() {
         ctx.setLineDash([6, 7]);
         ctx.lineDashOffset = dashOffsetRef.current;
 
-        // Draw horizontal line (left and right from cursor)
+        // Draw curved horizontal line (left to right through cursor)
+        const curveDepth = 15; // How much the line curves off the grid
         ctx.beginPath();
         ctx.moveTo(gridX - LINE_LENGTH * GRID_SPACING, gridY);
-        ctx.lineTo(gridX + LINE_LENGTH * GRID_SPACING, gridY);
+        // Curve above the line on left side
+        ctx.quadraticCurveTo(
+          gridX - LINE_LENGTH * GRID_SPACING * 0.5,
+          gridY - curveDepth,
+          gridX,
+          gridY
+        );
+        // Curve below the line on right side for 3D effect
+        ctx.quadraticCurveTo(
+          gridX + LINE_LENGTH * GRID_SPACING * 0.5,
+          gridY + curveDepth,
+          gridX + LINE_LENGTH * GRID_SPACING,
+          gridY
+        );
         ctx.stroke();
 
-        // Draw vertical line (up and down from cursor)
+        // Draw curved vertical line (up to down through cursor)
         ctx.beginPath();
         ctx.moveTo(gridX, gridY - LINE_LENGTH * GRID_SPACING);
-        ctx.lineTo(gridX, gridY + LINE_LENGTH * GRID_SPACING);
+        // Curve to the right on top side
+        ctx.quadraticCurveTo(
+          gridX + curveDepth,
+          gridY - LINE_LENGTH * GRID_SPACING * 0.5,
+          gridX,
+          gridY
+        );
+        // Curve to the left on bottom side for 3D effect
+        ctx.quadraticCurveTo(
+          gridX - curveDepth,
+          gridY + LINE_LENGTH * GRID_SPACING * 0.5,
+          gridX,
+          gridY + LINE_LENGTH * GRID_SPACING
+        );
         ctx.stroke();
 
         // Reset line dash for future drawings
