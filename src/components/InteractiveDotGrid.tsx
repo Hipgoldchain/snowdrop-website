@@ -7,7 +7,7 @@ const DOT_RADIUS = 1.2;
 const BASE_OPACITY = 0.38;
 const VERDANT = { r: 63, g: 225, b: 116 }; // #3FE174
 const GLOW_RADIUS = 120;
-const LERP_SPEED = 0.08; // Smooth interpolation speed (lower = slower, more organic)
+const LERP_SPEED = 0.04; // Smooth interpolation speed (lower = slower, longer tail)
 
 interface DotState {
   x: number;

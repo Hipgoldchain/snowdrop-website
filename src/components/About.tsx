@@ -1,3 +1,12 @@
+import Image from "next/image";
+
+const credentials = [
+  { name: "Tesco", logo: "/logos/tesco.svg", label: "finance transformation", desc: "Led Tesco\u2019s largest-ever finance transformation." },
+  { name: "Haleon", logo: "/logos/haleon.svg", label: "enterprise AI", desc: "Led enterprise AI strategy at Haleon." },
+  { name: "GSK", logo: "/logos/gsk.svg", label: "\u00A335B+ separation", desc: "Separation lead across the GSK demerger." },
+  { name: "EasyJet", logo: "/logos/easyjet.svg", label: "commercial", desc: "Worked on EasyJet\u2019s commercial transformation." },
+];
+
 export default function About() {
   return (
     <section id="about" className="bg-snow relative py-[120px] px-8 max-[968px]:py-20 max-[968px]:px-6">
@@ -62,53 +71,28 @@ export default function About() {
 
           {/* Credentials grid */}
           <div className="grid grid-cols-4 gap-5 mb-14 credentials-grid max-[968px]:grid-cols-2 max-[520px]:grid-cols-1">
-            <div className="bg-snow border border-ink/10 rounded-xl py-7 px-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-[3px] hover:border-verdant hover:shadow-[0_12px_28px_rgba(26,31,37,0.08)]">
-              <div className="font-sans font-bold text-2xl text-ink tracking-[-0.02em] mb-[6px]">
-                Tesco
+            {credentials.map((cred) => (
+              <div key={cred.name} className="bg-snow border border-ink/10 rounded-xl py-7 px-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-[3px] hover:border-verdant hover:shadow-[0_12px_28px_rgba(26,31,37,0.08)]">
+                <div className="mb-4 h-[32px] flex items-center">
+                  <Image
+                    src={cred.logo}
+                    alt={`${cred.name} logo`}
+                    width={90}
+                    height={32}
+                    className="opacity-40"
+                  />
+                </div>
+                <div className="font-sans font-bold text-2xl text-ink tracking-[-0.02em] mb-[6px]">
+                  {cred.name}
+                </div>
+                <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-verdant-deep font-semibold pb-[14px] mb-[14px] border-b border-ink/8">
+                  {cred.label}
+                </div>
+                <div className="text-[13px] text-ink/75 leading-[1.5]">
+                  {cred.desc}
+                </div>
               </div>
-              <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-verdant-deep font-semibold pb-[14px] mb-[14px] border-b border-ink/8">
-                finance transformation
-              </div>
-              <div className="text-[13px] text-ink/75 leading-[1.5]">
-                Led Tesco&apos;s largest-ever finance transformation.
-              </div>
-            </div>
-
-            <div className="bg-snow border border-ink/10 rounded-xl py-7 px-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-[3px] hover:border-verdant hover:shadow-[0_12px_28px_rgba(26,31,37,0.08)]">
-              <div className="font-sans font-bold text-2xl text-ink tracking-[-0.02em] mb-[6px]">
-                Haleon
-              </div>
-              <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-verdant-deep font-semibold pb-[14px] mb-[14px] border-b border-ink/8">
-                enterprise AI
-              </div>
-              <div className="text-[13px] text-ink/75 leading-[1.5]">
-                Led enterprise AI strategy at Haleon.
-              </div>
-            </div>
-
-            <div className="bg-snow border border-ink/10 rounded-xl py-7 px-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-[3px] hover:border-verdant hover:shadow-[0_12px_28px_rgba(26,31,37,0.08)]">
-              <div className="font-sans font-bold text-2xl text-ink tracking-[-0.02em] mb-[6px]">
-                GSK
-              </div>
-              <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-verdant-deep font-semibold pb-[14px] mb-[14px] border-b border-ink/8">
-                £35B+ separation
-              </div>
-              <div className="text-[13px] text-ink/75 leading-[1.5]">
-                Separation lead across the GSK demerger.
-              </div>
-            </div>
-
-            <div className="bg-snow border border-ink/10 rounded-xl py-7 px-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-[3px] hover:border-verdant hover:shadow-[0_12px_28px_rgba(26,31,37,0.08)]">
-              <div className="font-sans font-bold text-2xl text-ink tracking-[-0.02em] mb-[6px]">
-                EasyJet
-              </div>
-              <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-verdant-deep font-semibold pb-[14px] mb-[14px] border-b border-ink/8">
-                commercial
-              </div>
-              <div className="text-[13px] text-ink/75 leading-[1.5]">
-                Worked on EasyJet&apos;s commercial transformation.
-              </div>
-            </div>
+            ))}
           </div>
 
           {/* Credentials footer */}
