@@ -6,14 +6,14 @@ const GRID_SPACING = 22;
 const DOT_RADIUS = 1.2;
 const BASE_OPACITY = 0.38;
 const VERDANT = { r: 63, g: 225, b: 116 }; // #3FE174
-const LINE_COLOR = { r: 242, g: 208, b: 107 }; // #F2D06B (yellow from dioramas)
-const LINE_LENGTH = 4; // Number of grid cells the line extends
+const VERDANT_DEEP = { r: 27, g: 117, b: 58 }; // #1b753a
+const VERDANT_DARK = { r: 11, g: 79, b: 48 }; // #0b4f30
 
 export default function InteractiveDotGrid() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mouseRef = useRef<{ x: number; y: number } | null>(null);
   const rafRef = useRef<number>(0);
-  const dashOffsetRef = useRef(0);
+  const rotationRef = useRef(0);
   const reducedMotionRef = useRef(false);
 
   const drawStatic = useCallback(
@@ -31,6 +31,65 @@ export default function InteractiveDotGrid() {
     },
     []
   );
+
+  const drawCube = useCallback((ctx: CanvasRenderingContext2D, x: number, y: number, rotation: number) => {
+    const size = 30;
+    const angle = rotation;
+
+    // Calculate isometric vertices
+    const cos = Math.cos(angle);
+    const sin = Math.sin(angle);
+
+    // Define cube vertices (centered at origin, then rotated)
+    const vertices = [
+      [-1, -1, -1], [1, -1, -1], [1, 1, -1], [-1, 1, -1], // back face
+      [-1, -1, 1], [1, -1, 1], [1, 1, 1], [-1, 1, 1]      // front face
+    ];
+
+    // Rotate and project to 2D isometric
+    const projected = vertices.map(([vx, vy, vz]) => {
+      // Rotate around Y axis
+      const rx = vx * cos - vz * sin;
+      const rz = vx * sin + vz * cos;
+
+      // Isometric projection
+      const isoX = (rx - rz) * 0.866;
+      const isoY = (rx + rz) * 0.5 - vy;
+
+      return [x + isoX * size, y + isoY * size];
+    });
+
+    // Draw faces (back to front for proper layering)
+    // Back face
+    ctx.fillStyle = `rgba(${VERDANT_DARK.r},${VERDANT_DARK.g},${VERDANT_DARK.b},0.7)`;
+    ctx.beginPath();
+    ctx.moveTo(projected[0][0], projected[0][1]);
+    ctx.lineTo(projected[1][0], projected[1][1]);
+    ctx.lineTo(projected[2][0], projected[2][1]);
+    ctx.lineTo(projected[3][0], projected[3][1]);
+    ctx.closePath();
+    ctx.fill();
+
+    // Left face
+    ctx.fillStyle = `rgba(${VERDANT_DEEP.r},${VERDANT_DEEP.g},${VERDANT_DEEP.b},0.8)`;
+    ctx.beginPath();
+    ctx.moveTo(projected[0][0], projected[0][1]);
+    ctx.lineTo(projected[4][0], projected[4][1]);
+    ctx.lineTo(projected[7][0], projected[7][1]);
+    ctx.lineTo(projected[3][0], projected[3][1]);
+    ctx.closePath();
+    ctx.fill();
+
+    // Top face
+    ctx.fillStyle = `rgba(${VERDANT.r},${VERDANT.g},${VERDANT.b},0.85)`;
+    ctx.beginPath();
+    ctx.moveTo(projected[4][0], projected[4][1]);
+    ctx.lineTo(projected[5][0], projected[5][1]);
+    ctx.lineTo(projected[6][0], projected[6][1]);
+    ctx.lineTo(projected[7][0], projected[7][1]);
+    ctx.closePath();
+    ctx.fill();
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -61,7 +120,6 @@ export default function InteractiveDotGrid() {
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      drawStatic(ctx, width, height);
     };
 
     let resizeTimer: ReturnType<typeof setTimeout>;
@@ -91,66 +149,14 @@ export default function InteractiveDotGrid() {
       // Draw static dots
       drawStatic(ctx, width, height);
 
-      // Draw animated lines near cursor (if not reduced motion and mouse present)
+      // Draw spinning cube near cursor (if not reduced motion and mouse present)
       if (!reducedMotionRef.current && mouseRef.current) {
         const mouse = mouseRef.current;
 
-        // Find nearest grid intersection
-        const nearestCol = Math.round(mouse.x / GRID_SPACING);
-        const nearestRow = Math.round(mouse.y / GRID_SPACING);
-        const gridX = nearestCol * GRID_SPACING;
-        const gridY = nearestRow * GRID_SPACING;
+        // Slowly rotate the cube
+        rotationRef.current += 0.01;
 
-        // Animate dash offset for flowing effect
-        dashOffsetRef.current = (dashOffsetRef.current + 0.5) % 13;
-
-        ctx.strokeStyle = `rgba(${LINE_COLOR.r},${LINE_COLOR.g},${LINE_COLOR.b},0.45)`;
-        ctx.lineWidth = 2;
-        ctx.lineCap = "round";
-        ctx.setLineDash([6, 7]);
-        ctx.lineDashOffset = dashOffsetRef.current;
-
-        // Draw curved horizontal line (left to right through cursor)
-        const curveDepth = 15; // How much the line curves off the grid
-        ctx.beginPath();
-        ctx.moveTo(gridX - LINE_LENGTH * GRID_SPACING, gridY);
-        // Curve above the line on left side
-        ctx.quadraticCurveTo(
-          gridX - LINE_LENGTH * GRID_SPACING * 0.5,
-          gridY - curveDepth,
-          gridX,
-          gridY
-        );
-        // Curve below the line on right side for 3D effect
-        ctx.quadraticCurveTo(
-          gridX + LINE_LENGTH * GRID_SPACING * 0.5,
-          gridY + curveDepth,
-          gridX + LINE_LENGTH * GRID_SPACING,
-          gridY
-        );
-        ctx.stroke();
-
-        // Draw curved vertical line (up to down through cursor)
-        ctx.beginPath();
-        ctx.moveTo(gridX, gridY - LINE_LENGTH * GRID_SPACING);
-        // Curve to the right on top side
-        ctx.quadraticCurveTo(
-          gridX + curveDepth,
-          gridY - LINE_LENGTH * GRID_SPACING * 0.5,
-          gridX,
-          gridY
-        );
-        // Curve to the left on bottom side for 3D effect
-        ctx.quadraticCurveTo(
-          gridX - curveDepth,
-          gridY + LINE_LENGTH * GRID_SPACING * 0.5,
-          gridX,
-          gridY + LINE_LENGTH * GRID_SPACING
-        );
-        ctx.stroke();
-
-        // Reset line dash for future drawings
-        ctx.setLineDash([]);
+        drawCube(ctx, mouse.x, mouse.y, rotationRef.current);
       }
 
       rafRef.current = requestAnimationFrame(animate);
@@ -166,7 +172,7 @@ export default function InteractiveDotGrid() {
       mql.removeEventListener("change", handleMotionChange);
       clearTimeout(resizeTimer);
     };
-  }, [drawStatic]);
+  }, [drawStatic, drawCube]);
 
   return (
     <canvas
