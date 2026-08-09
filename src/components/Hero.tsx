@@ -35,7 +35,7 @@ export default function Hero() {
           className="text-ink/72 leading-[1.55] max-w-[540px] mx-auto mb-10"
           style={{ fontSize: "clamp(17px, 1.5vw, 19px)" }}
         >
-          We bring deep expertise in AI and hands-on experience with businesses across the UK — to help yours grow, faster.
+          We bring deep expertise and hands-on experience with businesses across the UK to help yours grow, faster.
         </p>
 
         {/* CTA */}
