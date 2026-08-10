@@ -32,7 +32,7 @@ const svg3 = `<svg viewBox="0 0 556 404" xmlns="http://www.w3.org/2000/svg" widt
 
 export default function Journey() {
   return (
-    <section id="journey" className="bg-snow py-[100px] px-8 max-[600px]:py-16 max-[600px]:px-5">
+    <section id="journey" className="bg-snow pt-[60px] pb-[100px] px-8 max-[600px]:pt-12 max-[600px]:pb-16 max-[600px]:px-5">
       <div className="max-w-[1220px] mx-auto">
         <span className="font-mono text-[11px] font-medium lowercase tracking-[0.1em] text-verdant-deep mb-3 block text-center">
           the journey
@@ -50,6 +50,11 @@ export default function Journey() {
             ctaLabel="Book Your Free Discovery Call"
             ctaHref={CALENDLY_DISCOVERY_URL}
             ctaStyle="solid"
+            pricing={{
+              main: "Free",
+              subtext: "No prep required",
+              variant: "free"
+            }}
           />
 
           <JourneyCard
@@ -60,6 +65,11 @@ export default function Journey() {
             ctaLabel="Skip ahead — book the £500 AI Audit"
             ctaHref={CALENDLY_AUDIT_URL}
             ctaStyle="outline"
+            pricing={{
+              main: "£500",
+              subtext: "Launch price · Was £850",
+              variant: "discounted"
+            }}
           />
 
           <JourneyCard
@@ -70,6 +80,11 @@ export default function Journey() {
             ctaLabel="Know what you need? Tell us what to build →"
             ctaHref="mailto:hello@snowdropgrowth.com"
             ctaStyle="text"
+            pricing={{
+              main: "Custom pricing",
+              subtext: "Tailored to your needs · Optional",
+              variant: "custom"
+            }}
           />
         </div>
       </div>

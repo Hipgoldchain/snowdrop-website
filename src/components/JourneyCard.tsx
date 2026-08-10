@@ -10,6 +10,11 @@ interface JourneyCardProps {
   ctaLabel: string;
   ctaHref: string;
   ctaStyle: "solid" | "outline" | "text";
+  pricing?: {
+    main: string;
+    subtext?: string;
+    variant?: "free" | "discounted" | "custom";
+  };
 }
 
 export default function JourneyCard({
@@ -20,6 +25,7 @@ export default function JourneyCard({
   ctaLabel,
   ctaHref,
   ctaStyle,
+  pricing,
 }: JourneyCardProps) {
   const artRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -71,6 +77,34 @@ export default function JourneyCard({
           className="text-sm leading-[1.55] text-ink/72 mb-[18px]"
           dangerouslySetInnerHTML={{ __html: parseDescription(description) }}
         />
+
+        {pricing && (
+          <div className={`
+            rounded-xl py-3 px-4 mb-4
+            ${pricing.variant === "free" ? "bg-verdant/15 border border-verdant/30" : ""}
+            ${pricing.variant === "discounted" ? "bg-amber-50 border border-amber-200" : ""}
+            ${pricing.variant === "custom" ? "bg-slate-50 border border-slate-200" : ""}
+          `}>
+            <div className={`
+              font-bold text-base
+              ${pricing.variant === "free" ? "text-verdant-deep" : ""}
+              ${pricing.variant === "discounted" ? "text-amber-900" : ""}
+              ${pricing.variant === "custom" ? "text-slate-700" : ""}
+            `}>
+              {pricing.main}
+            </div>
+            {pricing.subtext && (
+              <div className={`
+                text-xs font-medium mt-0.5
+                ${pricing.variant === "free" ? "text-verdant-deep/70" : ""}
+                ${pricing.variant === "discounted" ? "text-amber-700" : ""}
+                ${pricing.variant === "custom" ? "text-slate-500" : ""}
+              `}>
+                {pricing.subtext}
+              </div>
+            )}
+          </div>
+        )}
 
         <div className="mt-auto">
           {ctaStyle === "solid" && (
