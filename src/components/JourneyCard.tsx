@@ -112,7 +112,7 @@ export default function JourneyCard({
               href={ctaHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-verdant text-ink py-[13px] px-[22px] rounded-[13px] font-bold text-[14.5px] no-underline transition-transform duration-[120ms] ease-out hover:-translate-y-px shadow-[0_2px_0_rgba(26,31,37,0.18)] hover:shadow-[0_4px_10px_rgba(43,184,92,0.35)]"
+              className="block w-full text-center bg-verdant text-ink py-[13px] px-[22px] rounded-[13px] font-bold text-[14.5px] no-underline transition-transform duration-[120ms] ease-out hover:-translate-y-px shadow-[0_2px_0_rgba(26,31,37,0.18)] hover:shadow-[0_4px_10px_rgba(43,184,92,0.35)]"
             >
               {ctaLabel}
             </a>
