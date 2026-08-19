@@ -10,9 +10,9 @@ interface Credential {
 }
 
 const credentials: Credential[] = [
-  { name: "Auspicious by Design", logo: "/logos/auspicious.png", label: "full build & launch", desc: "Built and launched complete e-commerce platform.", link: "https://antiquetibetanfurniture.com", linkLabel: "Visit site →" },
-  { name: "RenoCheck", logo: "/logos/renocheck.png", label: "audit uncovered", desc: "AI audit uncovered £180k+ in automation opportunities across customer onboarding." },
-  { name: "Sift", logo: "/logos/sift.svg", label: "audit uncovered", desc: "AI audit uncovered workflow efficiencies in claims processing and customer support." },
+  { name: "RenoCheck", logo: "/logos/renocheck.png", label: "website & mobile app", desc: "Built complete website and mobile app platform.", link: "https://renocheck.co.uk", linkLabel: "Visit site →" },
+  { name: "Sift", logo: "/logos/sift.svg", label: "website build", desc: "Built and launched complete website.", link: "https://sift.co.uk", linkLabel: "Visit site →" },
+  { name: "Auspicious by Design", logo: "/logos/auspicious.png", label: "e-commerce platform", desc: "Built and launched complete e-commerce platform.", link: "https://antiquetibetanfurniture.com", linkLabel: "Visit site →" },
   { name: "Tesco", logo: "/logos/tesco.svg", label: "finance transformation", desc: "Led Tesco\u2019s largest-ever finance transformation (corporate role)." },
   { name: "Haleon", logo: "/logos/haleon.svg", label: "enterprise AI", desc: "Led enterprise AI strategy at Haleon (corporate role)." },
   { name: "GSK", logo: "/logos/gsk.svg", label: "\u00A335B+ separation", desc: "Separation lead across the GSK demerger (corporate role)." },
