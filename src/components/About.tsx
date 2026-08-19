@@ -16,10 +16,6 @@ const credentials: Credential[] = [
   { name: "Breamore House", logo: "/logos/breamore.svg", label: "ai audit completed", desc: "AI audit delivered growth roadmap and automation opportunities.", link: "https://breamorehouse.com", linkLabel: "Visit site →" },
   { name: "Bangers", logo: "/logos/bangers.svg", label: "ai audit completed", desc: "AI audit identified operational efficiencies and customer experience improvements." },
   { name: "SvenSplit", logo: "/logos/svensplit.svg", label: "ai audit completed", desc: "AI audit uncovered workflow automation and scaling opportunities." },
-  { name: "Tesco", logo: "/logos/tesco.svg", label: "finance transformation", desc: "Led Tesco\u2019s largest-ever finance transformation (corporate role)." },
-  { name: "Haleon", logo: "/logos/haleon.svg", label: "enterprise AI", desc: "Led enterprise AI strategy at Haleon (corporate role)." },
-  { name: "GSK", logo: "/logos/gsk.svg", label: "\u00A335B+ separation", desc: "Separation lead across the GSK demerger (corporate role)." },
-  { name: "EasyJet", logo: "/logos/easyjet.svg", label: "commercial", desc: "Worked on EasyJet\u2019s commercial transformation (corporate role)." },
 ];
 
 export default function About() {
@@ -74,13 +70,13 @@ export default function About() {
               className="font-sans font-bold leading-[1.05] tracking-[-0.025em] mb-6 text-ink"
               style={{ fontSize: "clamp(28px, 4vw, 48px)" }}
             >
-              We&apos;ve worked in some of the UK&apos;s{" "}
+              Real businesses.{" "}
               <br className="max-[968px]:hidden" />
-              biggest companies — on their biggest projects.
+              Real results.
             </h3>
             <p className="text-[17px] text-ink/70 leading-[1.6] max-w-[680px] mx-auto">
-              That same thinking now works for growing businesses: clear plans,
-              honest numbers, real wins in weeks.
+              From complete builds to AI audits — we help UK businesses
+              find growth opportunities and ship solutions that work.
             </p>
           </div>
 

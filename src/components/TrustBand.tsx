@@ -9,10 +9,6 @@ const logos = [
   { name: "Breamore House", src: "/logos/breamore.svg", width: 130 },
   { name: "Bangers", src: "/logos/bangers.svg", width: 90 },
   { name: "SvenSplit", src: "/logos/svensplit.svg", width: 100 },
-  { name: "Tesco", src: "/logos/tesco.svg", width: 90 },
-  { name: "EasyJet", src: "/logos/easyjet.svg", width: 90 },
-  { name: "GSK", src: "/logos/gsk.svg", width: 70 },
-  { name: "Haleon", src: "/logos/haleon.svg", width: 90 },
 ];
 
 export default function TrustBand() {
