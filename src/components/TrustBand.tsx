@@ -43,7 +43,7 @@ export default function TrustBand() {
               {logos.map((logo, i) => (
                 <div
                   key={`logo-1-${i}`}
-                  className="flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-300 shrink-0"
+                  className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300 shrink-0"
                   style={{ width: `${logo.width}px` }}
                 >
                   <Image
@@ -51,7 +51,8 @@ export default function TrustBand() {
                     alt={logo.name}
                     width={logo.width}
                     height={32}
-                    className="h-8 w-auto object-contain brightness-0 invert"
+                    className="h-8 w-auto object-contain"
+                    style={{ filter: 'brightness(0) invert(1)' }}
                   />
                 </div>
               ))}
@@ -59,7 +60,7 @@ export default function TrustBand() {
               {logos.map((logo, i) => (
                 <div
                   key={`logo-2-${i}`}
-                  className="flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-300 shrink-0"
+                  className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300 shrink-0"
                   style={{ width: `${logo.width}px` }}
                 >
                   <Image
@@ -67,7 +68,8 @@ export default function TrustBand() {
                     alt={logo.name}
                     width={logo.width}
                     height={32}
-                    className="h-8 w-auto object-contain brightness-0 invert"
+                    className="h-8 w-auto object-contain"
+                    style={{ filter: 'brightness(0) invert(1)' }}
                   />
                 </div>
               ))}

@@ -90,7 +90,7 @@ export default function About() {
                     alt={`${cred.name} logo`}
                     width={90}
                     height={32}
-                    className="opacity-40"
+                    className="opacity-50 h-8 w-auto object-contain"
                   />
                 </div>
                 <div className="font-sans font-bold text-2xl text-ink tracking-[-0.02em] mb-[6px]">
