@@ -1,10 +1,22 @@
 import Image from "next/image";
 
-const credentials = [
-  { name: "Tesco", logo: "/logos/tesco.svg", label: "finance transformation", desc: "Led Tesco\u2019s largest-ever finance transformation." },
-  { name: "Haleon", logo: "/logos/haleon.svg", label: "enterprise AI", desc: "Led enterprise AI strategy at Haleon." },
-  { name: "GSK", logo: "/logos/gsk.svg", label: "\u00A335B+ separation", desc: "Separation lead across the GSK demerger." },
-  { name: "EasyJet", logo: "/logos/easyjet.svg", label: "commercial", desc: "Worked on EasyJet\u2019s commercial transformation." },
+interface Credential {
+  name: string;
+  logo: string;
+  label: string;
+  desc: string;
+  link?: string;
+  linkLabel?: string;
+}
+
+const credentials: Credential[] = [
+  { name: "Auspicious by Design", logo: "/logos/auspicious.png", label: "full build & launch", desc: "Built and launched complete e-commerce platform.", link: "https://antiquetibetanfurniture.com", linkLabel: "Visit site →" },
+  { name: "RenoCheck", logo: "/logos/renocheck.png", label: "audit uncovered", desc: "AI audit uncovered £180k+ in automation opportunities across customer onboarding." },
+  { name: "Sift", logo: "/logos/sift.svg", label: "audit uncovered", desc: "AI audit uncovered workflow efficiencies in claims processing and customer support." },
+  { name: "Tesco", logo: "/logos/tesco.svg", label: "finance transformation", desc: "Led Tesco\u2019s largest-ever finance transformation (corporate role)." },
+  { name: "Haleon", logo: "/logos/haleon.svg", label: "enterprise AI", desc: "Led enterprise AI strategy at Haleon (corporate role)." },
+  { name: "GSK", logo: "/logos/gsk.svg", label: "\u00A335B+ separation", desc: "Separation lead across the GSK demerger (corporate role)." },
+  { name: "EasyJet", logo: "/logos/easyjet.svg", label: "commercial", desc: "Worked on EasyJet\u2019s commercial transformation (corporate role)." },
 ];
 
 export default function About() {
@@ -88,9 +100,19 @@ export default function About() {
                 <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-verdant-deep font-semibold pb-[14px] mb-[14px] border-b border-ink/8">
                   {cred.label}
                 </div>
-                <div className="text-[13px] text-ink/75 leading-[1.5]">
+                <div className="text-[13px] text-ink/75 leading-[1.5] mb-3">
                   {cred.desc}
                 </div>
+                {cred.link && (
+                  <a
+                    href={cred.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-[13px] font-semibold text-verdant-deep hover:text-verdant transition-colors"
+                  >
+                    {cred.linkLabel}
+                  </a>
+                )}
               </div>
             ))}
           </div>
