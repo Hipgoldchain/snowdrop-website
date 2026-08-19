@@ -8,7 +8,7 @@ const logos = [
   { name: "Auspicious by Design", src: "/logos/auspicious.png", width: 180 },
   { name: "Breamore House", src: "/logos/breamore.webp", width: 130 },
   { name: "Bangers", src: "/logos/bangers.webp", width: 110 },
-  { name: "SvenSplit", src: "/logos/svensplit.svg", width: 100 },
+  { name: "SvenSplit", src: "/logos/svensplit.jpg", width: 100 },
 ];
 
 export default function TrustBand() {

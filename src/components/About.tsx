@@ -15,7 +15,7 @@ const credentials: Credential[] = [
   { name: "Auspicious by Design", logo: "/logos/auspicious.png", label: "e-commerce platform", desc: "Built and launched complete e-commerce platform.", link: "https://antiquetibetanfurniture.com", linkLabel: "Visit site →" },
   { name: "Breamore House", logo: "/logos/breamore.webp", label: "ai audit completed", desc: "AI audit delivered growth roadmap and automation opportunities.", link: "https://breamorehouse.com", linkLabel: "Visit site →" },
   { name: "Bangers", logo: "/logos/bangers.webp", label: "ai audit completed", desc: "AI audit identified operational efficiencies and customer experience improvements." },
-  { name: "SvenSplit", logo: "/logos/svensplit.svg", label: "ai audit completed", desc: "AI audit uncovered workflow automation and scaling opportunities." },
+  { name: "SvenSplit", logo: "/logos/svensplit.jpg", label: "ai audit completed", desc: "AI audit uncovered workflow automation and scaling opportunities." },
 ];
 
 export default function About() {
