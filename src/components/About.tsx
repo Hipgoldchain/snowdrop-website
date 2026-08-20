@@ -3,19 +3,117 @@ import Image from "next/image";
 interface Credential {
   name: string;
   logo: string;
-  label: string;
-  desc: string;
+  sector: string;
+  engagementType: "AI AUDIT" | "DESIGN & BUILD";
+  actions: string[];
+  impact: string[];
   link?: string;
   linkLabel?: string;
 }
 
 const credentials: Credential[] = [
-  { name: "RenoCheck", logo: "/logos/renocheck.png", label: "website & mobile app", desc: "Built complete website and mobile app platform.", link: "https://renocheck.co.uk", linkLabel: "Visit site →" },
-  { name: "Sift", logo: "/logos/sift.svg", label: "website build", desc: "Built and launched complete website.", link: "https://sift.co.uk", linkLabel: "Visit site →" },
-  { name: "Auspicious by Design", logo: "/logos/auspicious.png", label: "e-commerce platform", desc: "Built and launched complete e-commerce platform.", link: "https://antiquetibetanfurniture.com", linkLabel: "Visit site →" },
-  { name: "Breamore House", logo: "/logos/breamore.png", label: "ai audit completed", desc: "AI audit delivered growth roadmap and automation opportunities.", link: "https://breamorehouse.com", linkLabel: "Visit site →" },
-  { name: "Bangers", logo: "/logos/bangers.png", label: "ai audit completed", desc: "AI audit identified operational efficiencies and customer experience improvements." },
-  { name: "SvenSplit", logo: "/logos/svensplit.png", label: "ai audit completed", desc: "AI audit uncovered workflow automation and scaling opportunities." },
+  {
+    name: "Breamore Estate",
+    logo: "/logos/breamore.png",
+    sector: "Travel & Leisure",
+    engagementType: "AI AUDIT",
+    actions: [
+      "Designed automated rent collection & payment chasing",
+      "Specced AI cost allocation across the portfolio",
+      "Mapped a simple CRM + maintenance workflow"
+    ],
+    impact: [
+      "~£17k/yr value found",
+      "~50× return",
+      "<£300/yr tools"
+    ],
+    link: "https://breamorehouse.com",
+    linkLabel: "Visit site →"
+  },
+  {
+    name: "SIFT",
+    logo: "/logos/sift.svg",
+    sector: "Retail",
+    engagementType: "DESIGN & BUILD",
+    actions: [
+      "Full web app — designed & built",
+      "Custom CRM",
+      "Automated lead funnel & content pipeline"
+    ],
+    impact: [
+      "Live platform",
+      "4 systems connected",
+      "Built end to end"
+    ],
+    link: "https://sift.co.uk",
+    linkLabel: "Visit site →"
+  },
+  {
+    name: "RenoCheck",
+    logo: "/logos/renocheck.png",
+    sector: "Retail",
+    engagementType: "DESIGN & BUILD",
+    actions: [
+      "AI cost-estimate engine",
+      "Web design & development",
+      "Launched end to end"
+    ],
+    impact: [
+      "Live today",
+      "Quotes in minutes"
+    ],
+    link: "https://renocheck.co.uk",
+    linkLabel: "Visit site →"
+  },
+  {
+    name: "Bangers",
+    logo: "/logos/bangers.png",
+    sector: "Retail",
+    engagementType: "AI AUDIT",
+    actions: [
+      "Designed a private-hire & catering enquiry engine",
+      "Specced automated review prompts",
+      "Mapped a simple CRM for repeat bookings"
+    ],
+    impact: [
+      "£140k–£337k growth found",
+      "hire delayed 12–18 months",
+      "~£40/mo tool stack"
+    ]
+  },
+  {
+    name: "Seven Split",
+    logo: "/logos/svensplit.png",
+    sector: "Retail",
+    engagementType: "AI AUDIT",
+    actions: [
+      "Designed AI quote generation",
+      "Specced automatic enquiry follow-up",
+      "One simple workflow, no new hires"
+    ],
+    impact: [
+      "£45k–£225k growth found",
+      "£116/yr tools",
+      "one job pays back 388×"
+    ]
+  },
+  {
+    name: "Auspicious by Design",
+    logo: "/logos/auspicious.png",
+    sector: "Retail",
+    engagementType: "DESIGN & BUILD",
+    actions: [
+      "Web design & development",
+      "Searchable online catalogue from paper records"
+    ],
+    impact: [
+      "Live in days",
+      "Full stock searchable",
+      "First web presence"
+    ],
+    link: "https://antiquetibetanfurniture.com",
+    linkLabel: "Visit site →"
+  },
 ];
 
 export default function About() {
@@ -83,7 +181,8 @@ export default function About() {
           {/* Credentials grid */}
           <div className="grid grid-cols-4 gap-5 mb-14 credentials-grid max-[968px]:grid-cols-2 max-[520px]:grid-cols-1">
             {credentials.map((cred) => (
-              <div key={cred.name} className="bg-snow border border-ink/10 rounded-xl py-7 px-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-[3px] hover:border-verdant hover:shadow-[0_12px_28px_rgba(26,31,37,0.08)]">
+              <div key={cred.name} className="bg-snow border border-ink/10 rounded-xl py-7 px-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-[3px] hover:border-verdant hover:shadow-[0_12px_28px_rgba(26,31,37,0.08)] flex flex-col">
+                {/* Logo */}
                 <div className="mb-4 h-[32px] flex items-center">
                   <Image
                     src={cred.logo}
@@ -93,24 +192,77 @@ export default function About() {
                     className="opacity-50 h-8 w-auto object-contain"
                   />
                 </div>
-                <div className="font-sans font-bold text-2xl text-ink tracking-[-0.02em] mb-[6px]">
-                  {cred.name}
+
+                {/* Client name */}
+                <div className="font-sans font-bold text-2xl text-ink tracking-[-0.02em] mb-3">
+                  {cred.link ? (
+                    <a
+                      href={cred.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-verdant-deep transition-colors"
+                    >
+                      {cred.name}
+                    </a>
+                  ) : (
+                    cred.name
+                  )}
                 </div>
-                <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-verdant-deep font-semibold pb-[14px] mb-[14px] border-b border-ink/8">
-                  {cred.label}
+
+                {/* Sector pill + Engagement badge */}
+                <div className="flex items-center gap-2 mb-5 flex-wrap">
+                  <span className="font-mono text-[11px] lowercase tracking-[0.04em] bg-mist border border-ink/6 text-ink/75 py-[5px] px-3 rounded-full">
+                    {cred.sector}
+                  </span>
+                  <span className={`font-mono text-[10px] uppercase tracking-[0.08em] font-semibold ${
+                    cred.engagementType === "AI AUDIT" ? "text-bluebell" : "text-verdant-deep"
+                  }`}>
+                    {cred.engagementType}
+                  </span>
                 </div>
-                <div className="text-[13px] text-ink/75 leading-[1.5] mb-3">
-                  {cred.desc}
+
+                {/* Actions */}
+                <div className="mb-5">
+                  <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-ink/60 mb-2">
+                    actions
+                  </div>
+                  <div className="space-y-1">
+                    {cred.actions.map((action, idx) => (
+                      <div key={idx} className="text-[13px] text-ink/85 leading-[1.5] flex items-start gap-2">
+                        <span className="text-verdant-deep text-[10px] mt-[3px]">•</span>
+                        <span>{action}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                {cred.link && (
-                  <a
-                    href={cred.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-[13px] font-semibold text-verdant-deep hover:text-verdant transition-colors"
-                  >
-                    {cred.linkLabel}
-                  </a>
+
+                {/* Impact */}
+                <div className="mt-auto">
+                  <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-ink/60 mb-2">
+                    impact
+                  </div>
+                  <div className="space-y-1">
+                    {cred.impact.map((item, idx) => (
+                      <div key={idx} className="text-[13px] text-ink/85 leading-[1.5] flex items-start gap-2">
+                        <span className="text-verdant-deep text-[10px] mt-[3px]">•</span>
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Link */}
+                {cred.link && cred.linkLabel && (
+                  <div className="mt-4 pt-4 border-t border-ink/8">
+                    <a
+                      href={cred.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block text-[13px] font-semibold text-verdant-deep hover:text-verdant transition-colors"
+                    >
+                      {cred.linkLabel}
+                    </a>
+                  </div>
                 )}
               </div>
             ))}
