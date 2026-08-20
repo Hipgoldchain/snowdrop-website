@@ -13,9 +13,9 @@ const credentials: Credential[] = [
   { name: "RenoCheck", logo: "/logos/renocheck.png", label: "website & mobile app", desc: "Built complete website and mobile app platform.", link: "https://renocheck.co.uk", linkLabel: "Visit site →" },
   { name: "Sift", logo: "/logos/sift.svg", label: "website build", desc: "Built and launched complete website.", link: "https://sift.co.uk", linkLabel: "Visit site →" },
   { name: "Auspicious by Design", logo: "/logos/auspicious.png", label: "e-commerce platform", desc: "Built and launched complete e-commerce platform.", link: "https://antiquetibetanfurniture.com", linkLabel: "Visit site →" },
-  { name: "Breamore House", logo: "/logos/breamore.webp", label: "ai audit completed", desc: "AI audit delivered growth roadmap and automation opportunities.", link: "https://breamorehouse.com", linkLabel: "Visit site →" },
-  { name: "Bangers", logo: "/logos/bangers.webp", label: "ai audit completed", desc: "AI audit identified operational efficiencies and customer experience improvements." },
-  { name: "SvenSplit", logo: "/logos/svensplit.jpg", label: "ai audit completed", desc: "AI audit uncovered workflow automation and scaling opportunities." },
+  { name: "Breamore House", logo: "/logos/breamore.png", label: "ai audit completed", desc: "AI audit delivered growth roadmap and automation opportunities.", link: "https://breamorehouse.com", linkLabel: "Visit site →" },
+  { name: "Bangers", logo: "/logos/bangers.png", label: "ai audit completed", desc: "AI audit identified operational efficiencies and customer experience improvements." },
+  { name: "SvenSplit", logo: "/logos/svensplit.png", label: "ai audit completed", desc: "AI audit uncovered workflow automation and scaling opportunities." },
 ];
 
 export default function About() {

@@ -6,9 +6,9 @@ const logos = [
   { name: "RenoCheck", src: "/logos/renocheck.png", width: 110 },
   { name: "Sift", src: "/logos/sift.svg", width: 70 },
   { name: "Auspicious by Design", src: "/logos/auspicious.png", width: 180 },
-  { name: "Breamore House", src: "/logos/breamore.webp", width: 130 },
-  { name: "Bangers", src: "/logos/bangers.webp", width: 110 },
-  { name: "SvenSplit", src: "/logos/svensplit.jpg", width: 100 },
+  { name: "Breamore House", src: "/logos/breamore.png", width: 130 },
+  { name: "Bangers", src: "/logos/bangers.png", width: 110 },
+  { name: "SvenSplit", src: "/logos/svensplit.png", width: 100 },
 ];
 
 export default function TrustBand() {
