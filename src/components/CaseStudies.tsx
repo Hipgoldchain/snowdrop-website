@@ -1,4 +1,5 @@
 import { caseStudies } from "@/data/caseStudies";
+import Image from "next/image";
 
 const sectorColorMap = {
   bluebell: {
@@ -48,65 +49,100 @@ export default function CaseStudies() {
             return (
               <div
                 key={i}
-                className="bg-snow rounded-2xl py-8 px-7 border border-ink/6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(26,31,37,0.1)] case-card"
+                className="bg-snow rounded-2xl py-8 px-7 border border-ink/6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(26,31,37,0.1)] case-card flex flex-col"
               >
-                <span
-                  className="font-mono text-[11px] tracking-[0.04em] py-[6px] px-3 rounded-full inline-block mb-5 font-semibold"
-                  style={{
-                    background: colors.bg,
-                    color: colors.text,
-                  }}
-                >
-                  {study.sector}
-                </span>
-                {study.url ? (
-                  <a
-                    href={study.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[22px] font-bold tracking-[-0.02em] mb-1 leading-[1.15] block text-ink no-underline hover:text-verdant-deep transition-colors"
+                {/* Header section */}
+                <div className="mb-6">
+                  <span
+                    className="font-mono text-[11px] tracking-[0.04em] py-[6px] px-3 rounded-full inline-block mb-4 font-semibold"
+                    style={{
+                      background: colors.bg,
+                      color: colors.text,
+                    }}
                   >
-                    {study.name}
-                  </a>
-                ) : (
-                  <h3 className="text-[22px] font-bold tracking-[-0.02em] mb-1 leading-[1.15]">
-                    {study.name}
-                  </h3>
-                )}
-                <p className="text-ink/55 text-[13px] mb-2 font-medium">
-                  {study.title}
-                </p>
-                <p className="text-ink/65 text-sm mb-7 italic">
-                  {study.context}
-                </p>
+                    {study.sector}
+                  </span>
 
-                <div className="flex flex-col gap-2 mb-6">
-                  {study.stats.map((s, j) => (
-                    <div
-                      key={j}
-                      className="bg-mist rounded-lg py-3 px-[14px] flex items-baseline justify-between gap-3"
-                    >
-                      <div className="font-mono font-bold text-[17px] text-verdant-deep tracking-[-0.01em] shrink-0">
-                        {s.stat}
-                      </div>
-                      <div className="text-[12px] text-ink/60 leading-[1.3] text-right">
-                        {s.label}
-                      </div>
+                  <div className="flex items-center gap-3 mb-1">
+                    <div className="shrink-0">
+                      <Image
+                        src={study.logo}
+                        alt={`${study.name} logo`}
+                        width={110}
+                        height={32}
+                        className="h-8 w-auto max-w-[110px] object-contain grayscale opacity-70"
+                        style={{ filter: 'grayscale(100%)' }}
+                      />
                     </div>
-                  ))}
+                    {study.url ? (
+                      <a
+                        href={study.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[22px] font-bold tracking-[-0.02em] leading-[1.15] text-ink no-underline hover:text-verdant-deep transition-colors"
+                      >
+                        {study.name}
+                      </a>
+                    ) : (
+                      <h3 className="text-[22px] font-bold tracking-[-0.02em] leading-[1.15]">
+                        {study.name}
+                      </h3>
+                    )}
+                  </div>
+
+                  <p className="text-ink/55 text-[13px] mb-2 font-medium">
+                    {study.title}
+                  </p>
+                  <p className="text-ink/65 text-sm italic">
+                    {study.context}
+                  </p>
                 </div>
 
-                <p className="text-ink/85 text-[15px] leading-[1.6] mb-6">
-                  {study.body}
-                </p>
+                {/* what we did */}
+                <div className="mb-6">
+                  <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-ink/60 mb-3">
+                    what we did
+                  </div>
+                  <div className="space-y-2">
+                    {study.tags.map((tag, k) => (
+                      <div key={k} className="flex items-start gap-2">
+                        <span className="text-verdant-deep text-[10px] mt-[3px]">•</span>
+                        <span className="text-ink/85 text-[15px] leading-[1.5]">{tag}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
-                <div className="font-mono text-[11px] text-ink/50 tracking-[0.06em] pt-5 border-t border-ink/8">
-                  {study.tags.map((tag, k) => (
-                    <span key={k}>
-                      {tag}
-                      {k < study.tags.length - 1 && " · "}
-                    </span>
-                  ))}
+                {/* how */}
+                <div className="mb-6">
+                  <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-ink/60 mb-3">
+                    how
+                  </div>
+                  <p className="text-ink/85 text-[15px] leading-[1.6]">
+                    {study.body}
+                  </p>
+                </div>
+
+                {/* the impact */}
+                <div className="mt-auto pt-6 border-t border-mist">
+                  <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-ink/60 mb-3">
+                    the impact
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    {study.stats.map((s, j) => (
+                      <div
+                        key={j}
+                        className="bg-mist rounded-lg py-3 px-[14px] flex items-baseline justify-between gap-3"
+                      >
+                        <div className="font-mono font-bold text-[17px] text-verdant-deep tracking-[-0.01em] shrink-0">
+                          {s.stat}
+                        </div>
+                        <div className="text-[12px] text-ink/60 leading-[1.3] text-right">
+                          {s.label}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             );

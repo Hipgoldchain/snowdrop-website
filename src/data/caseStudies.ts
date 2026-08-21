@@ -7,6 +7,7 @@ export interface CaseStudy {
   sector: string;
   sectorColor: "bluebell" | "butter" | "moss" | "purple";
   name: string;
+  logo: string;
   url?: string;
   title: string;
   context: string;
@@ -20,6 +21,7 @@ export const caseStudies: CaseStudy[] = [
     sector: "Property",
     sectorColor: "bluebell",
     name: "Breamore Estate",
+    logo: "/logos/breamore.png",
     url: "https://breamorehouse.com/",
     title: "Property management",
     context: "Historic estate business. Founder approaching retirement.",
@@ -28,13 +30,14 @@ export const caseStudies: CaseStudy[] = [
       { stat: "~50×", label: "return in year one" },
       { stat: "<£300", label: "a year on tools" },
     ],
-    body: "We sorted their costs automatically, built a maintenance log, and set up a simple way to talk to tenants. The real win wasn't the money saved. It was getting what's in the founder's head into a system — before they retire.",
+    body: "We mapped how to sort their costs automatically, log maintenance, and simplify tenant comms — then handed over the roadmap to make it happen. The real win wasn't the money saved. It was getting what's in the founder's head into a system — before they retire.",
     tags: ["AI cost tracking", "Maintenance logging", "Automated tenant communication", "Knowledge capture"],
   },
   {
     sector: "Property",
     sectorColor: "bluebell",
     name: "SIFT",
+    logo: "/logos/sift.svg",
     url: "https://sifthomes.com",
     title: "Online property portal",
     context:
@@ -51,6 +54,7 @@ export const caseStudies: CaseStudy[] = [
     sector: "Property",
     sectorColor: "bluebell",
     name: "RenoCheck",
+    logo: "/logos/renocheck.png",
     url: "https://renocheck.co.uk",
     title: "AI renovation cost platform",
     context:
@@ -67,6 +71,7 @@ export const caseStudies: CaseStudy[] = [
     sector: "Travel & Leisure",
     sectorColor: "butter",
     name: "Bangers",
+    logo: "/logos/bangers.png",
     url: "https://bangerslondon.com",
     title: "Multi-site hospitality",
     context:
@@ -76,13 +81,14 @@ export const caseStudies: CaseStudy[] = [
       { stat: "12–18mo", label: "head office hire delayed" },
       { stat: "~£40/mo", label: "total tool cost" },
     ],
-    body: "Catering and private-hire enquiries were getting missed. The follow-up was patchy. We built a system that responds straight away, follows up at day 2, 5, and 10, and tracks every lead in one place.",
+    body: "Catering and private-hire enquiries were getting missed. The follow-up was patchy. We designed a system that responds straight away, follows up at day 2, 5, and 10, and tracks every lead in one place — then handed over the roadmap to make it happen.",
     tags: ["CRM", "Automated follow-up", "Catering pipeline", "Revenue engine"],
   },
   {
     sector: "Construction",
     sectorColor: "moss",
     name: "Seven Split",
+    logo: "/logos/svensplit.png",
     title: "Bristol-based builder",
     context: "Solo builder. Strong word-of-mouth, no online presence.",
     stats: [
@@ -90,13 +96,14 @@ export const caseStudies: CaseStudy[] = [
       { stat: "£116/yr", label: "total tool cost" },
       { stat: "1 job", label: "pays it back 388 times" },
     ],
-    body: "He had no website and no reviews online. We built a simple way for new customers to find him, see his work, and book a call — for less than a tank of fuel.",
+    body: "He had no website and no reviews online. We mapped out how to help new customers find him, see his work, and book a call — then handed over the roadmap. The whole system costs less than a tank of fuel a year.",
     tags: ["Website", "Automated review prompts", "Automated Google Ads", "AI content creation"],
   },
   {
     sector: "Consumer",
     sectorColor: "purple",
     name: "Auspicious by Design",
+    logo: "/logos/auspicious.png",
     url: "https://antiquetibetanfurniture.com",
     title: "International antique dealers",
     context:
