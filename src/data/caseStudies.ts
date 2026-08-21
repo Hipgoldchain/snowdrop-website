@@ -30,7 +30,7 @@ export const caseStudies: CaseStudy[] = [
       { stat: "~50×", label: "return in year one" },
       { stat: "<£300", label: "a year on tools" },
     ],
-    body: "We mapped how to sort their costs automatically, log maintenance, and simplify tenant comms — then handed over the roadmap to make it happen. The real win wasn't the money saved. It was getting what's in the founder's head into a system — before they retire.",
+    body: "The real win wasn't the money saved — it was getting what's in the founder's head into a system, before they retire.",
     tags: ["AI cost tracking", "Maintenance logging", "Automated tenant communication", "Knowledge capture"],
   },
   {
@@ -47,7 +47,7 @@ export const caseStudies: CaseStudy[] = [
       { stat: "Custom", label: "CRM, built bespoke" },
       { stat: "4 AI systems", label: "working together" },
     ],
-    body: "We built the whole operating system behind the portal: a lead funnel that finds and scores opportunities, a custom CRM, a PR agent, and a content pipeline. Users sign up, get their own account and inbox, and the admin runs itself.",
+    body: "Users sign up, get their own account and inbox — and the admin runs itself.",
     tags: ["AI lead generation", "Custom CRM", "AI PR agent", "AI content workflow"],
   },
   {
@@ -64,8 +64,8 @@ export const caseStudies: CaseStudy[] = [
       { stat: "Minutes", label: "to a realistic cost estimate" },
       { stat: "AI", label: "powered pricing engine" },
     ],
-    body: "We built an AI tool that estimates renovation costs in minutes — describe the job, get a realistic price range. Designed, built, and shipped end to end, and live today.",
-    tags: ["AI estimator", "Cost modelling", "Rapid build", "Live product"],
+    body: "Describe the job, get a realistic price range — no more waiting weeks for quotes.",
+    tags: ["AI estimating engine", "Cost modelling", "Web design & build"],
   },
   {
     sector: "Travel & Leisure",
@@ -81,7 +81,7 @@ export const caseStudies: CaseStudy[] = [
       { stat: "12–18mo", label: "head office hire delayed" },
       { stat: "~£40/mo", label: "total tool cost" },
     ],
-    body: "Catering and private-hire enquiries were getting missed. The follow-up was patchy. We designed a system that responds straight away, follows up at day 2, 5, and 10, and tracks every lead in one place — then handed over the roadmap to make it happen.",
+    body: "A system designed to respond straight away and chase at day 2, 5, and 10 — so enquiries would never get missed again.",
     tags: ["CRM", "Automated follow-up", "Catering pipeline", "Revenue engine"],
   },
   {
@@ -96,7 +96,7 @@ export const caseStudies: CaseStudy[] = [
       { stat: "£116/yr", label: "total tool cost" },
       { stat: "1 job", label: "pays it back 388 times" },
     ],
-    body: "He had no website and no reviews online. We mapped out how to help new customers find him, see his work, and book a call — then handed over the roadmap. The whole system costs less than a tank of fuel a year.",
+    body: "A roadmap showing how new customers could find him online, see his work, and book a call — for less than a tank of fuel a year.",
     tags: ["Website", "Automated review prompts", "Automated Google Ads", "AI content creation"],
   },
   {
@@ -113,7 +113,7 @@ export const caseStudies: CaseStudy[] = [
       { stat: "Days", label: "build time, not weeks" },
       { stat: "Searchable", label: "online catalogue" },
     ],
-    body: "They had a paper catalogue full of one-of-a-kind antiques. We turned the whole thing into a website you can browse — built in days, for a fraction of what an agency would charge.",
+    body: "Built in days for a fraction of agency cost — and every piece became searchable online.",
     tags: ["Rapid build", "Web design & development", "Catalogue", "AI-assisted"],
   },
 ];

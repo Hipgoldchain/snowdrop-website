@@ -63,47 +63,76 @@ export default function CaseStudies() {
                     {study.sector}
                   </span>
 
-                  <div className="flex items-center gap-3 mb-1">
-                    <div className="shrink-0">
-                      <Image
-                        src={study.logo}
-                        alt={`${study.name} logo`}
-                        width={110}
-                        height={32}
-                        className="h-8 w-auto max-w-[110px] object-contain grayscale opacity-70"
-                        style={{ filter: 'grayscale(100%)' }}
-                      />
+                  {/* Logo OR Name (never both) */}
+                  {["SIFT", "RenoCheck", "Auspicious by Design"].includes(study.name) ? (
+                    // Wordmark logos: show logo only
+                    <div className="mb-1">
+                      {study.url ? (
+                        <a
+                          href={study.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block hover:opacity-80 transition-opacity"
+                        >
+                          <Image
+                            src={study.logo}
+                            alt={study.name}
+                            width={110}
+                            height={30}
+                            className="h-[30px] w-auto max-w-[180px] object-contain grayscale opacity-70"
+                            style={{ filter: 'grayscale(100%)' }}
+                          />
+                        </a>
+                      ) : (
+                        <Image
+                          src={study.logo}
+                          alt={study.name}
+                          width={110}
+                          height={30}
+                          className="h-[30px] w-auto max-w-[180px] object-contain grayscale opacity-70"
+                          style={{ filter: 'grayscale(100%)' }}
+                        />
+                      )}
                     </div>
-                    {study.url ? (
+                  ) : (
+                    // Symbol/crest logos: show text only
+                    study.url ? (
                       <a
                         href={study.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[22px] font-bold tracking-[-0.02em] leading-[1.15] text-ink no-underline hover:text-verdant-deep transition-colors"
+                        className="text-[22px] font-bold tracking-[-0.02em] leading-[1.15] block text-ink no-underline hover:text-verdant-deep transition-colors mb-1"
                       >
                         {study.name}
                       </a>
                     ) : (
-                      <h3 className="text-[22px] font-bold tracking-[-0.02em] leading-[1.15]">
+                      <h3 className="text-[22px] font-bold tracking-[-0.02em] leading-[1.15] mb-1">
                         {study.name}
                       </h3>
-                    )}
-                  </div>
+                    )
+                  )}
 
-                  <p className="text-ink/55 text-[13px] mb-2 font-medium">
+                  <p className="text-ink/55 text-[13px] mb-4 font-medium">
                     {study.title}
                   </p>
+                </div>
+
+                {/* the problem */}
+                <div className="mb-5">
+                  <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-ink/60 mb-2">
+                    the problem
+                  </div>
                   <p className="text-ink/65 text-sm italic">
                     {study.context}
                   </p>
                 </div>
 
                 {/* what we did */}
-                <div className="mb-6">
-                  <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-ink/60 mb-3">
+                <div className="mb-5">
+                  <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-ink/60 mb-2">
                     what we did
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-1">
                     {study.tags.map((tag, k) => (
                       <div key={k} className="flex items-start gap-2">
                         <span className="text-verdant-deep text-[10px] mt-[3px]">•</span>
@@ -113,10 +142,10 @@ export default function CaseStudies() {
                   </div>
                 </div>
 
-                {/* how */}
+                {/* why it mattered */}
                 <div className="mb-6">
-                  <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-ink/60 mb-3">
-                    how
+                  <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-ink/60 mb-2">
+                    why it mattered
                   </div>
                   <p className="text-ink/85 text-[15px] leading-[1.6]">
                     {study.body}
