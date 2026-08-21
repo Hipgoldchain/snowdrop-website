@@ -182,31 +182,32 @@ export default function About() {
           <div className="grid grid-cols-4 gap-5 mb-14 credentials-grid max-[968px]:grid-cols-2 max-[520px]:grid-cols-1">
             {credentials.map((cred) => (
               <div key={cred.name} className="bg-snow border border-ink/10 rounded-xl py-7 px-6 relative overflow-hidden transition-all duration-300 hover:-translate-y-[3px] hover:border-verdant hover:shadow-[0_12px_28px_rgba(26,31,37,0.08)] flex flex-col">
-                {/* Logo */}
-                <div className="mb-4 h-[32px] flex items-center">
-                  <Image
-                    src={cred.logo}
-                    alt={`${cred.name} logo`}
-                    width={90}
-                    height={32}
-                    className="opacity-50 h-8 w-auto object-contain"
-                  />
-                </div>
-
-                {/* Client name */}
-                <div className="font-sans font-bold text-2xl text-ink tracking-[-0.02em] mb-3">
-                  {cred.link ? (
-                    <a
-                      href={cred.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-verdant-deep transition-colors"
-                    >
-                      {cred.name}
-                    </a>
-                  ) : (
-                    cred.name
-                  )}
+                {/* Logo + Client name */}
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="shrink-0">
+                    <Image
+                      src={cred.logo}
+                      alt={`${cred.name} logo`}
+                      width={110}
+                      height={32}
+                      className="h-8 w-auto max-w-[110px] object-contain grayscale opacity-70"
+                      style={{ filter: 'grayscale(100%)' }}
+                    />
+                  </div>
+                  <div className="font-sans font-bold text-2xl text-ink tracking-[-0.02em] leading-[1.1]">
+                    {cred.link ? (
+                      <a
+                        href={cred.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-verdant-deep transition-colors"
+                      >
+                        {cred.name}
+                      </a>
+                    ) : (
+                      cred.name
+                    )}
+                  </div>
                 </div>
 
                 {/* Sector pill + Engagement badge */}
