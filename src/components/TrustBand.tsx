@@ -3,12 +3,12 @@
 import Image from "next/image";
 
 const logos = [
-  { name: "RenoCheck", src: "/logos/renocheck.png", width: 110 },
-  { name: "Sift", src: "/logos/sift.svg", width: 70 },
-  { name: "Auspicious by Design", src: "/logos/auspicious.png", width: 180 },
-  { name: "Breamore House", src: "/logos/breamore.png", width: 130 },
-  { name: "Bangers", src: "/logos/bangers.png", width: 110 },
-  { name: "SvenSplit", src: "/logos/svensplit.png", width: 100 },
+  { name: "RenoCheck", src: "/logos/renocheck.png", width: 160 },
+  { name: "Sift", src: "/logos/sift.svg", width: 100 },
+  { name: "Auspicious by Design", src: "/logos/auspicious.png", width: 260 },
+  { name: "Breamore House", src: "/logos/breamore.png", width: 190 },
+  { name: "Bangers", src: "/logos/bangers.png", width: 160 },
+  { name: "SvenSplit", src: "/logos/svensplit.png", width: 145 },
 ];
 
 export default function TrustBand() {
@@ -50,8 +50,8 @@ export default function TrustBand() {
                     src={logo.src}
                     alt={logo.name}
                     width={logo.width}
-                    height={32}
-                    className="h-8 w-auto object-contain"
+                    height={48}
+                    className="h-12 w-auto object-contain"
                     style={{ filter: 'brightness(0) invert(1)' }}
                   />
                 </div>
@@ -67,8 +67,8 @@ export default function TrustBand() {
                     src={logo.src}
                     alt={logo.name}
                     width={logo.width}
-                    height={32}
-                    className="h-8 w-auto object-contain"
+                    height={48}
+                    className="h-12 w-auto object-contain"
                     style={{ filter: 'brightness(0) invert(1)' }}
                   />
                 </div>

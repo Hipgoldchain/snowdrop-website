@@ -53,27 +53,39 @@ export default function CaseStudies() {
               >
                 {/* Header section */}
                 <div className="mb-6">
-                  <span
-                    className="font-mono text-[11px] tracking-[0.04em] py-[6px] px-3 rounded-full inline-block mb-4 font-semibold"
-                    style={{
-                      background: colors.bg,
-                      color: colors.text,
-                    }}
-                  >
-                    {study.sector}
-                  </span>
+                  <div className="flex items-start justify-between gap-4 mb-4">
+                    {/* Sector pill - top left */}
+                    <span
+                      className="font-mono text-[11px] tracking-[0.04em] py-[6px] px-3 rounded-full inline-block font-semibold shrink-0"
+                      style={{
+                        background: colors.bg,
+                        color: colors.text,
+                      }}
+                    >
+                      {study.sector}
+                    </span>
 
-                  {/* Logo OR Name (never both) */}
-                  {["SIFT", "RenoCheck", "Auspicious by Design"].includes(study.name) ? (
-                    // Wordmark logos: show logo only
-                    <div className="mb-1">
-                      {study.url ? (
-                        <a
-                          href={study.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block hover:opacity-80 transition-opacity"
-                        >
+                    {/* Logo OR Name - top right */}
+                    <div className="text-right">
+                      {["SIFT", "RenoCheck", "Auspicious by Design"].includes(study.name) ? (
+                        // Wordmark logos: show logo only
+                        study.url ? (
+                          <a
+                            href={study.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block hover:opacity-80 transition-opacity"
+                          >
+                            <Image
+                              src={study.logo}
+                              alt={study.name}
+                              width={110}
+                              height={30}
+                              className="h-[30px] w-auto max-w-[180px] object-contain grayscale opacity-70"
+                              style={{ filter: 'grayscale(100%)' }}
+                            />
+                          </a>
+                        ) : (
                           <Image
                             src={study.logo}
                             alt={study.name}
@@ -82,35 +94,26 @@ export default function CaseStudies() {
                             className="h-[30px] w-auto max-w-[180px] object-contain grayscale opacity-70"
                             style={{ filter: 'grayscale(100%)' }}
                           />
-                        </a>
+                        )
                       ) : (
-                        <Image
-                          src={study.logo}
-                          alt={study.name}
-                          width={110}
-                          height={30}
-                          className="h-[30px] w-auto max-w-[180px] object-contain grayscale opacity-70"
-                          style={{ filter: 'grayscale(100%)' }}
-                        />
+                        // Symbol/crest logos: show text only
+                        study.url ? (
+                          <a
+                            href={study.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[22px] font-bold tracking-[-0.02em] leading-[1.15] block text-ink no-underline hover:text-verdant-deep transition-colors"
+                          >
+                            {study.name}
+                          </a>
+                        ) : (
+                          <h3 className="text-[22px] font-bold tracking-[-0.02em] leading-[1.15]">
+                            {study.name}
+                          </h3>
+                        )
                       )}
                     </div>
-                  ) : (
-                    // Symbol/crest logos: show text only
-                    study.url ? (
-                      <a
-                        href={study.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[22px] font-bold tracking-[-0.02em] leading-[1.15] block text-ink no-underline hover:text-verdant-deep transition-colors mb-1"
-                      >
-                        {study.name}
-                      </a>
-                    ) : (
-                      <h3 className="text-[22px] font-bold tracking-[-0.02em] leading-[1.15] mb-1">
-                        {study.name}
-                      </h3>
-                    )
-                  )}
+                  </div>
 
                   <p className="text-ink/55 text-[13px] mb-4 font-medium">
                     {study.title}
