@@ -65,52 +65,33 @@ export default function CaseStudies() {
                       {study.sector}
                     </span>
 
-                    {/* Logo OR Name - top right */}
+                    {/* Logo - top right (all clients show logo) */}
                     <div className="text-right">
-                      {["SIFT", "RenoCheck", "Auspicious by Design"].includes(study.name) ? (
-                        // Wordmark logos: show logo only
-                        study.url ? (
-                          <a
-                            href={study.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block hover:opacity-80 transition-opacity"
-                          >
-                            <Image
-                              src={study.logo}
-                              alt={study.name}
-                              width={110}
-                              height={30}
-                              className="h-[30px] w-auto max-w-[180px] object-contain grayscale opacity-70"
-                              style={{ filter: 'grayscale(100%)' }}
-                            />
-                          </a>
-                        ) : (
+                      {study.url ? (
+                        <a
+                          href={study.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block hover:opacity-80 transition-opacity"
+                        >
                           <Image
                             src={study.logo}
                             alt={study.name}
-                            width={110}
-                            height={30}
-                            className="h-[30px] w-auto max-w-[180px] object-contain grayscale opacity-70"
-                            style={{ filter: 'grayscale(100%)' }}
+                            width={140}
+                            height={48}
+                            className="h-12 w-auto max-w-[200px] object-contain"
+                            style={{ filter: 'brightness(0) invert(1) grayscale(100%)', opacity: 0.7 }}
                           />
-                        )
+                        </a>
                       ) : (
-                        // Symbol/crest logos: show text only
-                        study.url ? (
-                          <a
-                            href={study.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-[22px] font-bold tracking-[-0.02em] leading-[1.15] block text-ink no-underline hover:text-verdant-deep transition-colors"
-                          >
-                            {study.name}
-                          </a>
-                        ) : (
-                          <h3 className="text-[22px] font-bold tracking-[-0.02em] leading-[1.15]">
-                            {study.name}
-                          </h3>
-                        )
+                        <Image
+                          src={study.logo}
+                          alt={study.name}
+                          width={140}
+                          height={48}
+                          className="h-12 w-auto max-w-[200px] object-contain"
+                          style={{ filter: 'brightness(0) invert(1) grayscale(100%)', opacity: 0.7 }}
+                        />
                       )}
                     </div>
                   </div>
