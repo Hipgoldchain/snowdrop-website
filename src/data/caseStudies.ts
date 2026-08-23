@@ -75,9 +75,9 @@ export const caseStudies: CaseStudy[] = [
     url: "https://bangerslondon.com",
     type: "audit",
     actions: [
-      "Automated events booking & follow-up workflow",
-      "Catering offer design & online ordering",
-      "Marketing & content pipeline"
+      "Auto booking & follow-up",
+      "Online catering orders",
+      "Marketing & content"
     ],
     stats: [
       { stat: "£140k–£337k", label: "extra revenue possible" },
