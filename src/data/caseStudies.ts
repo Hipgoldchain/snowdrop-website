@@ -9,11 +9,10 @@ export interface CaseStudy {
   name: string;
   logo: string;
   url?: string;
-  title: string;
-  context: string;
+  type: "build" | "audit";
+  actions: string[];
   stats: CaseStat[];
-  body: string;
-  tags: string[];
+  impactChain?: string; // For Breamore's connected chain
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -23,15 +22,14 @@ export const caseStudies: CaseStudy[] = [
     name: "Breamore Estate",
     logo: "/logos/breamore.png",
     url: "https://breamorehouse.com/",
-    title: "Property management",
-    context: "Historic estate business. Founder approaching retirement.",
-    stats: [
-      { stat: "~£17k", label: "a year unlocked" },
-      { stat: "~50×", label: "return in year one" },
-      { stat: "<£300", label: "a year on tools" },
+    type: "audit",
+    actions: [
+      "AI property maintenance & cost tracking",
+      "Automated tenant communication",
+      "End-of-month finance reconciliations"
     ],
-    body: "The real win wasn't the money saved — it was getting what's in the founder's head into a system, before they retire.",
-    tags: ["AI cost tracking", "Maintenance logging", "Automated tenant communication", "Knowledge capture"],
+    stats: [],
+    impactChain: "<£300/yr on tools → ~£17k/yr unlocked → ~50× return on tool investment",
   },
   {
     sector: "Property",
@@ -39,16 +37,18 @@ export const caseStudies: CaseStudy[] = [
     name: "SIFT",
     logo: "/logos/sift.svg",
     url: "https://sifthomes.com",
-    title: "Online property portal",
-    context:
-      "A property-search app that scores and ranks listings for buyers.",
+    type: "build",
+    actions: [
+      "Web & mobile app",
+      "AI lead generation",
+      "AI PR agent",
+      "AI content & marketing workflow"
+    ],
     stats: [
       { stat: "Full app", label: "accounts & inboxes" },
       { stat: "Custom", label: "CRM, built bespoke" },
       { stat: "4 AI systems", label: "working together" },
     ],
-    body: "Users sign up, get their own account and inbox — and the admin runs itself.",
-    tags: ["AI lead generation", "Custom CRM", "AI PR agent", "AI content workflow"],
   },
   {
     sector: "Property",
@@ -56,16 +56,16 @@ export const caseStudies: CaseStudy[] = [
     name: "RenoCheck",
     logo: "/logos/renocheck.png",
     url: "https://renocheck.co.uk",
-    title: "AI renovation cost platform",
-    context:
-      "Homeowners wait weeks for builder quotes. Renovation costs are a black box.",
+    type: "build",
+    actions: [
+      "Web design & build",
+      "AI cost-estimating engine"
+    ],
     stats: [
       { stat: "Live", label: "built and launched" },
       { stat: "Minutes", label: "to a realistic cost estimate" },
       { stat: "AI", label: "powered pricing engine" },
     ],
-    body: "Describe the job, get a realistic price range — no more waiting weeks for quotes.",
-    tags: ["AI estimating engine", "Cost modelling", "Web design & build"],
   },
   {
     sector: "Travel & Leisure",
@@ -73,31 +73,32 @@ export const caseStudies: CaseStudy[] = [
     name: "Bangers",
     logo: "/logos/bangers.png",
     url: "https://bangerslondon.com",
-    title: "Multi-site hospitality",
-    context:
-      "London-based breakfast group. Too much demand, not enough capacity.",
+    type: "audit",
+    actions: [
+      "Automated events booking & follow-up workflow",
+      "Catering offer design & online ordering",
+      "Marketing & content pipeline"
+    ],
     stats: [
       { stat: "£140k–£337k", label: "extra revenue possible" },
       { stat: "12–18mo", label: "head office hire delayed" },
       { stat: "~£40/mo", label: "total tool cost" },
     ],
-    body: "A system designed to respond straight away and chase at day 2, 5, and 10 — so enquiries would never get missed again.",
-    tags: ["CRM", "Automated follow-up", "Catering pipeline", "Revenue engine"],
   },
   {
     sector: "Construction",
     sectorColor: "moss",
     name: "Seven Split",
     logo: "/logos/svensplit.png",
-    title: "Bristol-based builder",
-    context: "Solo builder. Strong word-of-mouth, no online presence.",
-    stats: [
-      { stat: "£45k–£225k", label: "extra revenue possible" },
-      { stat: "£116/yr", label: "total tool cost" },
-      { stat: "1 job", label: "pays it back 388 times" },
+    type: "build",
+    actions: [
+      "Web design & build"
     ],
-    body: "A roadmap showing how new customers could find him online, see his work, and book a call — for less than a tank of fuel a year.",
-    tags: ["Website", "Automated review prompts", "Automated Google Ads", "AI content creation"],
+    stats: [
+      { stat: "Live", label: "built and launched" },
+      { stat: "First web presence", label: "now searchable online" },
+      { stat: "Quote-ready", label: "contact form live" },
+    ],
   },
   {
     sector: "Consumer",
@@ -105,15 +106,14 @@ export const caseStudies: CaseStudy[] = [
     name: "Auspicious by Design",
     logo: "/logos/auspicious.png",
     url: "https://antiquetibetanfurniture.com",
-    title: "International antique dealers",
-    context:
-      "Antiques dealer. Whole catalogue stuck inside a printed PDF.",
-    stats: [
-      { stat: "Full website", label: "built from PDF catalogue" },
-      { stat: "Days", label: "build time, not weeks" },
-      { stat: "Searchable", label: "online catalogue" },
+    type: "build",
+    actions: [
+      "Website build & SEO"
     ],
-    body: "Built in days for a fraction of agency cost — and every piece became searchable online.",
-    tags: ["Rapid build", "Web design & development", "Catalogue", "AI-assisted"],
+    stats: [
+      { stat: "Sales doubled", label: "after launch" },
+      { stat: "Found online", label: "for the first time" },
+      { stat: "Enquiries", label: "with no marketing spend" },
+    ],
   },
 ];
