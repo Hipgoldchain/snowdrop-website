@@ -2,7 +2,8 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Journey from "@/components/Journey";
 import TrustBand from "@/components/TrustBand";
-import CaseStudies from "@/components/CaseStudies";
+import AuditExperience from "@/components/AuditExperience";
+import BuildExperience from "@/components/BuildExperience";
 import BrandMoment from "@/components/BrandMoment";
 import About from "@/components/About";
 import FinalCta from "@/components/FinalCta";
@@ -16,7 +17,8 @@ export default function Home() {
         <Hero />
         <Journey />
         <TrustBand />
-        <CaseStudies />
+        <AuditExperience />
+        <BuildExperience />
         <BrandMoment />
         <About />
         <FinalCta />
