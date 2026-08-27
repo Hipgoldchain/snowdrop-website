@@ -34,12 +34,9 @@ export default function Journey() {
   return (
     <section id="journey" className="bg-snow pt-[60px] pb-[100px] px-8 max-[600px]:pt-12 max-[600px]:pb-16 max-[600px]:px-5">
       <div className="max-w-[1220px] mx-auto">
-        <span className="font-mono text-[15px] font-bold lowercase tracking-[0.12em] text-verdant-deep mb-4 block text-center">
-          the journey
+        <span className="font-mono text-[11px] font-medium lowercase tracking-[0.1em] text-verdant-deep mb-10 block text-center">
+          how it works
         </span>
-        <h2 className="text-center font-bold tracking-[-0.02em] leading-[1.06] mb-12 max-[600px]:mb-10" style={{ fontSize: "clamp(38px, 5.5vw, 56px)" }}>
-          From stuck to running — in three steps.
-        </h2>
 
         <div className="grid gap-6 grid-cols-3 max-[900px]:grid-cols-1">
           <JourneyCard
@@ -61,7 +58,7 @@ export default function Journey() {
             svgContent={svg2}
             number="02 · The AI Audit"
             title="The AI Audit"
-            description="Forty-five minutes. Systems mapped, opportunities priced, your Opportunity Roadmap back in 48 hours."
+            description="Forty-five minutes. We map your business, price every opportunity, and deliver your Opportunity Roadmap in 48 hours — plus a one-hour activation call and **your first AI agent built, deployed, and live — included.**"
             ctaLabel="Skip ahead — book the £500 AI Audit"
             ctaHref={CALENDLY_AUDIT_URL}
             ctaStyle="outline"
@@ -74,18 +71,42 @@ export default function Journey() {
 
           <JourneyCard
             svgContent={svg3}
-            number="03 · Built and live"
-            title="Built and live"
-            description="Days, not months. Your first agents and workflows running — and the outcomes arriving from outside."
-            ctaLabel="Know what you need? Tell us what to build →"
+            number="03 · Going forward"
+            title="Going forward"
+            description="Custom AI agents and workflows, or ongoing advisory — scoped together once your roadmap is live."
+            ctaLabel=""
             ctaHref="mailto:hello@snowdropgrowth.com"
             ctaStyle="text"
             pricing={{
-              main: "Custom pricing",
-              subtext: "Tailored to your needs · Optional",
-              variant: "custom"
-            }}
+              main: "",
+              subtext: "",
+              variant: "custom"            }}
           />
+        </div>
+
+        {/* Section footer */}
+        <div className="pt-12 text-center">
+          <a
+            href={CALENDLY_DISCOVERY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-verdant text-ink py-[18px] px-10 rounded-[10px] font-semibold text-[17px] no-underline transition-all duration-200 inline-block border-none cursor-pointer hover:bg-verdant-deep hover:text-snow hover:-translate-y-px"
+          >
+            Book Your Free Discovery Call
+          </a>
+          <div className="mt-4">
+            <a
+              href={CALENDLY_AUDIT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-[13px] text-ink/55 no-underline border-b border-dashed border-ink/25 pb-px transition-colors duration-200 hover:text-verdant-deep hover:border-verdant-deep"
+            >
+              Already sold? Skip ahead and book the £500 AI Audit →
+            </a>
+          </div>
+          <div className="mt-[18px] font-mono text-[11px] lowercase tracking-[0.08em] text-ink/50">
+            no prep required · we won't sell you the full audit unless it's the right fit
+          </div>
         </div>
       </div>
     </section>

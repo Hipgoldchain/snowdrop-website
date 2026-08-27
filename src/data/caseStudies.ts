@@ -29,7 +29,7 @@ export const caseStudies: CaseStudy[] = [
       "End-of-month finance reconciliations"
     ],
     stats: [],
-    impactChain: "<£300/yr on tools → ~£17k/yr unlocked → ~50× return on tool investment",
+    impactChain: "<£300/yr on tools → ~£17k/yr unlocked → up to ~50× return on tool investment",
   },
   {
     sector: "Property",

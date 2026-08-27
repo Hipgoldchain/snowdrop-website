@@ -78,7 +78,7 @@ export default function JourneyCard({
           dangerouslySetInnerHTML={{ __html: parseDescription(description) }}
         />
 
-        {pricing && (
+        {pricing && pricing.main && (
           <div className={`
             rounded-xl py-3 px-4 mb-4
             ${pricing.variant === "free" ? "bg-verdant/15 border border-verdant/30" : ""}
@@ -107,7 +107,7 @@ export default function JourneyCard({
         )}
 
         <div className="mt-auto">
-          {ctaStyle === "solid" && (
+          {ctaStyle === "solid" && ctaLabel && (
             <a
               href={ctaHref}
               target="_blank"
@@ -118,7 +118,7 @@ export default function JourneyCard({
             </a>
           )}
 
-          {ctaStyle === "outline" && (
+          {ctaStyle === "outline" && ctaLabel && (
             <a
               href={ctaHref}
               target="_blank"
@@ -129,7 +129,7 @@ export default function JourneyCard({
             </a>
           )}
 
-          {ctaStyle === "text" && (
+          {ctaStyle === "text" && ctaLabel && (
             <a
               href={ctaHref}
               className="inline-block font-mono text-[12.5px] text-[#4A555E] py-[6px] no-underline border-b-2 border-verdant-deep/40 transition-colors duration-[120ms] hover:text-ink hover:border-verdant-deep"

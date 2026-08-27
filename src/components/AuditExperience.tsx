@@ -1,6 +1,6 @@
 "use client";
 
-import { audits } from "@/data/audits";
+import { audits, AuditCard } from "@/data/audits";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -22,6 +22,48 @@ const sectorColorMap = {
     text: "#6B4FA0",
   },
 };
+
+const impactRows: Array<{
+  label: string;
+  key: keyof Pick<AuditCard, "growthFound" | "toolCost" | "timeToLive">;
+  valueColor: string;
+}> = [
+  { label: "growth found", key: "growthFound", valueColor: "text-verdant-deep" },
+  { label: "tool cost", key: "toolCost", valueColor: "text-ink" },
+  { label: "time to live", key: "timeToLive", valueColor: "text-ink" },
+];
+
+function ImpactRows({ audit }: { audit: AuditCard }) {
+  return (
+    <div className="mt-auto">
+      <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-ink/60 mb-3">
+        impact if delivered
+      </div>
+      <div className="flex flex-col gap-2">
+        {impactRows.map((row) => (
+          <div
+            key={row.key}
+            className="bg-mist rounded-lg h-[46px] px-[14px] flex items-center justify-between gap-3"
+          >
+            <div className="font-mono text-[11px] lowercase tracking-[0.04em] text-ink/55 shrink-0 w-[90px]">
+              {row.label}
+            </div>
+            <div
+              className={`font-mono font-bold text-[15px] tracking-[-0.01em] text-right ${row.valueColor}`}
+            >
+              {audit[row.key]}
+            </div>
+          </div>
+        ))}
+      </div>
+      {audit.footnote && (
+        <div className="font-mono text-[11px] text-ink/45 tracking-[0.02em] mt-2 px-[14px]">
+          {audit.footnote}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function AuditExperience() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -133,35 +175,8 @@ export default function AuditExperience() {
                   </div>
                 </div>
 
-                {/* Impact if delivered */}
-                <div className="mt-auto">
-                  <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-ink/60 mb-3">
-                    impact if delivered
-                  </div>
-                  {audit.impactChain ? (
-                    <div className="bg-mist rounded-lg py-4 px-4">
-                      <div className="font-mono text-[15px] text-verdant-deep font-semibold tracking-[-0.01em] leading-[1.5]">
-                        {audit.impactChain}
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="flex flex-col gap-2">
-                      {audit.impact?.map((s, j) => (
-                        <div
-                          key={j}
-                          className="bg-mist rounded-lg py-3 px-[14px] flex items-baseline justify-between gap-3"
-                        >
-                          <div className="font-mono font-bold text-[17px] text-verdant-deep tracking-[-0.01em] shrink-0">
-                            {s.stat}
-                          </div>
-                          <div className="text-[12px] text-ink/60 leading-[1.3] text-right">
-                            {s.label}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                {/* Impact if delivered — uniform rows */}
+                <ImpactRows audit={audit} />
               </div>
             );
           })}
@@ -256,35 +271,8 @@ export default function AuditExperience() {
                         </div>
                       </div>
 
-                      {/* Impact if delivered */}
-                      <div className="mt-auto">
-                        <div className="font-mono text-[11px] lowercase tracking-[0.06em] text-ink/60 mb-3">
-                          impact if delivered
-                        </div>
-                        {audit.impactChain ? (
-                          <div className="bg-mist rounded-lg py-4 px-4">
-                            <div className="font-mono text-[15px] text-verdant-deep font-semibold tracking-[-0.01em] leading-[1.5]">
-                              {audit.impactChain}
-                            </div>
-                          </div>
-                        ) : (
-                          <div className="flex flex-col gap-2">
-                            {audit.impact?.map((s, j) => (
-                              <div
-                                key={j}
-                                className="bg-mist rounded-lg py-3 px-[14px] flex items-baseline justify-between gap-3"
-                              >
-                                <div className="font-mono font-bold text-[17px] text-verdant-deep tracking-[-0.01em] shrink-0">
-                                  {s.stat}
-                                </div>
-                                <div className="text-[12px] text-ink/60 leading-[1.3] text-right">
-                                  {s.label}
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                      </div>
+                      {/* Impact if delivered — uniform rows */}
+                      <ImpactRows audit={audit} />
                     </div>
                   </div>
                 );

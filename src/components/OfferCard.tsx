@@ -73,9 +73,6 @@ export default function OfferCard() {
                   — Your first AI agent or solution — built, live, included.
                 </li>
               </ul>
-              <p className="text-sm text-ink/72 leading-[1.5] mt-3 italic">
-                Not happy with the results? You get your money back.
-              </p>
             </div>
           </div>
 

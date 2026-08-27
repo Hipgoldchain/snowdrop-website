@@ -15,7 +15,7 @@ export default function BookedPage() {
         You&apos;re booked.
       </h1>
       <p className="text-lg text-ink/70 max-w-[440px] leading-[1.6]">
-        Check your inbox for the invite — no prep needed, just bring coffee.
+        Check your inbox for the invite. No prep required — bring coffee.
       </p>
       <BookedLeadEvent />
     </main>

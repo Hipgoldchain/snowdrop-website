@@ -34,11 +34,13 @@ export default function FinalCta() {
         >
           Ready to grow your business?
         </h2>
-        <p className="text-xl text-snow/70 mb-12 max-w-[600px] mx-auto">
-          Book a free 15-minute discovery call. One bottleneck named, one growth
-          fix, free. If we&apos;re a fit, you can book the audit. If not, no
-          pressure — we won&apos;t sell you the full audit unless it&apos;s the right fit.
+        <p className="text-xl text-snow/70 mb-8 max-w-[600px] mx-auto">
+          Book a free 15-minute discovery call. We&apos;ll find your biggest
+          bottleneck and give you your first growth fix, free.
         </p>
+        <div className="font-mono text-[11px] lowercase tracking-[0.08em] text-verdant mb-12">
+          no prep required · we won&apos;t sell you the full audit unless it&apos;s the right fit
+        </div>
 
         {/* Calendly inline embed */}
         <div className="mb-8">

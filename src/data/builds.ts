@@ -20,7 +20,7 @@ export const builds: BuildCard[] = [
     built: [
       "Web & mobile app",
       "AI lead generation",
-      "AI PR agent",
+      "AI PR tools",
       "AI content & marketing workflow"
     ],
     launch: [

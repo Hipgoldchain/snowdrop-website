@@ -6,8 +6,10 @@ export interface AuditCard {
   sectorColor: "bluebell" | "butter" | "moss" | "purple";
   situation: string;
   opportunities: string[];
-  impactChain?: string;
-  impact?: Array<{ stat: string; label: string }>;
+  growthFound: string;
+  toolCost: string;
+  timeToLive: string;
+  footnote?: string;
 }
 
 export const audits: AuditCard[] = [
@@ -23,7 +25,10 @@ export const audits: AuditCard[] = [
       "Automated tenant communication",
       "End-of-month finance reconciliations"
     ],
-    impactChain: "<£300/yr on tools → ~£17k/yr unlocked → ~50× return"
+    growthFound: "~£17k a year",
+    toolCost: "<£300 a year",
+    timeToLive: "full roadmap live in 4–6 weeks",
+    footnote: "that\u2019s up to ~50\u00D7 return on tool investment"
   },
   {
     name: "Bangers",
@@ -35,11 +40,11 @@ export const audits: AuditCard[] = [
     opportunities: [
       "Automated events booking & follow-up",
       "Catering offer & online ordering",
-      "Marketing & content pipeline"
+      "Marketing & content"
     ],
-    impact: [
-      { stat: "£140k–£337k", label: "extra revenue possible per year" }
-    ]
+    growthFound: "£140k–£337k a year",
+    toolCost: "~£40 a month",
+    timeToLive: "full roadmap live in 4–6 weeks"
   },
   {
     name: "Seven Split",
@@ -52,9 +57,8 @@ export const audits: AuditCard[] = [
       "Automatic enquiry follow-up",
       "New website build"
     ],
-    impact: [
-      { stat: "£45k–£225k", label: "extra revenue possible per year" },
-      { stat: "388×", label: "one job pays back the tools" }
-    ]
+    growthFound: "£45k–£225k a year",
+    toolCost: "£116 a year",
+    timeToLive: "full roadmap live in 4–6 weeks"
   }
 ];

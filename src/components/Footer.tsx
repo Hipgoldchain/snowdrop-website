@@ -8,7 +8,6 @@ export default function Footer() {
           <Wordmark size="md" light />
           <p className="text-snow/65 text-sm mt-4 max-w-[320px] leading-[1.5]">
             Growth systems for small businesses that work in weeks, not months.
-            The AI Audit, plus your first AI agent built in.
           </p>
         </div>
 

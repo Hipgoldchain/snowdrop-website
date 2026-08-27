@@ -27,19 +27,32 @@ export default function Hero() {
           style={{ fontSize: "clamp(38px, 5.5vw, 64px)" }}
         >
           <span className="text-verdant-deep">Grow</span> your business.
-          <br className="max-[600px]:hidden" />
-          {" "}With AI.
         </h1>
 
         <p
           className="text-ink/72 leading-[1.55] max-w-[540px] mx-auto mb-10"
           style={{ fontSize: "clamp(17px, 1.5vw, 19px)" }}
         >
-          We bring deep expertise and hands-on experience with businesses across the UK to help yours grow, faster.
+          We find what&apos;s holding your business back — then use AI to fix it, fast. Your first fix live in as little as a week.
         </p>
 
+        {/* Free-call value pill */}
+        <div className="inline-flex items-center gap-[10px] flex-wrap justify-center mb-7 py-3 px-[22px] bg-mist rounded-full">
+          <span className="font-sans font-semibold text-sm text-ink">
+            free 15-min discovery call
+          </span>
+          <span className="text-ink/30">·</span>
+          <span className="font-sans font-semibold text-sm text-ink">
+            one bottleneck named
+          </span>
+          <span className="text-ink/30">·</span>
+          <span className="font-sans font-semibold text-sm text-ink">
+            one growth fix, free
+          </span>
+        </div>
+
         {/* CTA */}
-        <div className="flex gap-3 justify-center items-center mb-7 flex-wrap">
+        <div className="mb-7">
           <a
             href={CALENDLY_DISCOVERY_URL}
             target="_blank"
@@ -48,18 +61,11 @@ export default function Hero() {
           >
             Book Your Free Discovery Call
           </a>
-          <a
-            href="#journey"
-            className="border-2 border-verdant-deep text-ink py-[16px] px-8 rounded-[10px] font-semibold text-[17px] no-underline transition-all duration-200 inline-block bg-transparent hover:-translate-y-px hover:bg-verdant/12"
-          >
-            How it works
-          </a>
         </div>
 
         {/* Reassure */}
         <div className="font-mono text-[11px] lowercase tracking-[0.08em] text-ink/50">
-          <span className="max-[390px]:hidden">no prep · no pitch · leave with your first growth fix, free</span>
-          <span className="hidden max-[390px]:inline">no prep · leave with your first growth fix, free</span>
+          no prep required · we won&apos;t sell you the full audit unless it&apos;s the right fit
         </div>
 
       </div>

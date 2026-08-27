@@ -15,8 +15,8 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <Journey />
         <TrustBand />
+        <Journey />
         <AuditExperience />
         <BuildExperience />
         <BrandMoment />
