@@ -36,21 +36,6 @@ export default function Hero() {
           We find what&apos;s holding your business back — then use AI to fix it, fast. Your first fix live in as little as a week.
         </p>
 
-        {/* Free-call value pill */}
-        <div className="inline-flex items-center gap-[10px] flex-wrap justify-center mb-7 py-3 px-[22px] bg-mist rounded-full">
-          <span className="font-sans font-semibold text-sm text-ink">
-            free 15-min discovery call
-          </span>
-          <span className="text-ink/30">·</span>
-          <span className="font-sans font-semibold text-sm text-ink">
-            one bottleneck named
-          </span>
-          <span className="text-ink/30">·</span>
-          <span className="font-sans font-semibold text-sm text-ink">
-            one growth fix, free
-          </span>
-        </div>
-
         {/* CTA */}
         <div className="mb-7">
           <a
