@@ -9,13 +9,13 @@ export default function Nav() {
         </a>
         <div className="flex gap-9 items-center">
           <a
-            href="#audit-offer"
+            href="#journey"
             className="text-ink no-underline font-medium text-sm transition-colors duration-200 hover:text-verdant-deep hidden md:inline"
           >
             The AI Audit
           </a>
           <a
-            href="#case-studies"
+            href="#audit-experience"
             className="text-ink no-underline font-medium text-sm transition-colors duration-200 hover:text-verdant-deep hidden md:inline"
           >
             Our Work

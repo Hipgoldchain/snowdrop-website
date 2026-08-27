@@ -18,7 +18,7 @@ export default function Footer() {
           <ul className="list-none">
             <li className="mb-[10px]">
               <a
-                href="#audit-offer"
+                href="#journey"
                 className="text-snow/75 no-underline text-sm transition-colors duration-200 hover:text-verdant"
               >
                 The AI Audit
@@ -26,7 +26,7 @@ export default function Footer() {
             </li>
             <li className="mb-[10px]">
               <a
-                href="#case-studies"
+                href="#audit-experience"
                 className="text-snow/75 no-underline text-sm transition-colors duration-200 hover:text-verdant"
               >
                 Our Work
