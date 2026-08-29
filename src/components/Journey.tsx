@@ -41,9 +41,11 @@ export default function Journey() {
         <div className="grid gap-6 grid-cols-3 max-[900px]:grid-cols-1">
           <JourneyCard
             svgContent={svg1}
-            number="01 · Free Discovery Call"
-            title="Free Discovery Call"
-            description="Fifteen minutes. We find your biggest bottleneck live, and you leave with your first growth fix outlined."
+            number="01 · Free discovery call, 15 minutes"
+            title="Free discovery call"
+            description="Fifteen minutes. We find the one job eating the most of your week, and we name it. Then you get one fix you can build yourself, whether or not you ever pay us.
+
+Most free audits are just sales demos for a bigger payment further down the line. This one isn't."
             ctaLabel="Book Your Free Discovery Call"
             ctaHref={CALENDLY_DISCOVERY_URL}
             ctaStyle="solid"
@@ -56,15 +58,17 @@ export default function Journey() {
 
           <JourneyCard
             svgContent={svg2}
-            number="02 · The AI Audit"
-            title="The AI Audit"
-            description="Forty-five minutes. We map your business, price every opportunity, and deliver your Opportunity Roadmap in 48 hours — plus a one-hour activation call and **your first AI agent built, deployed, and live — included.**"
-            ctaLabel="Skip ahead — book the £500 AI Audit"
+            number="02 · Your Growth Roadmap"
+            title="Your Growth Roadmap"
+            description="A 45 minute AI audit call. Your roadmap, costed, in 48 hours. An activation call to walk you through it. **Your first AI agent built, deployed and live. Included.**
+
+Most consultants sell you a plan. Most agencies sell you a build. You get both."
+            ctaLabel="Already sold? Skip ahead and book the £500 roadmap →"
             ctaHref={CALENDLY_AUDIT_URL}
             ctaStyle="outline"
             pricing={{
               main: "£500",
-              subtext: "Launch price · Was £850",
+              subtext: "Launch price · Save £250",
               variant: "discounted"
             }}
           />
@@ -73,7 +77,7 @@ export default function Journey() {
             svgContent={svg3}
             number="03 · Going forward"
             title="Going forward"
-            description="Custom AI agents and workflows, or ongoing advisory — scoped together once your roadmap is live."
+            description="Custom agents, more workflows, or ongoing advice. We scope it together once the roadmap is live."
             ctaLabel=""
             ctaHref="mailto:hello@snowdropgrowth.com"
             ctaStyle="text"
@@ -101,11 +105,11 @@ export default function Journey() {
               rel="noopener noreferrer"
               className="inline-block text-[13px] text-ink/55 no-underline border-b border-dashed border-ink/25 pb-px transition-colors duration-200 hover:text-verdant-deep hover:border-verdant-deep"
             >
-              Already sold? Skip ahead and book the £500 AI Audit →
+              Already sold? Skip ahead and book the £500 roadmap →
             </a>
           </div>
           <div className="mt-[18px] font-mono text-[11px] lowercase tracking-[0.08em] text-ink/50">
-            no prep required · we won't sell you the full audit unless it's the right fit
+            no pitch · no prep · we'll only sell you the roadmap if it's a fit
           </div>
         </div>
       </div>

@@ -16,24 +16,32 @@ export default function Hero() {
       {/* Hero card */}
       <div className="relative z-1 bg-snow border border-ink/8 rounded-[20px] py-[72px] px-16 max-w-[760px] w-full text-center shadow-[0_1px_2px_rgba(26,31,37,0.04),0_8px_24px_rgba(26,31,37,0.06),0_24px_60px_rgba(26,31,37,0.08)] max-[600px]:py-12 max-[600px]:px-7 max-[600px]:rounded-2xl">
         <span
-          className="font-mono font-bold uppercase text-verdant-deep mb-4 block tracking-[0.1em] max-[390px]:text-[13px] max-[390px]:tracking-[0.08em]"
+          className="font-mono lowercase text-verdant-deep mb-4 block tracking-[0.1em] max-[390px]:text-[13px] max-[390px]:tracking-[0.08em]"
           style={{ fontSize: "clamp(13px, 1.1vw, 15px)" }}
         >
-          The AI Audit · For ambitious UK businesses
+          practical ai for growing businesses
         </span>
 
         <h1
           className="font-sans font-bold leading-[1.05] tracking-[-0.03em] text-ink mb-6"
           style={{ fontSize: "clamp(38px, 5.5vw, 64px)" }}
         >
-          <span className="text-verdant-deep">Grow</span> your business.
+          Your first AI fix, built and running in a week.
         </h1>
 
         <p
-          className="text-ink/72 leading-[1.55] max-w-[540px] mx-auto mb-10"
+          className="text-ink/72 leading-[1.55] max-w-[540px] mx-auto mb-8"
           style={{ fontSize: "clamp(17px, 1.5vw, 19px)" }}
         >
-          We find what&apos;s holding your business back — then use AI to fix it, fast. Your first fix live in as little as a week.
+          One real solution, live in your business, helping it grow. No deck, no follow-up sale.
+        </p>
+
+        {/* Free-call pill */}
+        <p
+          className="text-ink/65 leading-[1.55] max-w-[500px] mx-auto mb-10"
+          style={{ fontSize: "clamp(15px, 1.2vw, 16px)" }}
+        >
+          Free 15 minute call. You&apos;ll leave knowing your biggest bottleneck, and one fix you can build yourself that week.
         </p>
 
         {/* CTA */}
@@ -50,7 +58,7 @@ export default function Hero() {
 
         {/* Reassure */}
         <div className="font-mono text-[11px] lowercase tracking-[0.08em] text-ink/50">
-          no prep required · we won&apos;t sell you the full audit unless it&apos;s the right fit
+          no pitch · no prep · we&apos;ll only sell you the roadmap if it&apos;s a fit
         </div>
 
       </div>

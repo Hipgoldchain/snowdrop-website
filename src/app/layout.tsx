@@ -18,14 +18,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Snowdrop — The AI Audit for UK small businesses",
+  title: "Snowdrop | Your Growth Roadmap for UK small businesses",
   description:
-    "Growth systems for small businesses that work in weeks, not months. The AI Audit — your Opportunity Roadmap plus your first AI agent, built by us. £500 launch price.",
+    "Growth systems for small businesses that work in weeks, not months. Your Growth Roadmap, plus your first AI agent built by us. £500 launch price.",
   metadataBase: new URL("https://snowdropgrowth.com"),
   openGraph: {
-    title: "Snowdrop — The AI Audit for UK small businesses",
+    title: "Snowdrop | Your Growth Roadmap for UK small businesses",
     description:
-      "Growth systems for small businesses that work in weeks, not months. The AI Audit — your Opportunity Roadmap plus your first AI agent, built by us. £500 launch price.",
+      "Growth systems for small businesses that work in weeks, not months. Your Growth Roadmap, plus your first AI agent built by us. £500 launch price.",
     url: "https://snowdropgrowth.com",
     siteName: "Snowdrop",
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Snowdrop — Growth systems for small businesses",
+        alt: "Snowdrop | Growth systems for small businesses",
       },
     ],
     locale: "en_GB",
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Snowdrop — The AI Audit for UK small businesses",
+    title: "Snowdrop | Your Growth Roadmap for UK small businesses",
     description:
-      "Growth systems for small businesses that work in weeks, not months. The AI Audit — your Opportunity Roadmap plus your first AI agent, built by us. £500 launch price.",
+      "Growth systems for small businesses that work in weeks, not months. Your Growth Roadmap, plus your first AI agent built by us. £500 launch price.",
     images: ["/og-image.png"],
   },
   icons: {

@@ -12,18 +12,16 @@ export default function About() {
             className="font-sans font-bold leading-[1.05] tracking-[-0.025em] max-w-[900px] mb-12"
             style={{ fontSize: "clamp(32px, 4.8vw, 60px)" }}
           >
-            Built for small businesses.{" "}
+            Built for small businesses,{" "}
             <br className="max-[968px]:hidden" />
-            Not the <span className="text-verdant-deep">FTSE 100.</span>
+            not the <span className="text-verdant-deep">FTSE 100.</span>
           </h2>
 
           <div className="grid grid-cols-2 gap-14 about-cols max-[968px]:grid-cols-1 max-[968px]:gap-9">
             <div>
               <h4 className="text-lg font-semibold mb-3">What we do</h4>
               <p className="text-ink/85 text-base leading-[1.65]">
-                We help UK businesses use AI to grow — fast. One discovery call,
-                your roadmap, and your first AI tool built by us. Optional support
-                to build the rest.
+                We find the work that&apos;s costing you, write you a plan for fixing it, and build the first fix ourselves. If you want more after that, we&apos;ll talk about it then.
               </p>
             </div>
             <div>
@@ -31,10 +29,7 @@ export default function About() {
                 What we&apos;re not
               </h4>
               <p className="text-ink/85 text-base leading-[1.65]">
-                We&apos;re not consultants in disguise. No PowerPoint decks.
-                No three-month planning. No tool you&apos;ll never log into again.
-                We start with how you work, pick the right tool, and stay
-                honest about what AI can and can&apos;t do.
+                No PowerPoint factory, no three month diagnostic, no tool you&apos;ll never log into again.
               </p>
             </div>
           </div>
@@ -52,11 +47,8 @@ export default function About() {
             >
               Sasha has worked in some of the UK&apos;s{" "}
               <br className="max-[968px]:hidden" />
-              biggest companies — on their biggest projects.
+              biggest companies, on their biggest projects.
             </h3>
-            <p className="text-[17px] text-ink/70 leading-[1.6] max-w-[680px] mx-auto">
-              That same thinking now works for small businesses: clear plans, honest numbers, real wins in weeks.
-            </p>
           </div>
 
           <div className="grid grid-cols-4 gap-5 mb-14 max-[968px]:grid-cols-2 max-[520px]:grid-cols-1">
@@ -66,7 +58,7 @@ export default function About() {
                 finance transformation
               </div>
               <div className="text-[13px] text-ink/75 leading-[1.5]">
-                Led Tesco&apos;s largest-ever finance transformation.
+                Led their largest ever finance transformation.
               </div>
             </div>
 
@@ -76,7 +68,7 @@ export default function About() {
                 enterprise AI
               </div>
               <div className="text-[13px] text-ink/75 leading-[1.5]">
-                Led enterprise AI strategy at Haleon.
+                Led enterprise AI strategy.
               </div>
             </div>
 
@@ -86,7 +78,7 @@ export default function About() {
                 £35B+ separation
               </div>
               <div className="text-[13px] text-ink/75 leading-[1.5]">
-                Separation lead across the GSK and Haleon split.
+                Separation lead across the split.
               </div>
             </div>
 
@@ -96,7 +88,7 @@ export default function About() {
                 commercial
               </div>
               <div className="text-[13px] text-ink/75 leading-[1.5]">
-                Worked on EasyJet&apos;s commercial transformation.
+                Commercial transformation.
               </div>
             </div>
           </div>
@@ -110,7 +102,7 @@ export default function About() {
               <span className="font-mono text-[11px] lowercase tracking-[0.04em] bg-mist border border-ink/6 text-ink/75 py-[5px] px-3 rounded-full">Public Sector</span>
             </div>
             <p className="text-sm text-ink/65 max-w-[620px] mx-auto leading-[1.5]">
-              Snowdrop is founded by <strong className="text-ink font-semibold">Sasha</strong> — with 8+ years inside FTSE 100 and FTSE 20 businesses, working on enterprise AI and transformation.
+              Founded by <strong className="text-ink font-semibold">Sasha</strong>. Eight years across the FTSE 100, on enterprise AI and transformation.
             </p>
           </div>
         </div>

@@ -13,7 +13,7 @@ export default function BrandMoment() {
         priority={false}
       />
 
-      {/* Dot grid — over the photo for brand consistency */}
+      {/* Dot grid, over the photo for brand consistency */}
       <div
         className="absolute inset-0 opacity-[0.18] pointer-events-none"
         style={{

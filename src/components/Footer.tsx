@@ -21,7 +21,7 @@ export default function Footer() {
                 href="#journey"
                 className="text-snow/75 no-underline text-sm transition-colors duration-200 hover:text-verdant"
               >
-                The AI Audit
+                The Roadmap
               </a>
             </li>
             <li className="mb-[10px]">

@@ -6,6 +6,7 @@ export interface AuditCard {
   sectorColor: "bluebell" | "butter" | "moss" | "purple";
   situation: string;
   opportunities: string[];
+  cardLine: string;
   growthFound: string;
   toolCost: string;
   timeToLive: string;
@@ -25,10 +26,26 @@ export const audits: AuditCard[] = [
       "Automated tenant communication",
       "End-of-month finance reconciliations"
     ],
-    growthFound: "~£17k a year",
-    toolCost: "<£300 a year",
-    timeToLive: "full roadmap live in 4–6 weeks",
-    footnote: "that\u2019s up to ~50\u00D7 return on tool investment"
+    cardLine: "Found \u00A317,000 a year. Tools cost under \u00A3300.",
+    growthFound: "\u00A317,000 a year",
+    toolCost: "under \u00A3300 a year",
+    timeToLive: "full roadmap live in 4\u20136 weeks"
+  },
+  {
+    name: "Seven Split",
+    logo: "/logos/svensplit.png",
+    sector: "Construction",
+    sectorColor: "moss",
+    situation: "Solo builder. Strong word-of-mouth, no online presence.",
+    opportunities: [
+      "AI quote generation",
+      "Automatic enquiry follow-up",
+      "New website build"
+    ],
+    cardLine: "Found \u00A3130,000. One job pays for the lot.",
+    growthFound: "\u00A3130,000",
+    toolCost: "\u00A3116 a year",
+    timeToLive: "full roadmap live in 4\u20136 weeks"
   },
   {
     name: "Bangers",
@@ -42,23 +59,9 @@ export const audits: AuditCard[] = [
       "Catering offer & online ordering",
       "Marketing & content"
     ],
-    growthFound: "£140k–£337k a year",
-    toolCost: "~£40 a month",
-    timeToLive: "full roadmap live in 4–6 weeks"
-  },
-  {
-    name: "Seven Split",
-    logo: "/logos/svensplit.png",
-    sector: "Construction",
-    sectorColor: "moss",
-    situation: "Solo builder. Strong word-of-mouth, no online presence.",
-    opportunities: [
-      "AI quote generation",
-      "Automatic enquiry follow-up",
-      "New website build"
-    ],
-    growthFound: "£45k–£225k a year",
-    toolCost: "£116 a year",
-    timeToLive: "full roadmap live in 4–6 weeks"
+    cardLine: "Found \u00A3230,000, and delayed a hire by over a year.",
+    growthFound: "\u00A3230,000",
+    toolCost: "~\u00A340 a month",
+    timeToLive: "full roadmap live in 4\u20136 weeks"
   }
 ];

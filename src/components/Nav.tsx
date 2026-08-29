@@ -12,7 +12,7 @@ export default function Nav() {
             href="#journey"
             className="text-ink no-underline font-medium text-sm transition-colors duration-200 hover:text-verdant-deep hidden md:inline"
           >
-            The AI Audit
+            The Roadmap
           </a>
           <a
             href="#audit-experience"

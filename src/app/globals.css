@@ -18,7 +18,7 @@
 }
 
 /*
- * Base styles — placed inside @layer base so Tailwind utility
+ * Base styles, placed inside @layer base so Tailwind utility
  * classes (in @layer utilities) correctly override them.
  * The * reset is omitted because Tailwind v4's base already resets
  * margin, padding, and box-sizing on all elements.
@@ -65,7 +65,7 @@
 }
 
 /*
- * Responsive overrides — intentionally UNLAYERED so they override
+ * Responsive overrides, intentionally UNLAYERED so they override
  * Tailwind's layered grid-cols-3 utility on .case-grid.
  */
 @media (max-width: 1100px) {

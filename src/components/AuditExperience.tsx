@@ -80,16 +80,16 @@ export default function AuditExperience() {
     <section id="audit-experience" className="bg-mist relative py-[120px] px-8 max-[968px]:py-20 max-[968px]:px-6">
       <div className="max-w-[1280px] mx-auto">
         <span className="font-mono text-[11px] font-medium lowercase tracking-[0.1em] text-verdant-deep mb-6 block">
-          our audit experience
+          our experience
         </span>
         <h2
           className="font-sans font-bold leading-[1.02] tracking-[-0.03em] mb-5"
           style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
         >
-          What our audits find.
+          How we&apos;ve used AI to help real businesses grow.
         </h2>
         <p className="text-lg text-ink/70 max-w-[720px] mb-16">
-          Real opportunities, real numbers — uncovered in 48 hours.
+          Six jobs across four sectors. Here&apos;s what we found.
         </p>
 
         {/* Desktop: all three visible */}
@@ -175,7 +175,7 @@ export default function AuditExperience() {
                   </div>
                 </div>
 
-                {/* Impact if delivered — uniform rows */}
+                {/* Impact if delivered, uniform rows */}
                 <ImpactRows audit={audit} />
               </div>
             );
@@ -271,7 +271,7 @@ export default function AuditExperience() {
                         </div>
                       </div>
 
-                      {/* Impact if delivered — uniform rows */}
+                      {/* Impact if delivered, uniform rows */}
                       <ImpactRows audit={audit} />
                     </div>
                   </div>

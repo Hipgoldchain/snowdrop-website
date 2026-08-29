@@ -32,14 +32,13 @@ export default function FinalCta() {
           className="font-sans font-bold leading-[1.05] tracking-[-0.03em] mb-6"
           style={{ fontSize: "clamp(36px, 5.5vw, 72px)" }}
         >
-          Ready to grow your business?
+          Ready to use AI to grow your business?
         </h2>
         <p className="text-xl text-snow/70 mb-8 max-w-[600px] mx-auto">
-          Book a free 15-minute discovery call. We&apos;ll find your biggest
-          bottleneck and give you your first growth fix, free.
+          Fifteen minutes, free. You&apos;ll leave knowing your biggest bottleneck, and one fix you can build yourself that week.
         </p>
         <div className="font-mono text-[11px] lowercase tracking-[0.08em] text-verdant mb-12">
-          no prep required · we won&apos;t sell you the full audit unless it&apos;s the right fit
+          no pitch · no prep · we&apos;ll only sell you the roadmap if it&apos;s a fit
         </div>
 
         {/* Calendly inline embed */}
@@ -54,7 +53,7 @@ export default function FinalCta() {
           href="mailto:hello@snowdropgrowth.com"
           className="text-snow/70 no-underline text-[15px] transition-colors duration-200 hover:text-verdant"
         >
-          Or email hello@snowdropgrowth.com →
+          Or email hello@snowdropgrowth.com
         </a>
       </div>
     </section>
