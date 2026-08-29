@@ -21,10 +21,10 @@ const stats = [
 
 export default function TrustBand() {
   return (
-    <section className="py-14 px-8 bg-ink text-snow relative overflow-hidden">
+    <section className="py-14 px-8 bg-[#20262F] text-snow relative overflow-hidden border-t border-[#2A313B]">
       {/* Dot grid */}
       <div
-        className="absolute inset-0 opacity-[0.08] pointer-events-none"
+        className="absolute inset-0 opacity-[0.05] pointer-events-none"
         style={{
           backgroundImage:
             "radial-gradient(circle, #3FE174 1px, transparent 1px)",
@@ -39,7 +39,7 @@ export default function TrustBand() {
             <div className="font-mono text-[13px] font-bold lowercase tracking-[0.14em] text-verdant mb-2">
               Trusted by real UK businesses
             </div>
-            <div className="text-[15px] text-snow/60">
+            <div className="text-[15px] text-[#A8B2BC]/60">
               all over the country
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function TrustBand() {
                   >
                     {stat.value}
                   </div>
-                  <div className="text-[13px] text-snow/70 leading-[1.4] max-w-[200px] mx-auto">
+                  <div className="text-[13px] text-[#A8B2BC] leading-[1.4] max-w-[200px] mx-auto">
                     {stat.label}
                   </div>
                 </div>
