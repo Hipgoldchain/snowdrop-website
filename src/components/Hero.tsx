@@ -13,8 +13,16 @@ export default function Hero() {
       {/* Interactive dot grid background */}
       <InteractiveDotGrid />
 
-      {/* Hero content — no card, content sits directly on dark ground */}
-      <div className="relative z-1 max-w-[760px] mx-auto text-center">
+      {/* Bottom fade — dissolves dot grid into the next section */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-[200px] pointer-events-none z-[1]"
+        style={{
+          background: "linear-gradient(to bottom, transparent 0%, #20262F 100%)",
+        }}
+      />
+
+      {/* Hero card */}
+      <div className="relative z-[2] bg-[#20262F]/80 backdrop-blur-[12px] border border-[#2A313B] rounded-[20px] py-[72px] px-16 max-w-[760px] w-full text-center shadow-[0_1px_2px_rgba(0,0,0,0.12),0_8px_24px_rgba(0,0,0,0.18),0_24px_60px_rgba(0,0,0,0.24)] max-[600px]:py-12 max-[600px]:px-7 max-[600px]:rounded-2xl">
         <span
           className="font-mono lowercase text-verdant mb-4 block tracking-[0.1em] max-[390px]:text-[13px] max-[390px]:tracking-[0.08em]"
           style={{ fontSize: "clamp(13px, 1.1vw, 15px)" }}
@@ -36,7 +44,7 @@ export default function Hero() {
           One real solution, live in your business, helping it grow. No deck, no follow-up sale.
         </p>
 
-        {/* Free-call pill — optional dark panel: bg-[#20262F] border border-[#2A313B] rounded-xl py-4 px-6 inline-block */}
+        {/* Free-call pill */}
         <p
           className="text-[#A8B2BC] leading-[1.55] max-w-[500px] mx-auto mb-10"
           style={{ fontSize: "clamp(15px, 1.2vw, 16px)" }}
