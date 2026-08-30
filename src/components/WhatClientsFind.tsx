@@ -27,35 +27,35 @@ const findings = [
 
 export default function WhatClientsFind() {
   return (
-    <section id="what-clients-find" className="bg-mist py-[120px] px-8 max-[968px]:py-20 max-[968px]:px-6">
+    <section id="what-clients-find" className="bg-[#20262F] border-t border-[#2A313B] py-[120px] px-8 max-[968px]:py-20 max-[968px]:px-6">
       <div className="max-w-[1280px] mx-auto">
-        <span className="font-mono text-[11px] font-medium lowercase tracking-[0.1em] text-verdant-deep mb-6 block">
+        <span className="font-mono text-[11px] font-medium lowercase tracking-[0.1em] text-verdant mb-6 block">
           what our clients find
         </span>
         <h2
-          className="font-sans font-bold leading-[1.02] tracking-[-0.03em] mb-5"
+          className="font-sans font-bold leading-[1.02] tracking-[-0.03em] mb-5 text-snow"
           style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
         >
           Most businesses are losing money to the same six things.
         </h2>
-        <p className="text-lg text-ink/70 max-w-[720px] mb-16">
+        <p className="text-lg text-[#A8B2BC] max-w-[720px] mb-16">
           Three audits across three sectors. The problems rhyme.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 max-w-[960px]">
           {findings.map((f, i) => (
             <div key={i}>
-              <h3 className="font-sans font-semibold text-[18px] leading-[1.3] text-ink mb-2">
+              <h3 className="font-sans font-semibold text-[18px] leading-[1.3] text-snow mb-2">
                 {f.pattern}
               </h3>
-              <p className="text-[16px] leading-[1.55] text-ink/65">
+              <p className="text-[16px] leading-[1.55] text-[#7A848E]">
                 {f.line}
               </p>
             </div>
           ))}
         </div>
 
-        <p className="text-lg text-ink/70 max-w-[720px] mt-16">
+        <p className="text-lg text-[#A8B2BC] max-w-[720px] mt-16">
           Your roadmap names which one is costing you most. Then we build the fix for it.
         </p>
       </div>

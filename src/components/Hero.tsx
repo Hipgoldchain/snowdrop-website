@@ -10,10 +10,8 @@ export default function Hero() {
       id="hero"
       className="min-h-[calc(100vh-68px)] mt-[68px] flex items-center justify-center relative overflow-hidden py-20 px-6 bg-[#191E26]"
     >
-      {/* Interactive dot grid background — opacity reduced for dark ground */}
-      <div className="absolute inset-0 opacity-[0.30] pointer-events-none">
-        <InteractiveDotGrid />
-      </div>
+      {/* Interactive dot grid background */}
+      <InteractiveDotGrid />
 
       {/* Hero content — no card, content sits directly on dark ground */}
       <div className="relative z-1 max-w-[760px] mx-auto text-center">

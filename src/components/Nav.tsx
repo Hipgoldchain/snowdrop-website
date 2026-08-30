@@ -2,27 +2,27 @@ import Wordmark from "./Wordmark";
 
 export default function Nav() {
   return (
-    <nav className="fixed top-0 left-0 right-0 h-[68px] bg-snow/95 backdrop-blur-[14px] border-b border-ink/8 z-100 flex items-center px-8 max-[600px]:px-5">
+    <nav className="fixed top-0 left-0 right-0 h-[68px] bg-[#191E26]/95 backdrop-blur-[14px] border-b border-[#2A313B] z-100 flex items-center px-8 max-[600px]:px-5">
       <div className="max-w-[1280px] mx-auto w-full flex items-center justify-between">
         <a href="#" className="no-underline">
-          <Wordmark size="sm" />
+          <Wordmark size="sm" light />
         </a>
         <div className="flex gap-9 items-center">
           <a
             href="#journey"
-            className="text-ink no-underline font-medium text-sm transition-colors duration-200 hover:text-verdant-deep hidden md:inline"
+            className="text-snow/75 no-underline font-medium text-sm transition-colors duration-200 hover:text-verdant hidden md:inline"
           >
             The Roadmap
           </a>
           <a
             href="#audit-experience"
-            className="text-ink no-underline font-medium text-sm transition-colors duration-200 hover:text-verdant-deep hidden md:inline"
+            className="text-snow/75 no-underline font-medium text-sm transition-colors duration-200 hover:text-verdant hidden md:inline"
           >
             Our Work
           </a>
           <a
             href="#about"
-            className="text-ink no-underline font-medium text-sm transition-colors duration-200 hover:text-verdant-deep hidden md:inline"
+            className="text-snow/75 no-underline font-medium text-sm transition-colors duration-200 hover:text-verdant hidden md:inline"
           >
             About
           </a>

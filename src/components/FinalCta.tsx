@@ -5,18 +5,18 @@ import dynamic from "next/dynamic";
 const CalendlyEmbed = dynamic(() => import("./CalendlyEmbed"), {
   ssr: false,
   loading: () => (
-    <div className="bg-snow text-ink rounded-xl py-20 px-8 mb-8 border border-ink/8 text-center">
-      <p className="text-ink/50 text-sm">Loading booking widget&hellip;</p>
+    <div className="bg-[#20262F] text-snow rounded-xl py-20 px-8 mb-8 border border-[#2A313B] text-center">
+      <p className="text-[#7A848E] text-sm">Loading booking widget&hellip;</p>
     </div>
   ),
 });
 
 export default function FinalCta() {
   return (
-    <section id="book" className="bg-ink text-snow text-center relative overflow-hidden py-[120px] px-8 max-[968px]:py-20 max-[968px]:px-6">
+    <section id="book" className="bg-[#191E26] text-snow text-center relative overflow-hidden py-[120px] px-8 max-[968px]:py-20 max-[968px]:px-6 border-t border-[#2A313B]">
       {/* Dot grid */}
       <div
-        className="absolute inset-0 opacity-[0.18] pointer-events-none"
+        className="absolute inset-0 opacity-[0.10] pointer-events-none"
         style={{
           backgroundImage:
             "radial-gradient(circle, #3FE174 1px, transparent 1px)",
@@ -34,7 +34,7 @@ export default function FinalCta() {
         >
           Ready to use AI to grow your business?
         </h2>
-        <p className="text-xl text-snow/70 mb-8 max-w-[600px] mx-auto">
+        <p className="text-xl text-[#A8B2BC] mb-8 max-w-[600px] mx-auto">
           Fifteen minutes, free. You&apos;ll leave knowing your biggest bottleneck, and one fix you can build yourself that week.
         </p>
         <div className="font-mono text-[11px] lowercase tracking-[0.08em] text-verdant mb-12">
@@ -51,7 +51,7 @@ export default function FinalCta() {
         </div>
         <a
           href="mailto:hello@snowdropgrowth.com"
-          className="text-snow/70 no-underline text-[15px] transition-colors duration-200 hover:text-verdant"
+          className="text-[#A8B2BC] no-underline text-[15px] transition-colors duration-200 hover:text-verdant"
         >
           Or email hello@snowdropgrowth.com
         </a>

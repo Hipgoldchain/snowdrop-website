@@ -48,7 +48,7 @@ export default function JourneyCard({
 
   // Parse markdown bold syntax (**text**) to HTML with brand green color
   const parseDescription = (text: string) => {
-    return text.replace(/\*\*(.*?)\*\*/g, '<strong class="text-verdant-deep font-bold">$1</strong>');
+    return text.replace(/\*\*(.*?)\*\*/g, '<strong class="text-verdant font-bold">$1</strong>');
   };
 
   return (
@@ -56,7 +56,7 @@ export default function JourneyCard({
       ref={cardRef}
       onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
-      className="bg-mist rounded-[22px] p-[10px_10px_24px] overflow-hidden flex flex-col"
+      className="bg-[#20262F] rounded-[22px] p-[10px_10px_24px] overflow-hidden flex flex-col"
       style={{ perspective: "900px" }}
     >
       <div
@@ -67,38 +67,38 @@ export default function JourneyCard({
       </div>
 
       <div className="px-5 flex flex-col flex-1">
-        <div className="font-mono text-[11px] font-bold tracking-[0.16em] text-[#8C9A92] uppercase">
+        <div className="font-mono text-[11px] font-bold tracking-[0.16em] text-[#7A848E] uppercase">
           {number}
         </div>
-        <h3 className="text-[19px] font-bold tracking-[-0.01em] mt-[6px] mb-2">
+        <h3 className="text-[19px] font-bold tracking-[-0.01em] mt-[6px] mb-2 text-snow">
           {title}
         </h3>
         <p
-          className="text-sm leading-[1.55] text-ink/72 mb-[18px]"
+          className="text-sm leading-[1.55] text-[#A8B2BC] mb-[18px]"
           dangerouslySetInnerHTML={{ __html: parseDescription(description) }}
         />
 
         {pricing && pricing.main && (
           <div className={`
             rounded-xl py-3 px-4 mb-4
-            ${pricing.variant === "free" ? "bg-verdant/15 border border-verdant/30" : ""}
-            ${pricing.variant === "discounted" ? "bg-amber-50 border border-amber-200" : ""}
-            ${pricing.variant === "custom" ? "bg-slate-50 border border-slate-200" : ""}
+            ${pricing.variant === "free" ? "bg-verdant/10 border border-verdant/25" : ""}
+            ${pricing.variant === "discounted" ? "bg-[#2A2520] border border-[#4A3D2A]" : ""}
+            ${pricing.variant === "custom" ? "bg-[#252A30] border border-[#2A313B]" : ""}
           `}>
             <div className={`
               font-bold text-base
-              ${pricing.variant === "free" ? "text-verdant-deep" : ""}
-              ${pricing.variant === "discounted" ? "text-amber-900" : ""}
-              ${pricing.variant === "custom" ? "text-slate-700" : ""}
+              ${pricing.variant === "free" ? "text-verdant" : ""}
+              ${pricing.variant === "discounted" ? "text-butter" : ""}
+              ${pricing.variant === "custom" ? "text-[#A8B2BC]" : ""}
             `}>
               {pricing.main}
             </div>
             {pricing.subtext && (
               <div className={`
                 text-xs font-medium mt-0.5
-                ${pricing.variant === "free" ? "text-verdant-deep/70" : ""}
-                ${pricing.variant === "discounted" ? "text-amber-700" : ""}
-                ${pricing.variant === "custom" ? "text-slate-500" : ""}
+                ${pricing.variant === "free" ? "text-verdant/70" : ""}
+                ${pricing.variant === "discounted" ? "text-butter/70" : ""}
+                ${pricing.variant === "custom" ? "text-[#7A848E]" : ""}
               `}>
                 {pricing.subtext}
               </div>
@@ -112,7 +112,7 @@ export default function JourneyCard({
               href={ctaHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full text-center bg-verdant text-ink py-[13px] px-[22px] rounded-[13px] font-bold text-[14.5px] no-underline transition-transform duration-[120ms] ease-out hover:-translate-y-px shadow-[0_2px_0_rgba(26,31,37,0.18)] hover:shadow-[0_4px_10px_rgba(43,184,92,0.35)]"
+              className="block w-full text-center bg-verdant text-ink py-[13px] px-[22px] rounded-[13px] font-bold text-[14.5px] no-underline transition-transform duration-[120ms] ease-out hover:-translate-y-px shadow-[0_2px_0_rgba(0,0,0,0.25)] hover:shadow-[0_4px_10px_rgba(43,184,92,0.35)]"
             >
               {ctaLabel}
             </a>
@@ -123,7 +123,7 @@ export default function JourneyCard({
               href={ctaHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block border-2 border-verdant-deep text-ink py-[11px] px-5 rounded-[13px] font-bold text-sm no-underline bg-transparent transition-all duration-[120ms] ease-out hover:-translate-y-px hover:bg-verdant/12"
+              className="inline-block border-2 border-verdant text-snow py-[11px] px-5 rounded-[13px] font-bold text-sm no-underline bg-transparent transition-all duration-[120ms] ease-out hover:-translate-y-px hover:bg-verdant/12"
             >
               {ctaLabel}
             </a>
@@ -132,7 +132,7 @@ export default function JourneyCard({
           {ctaStyle === "text" && ctaLabel && (
             <a
               href={ctaHref}
-              className="inline-block font-mono text-[12.5px] text-[#4A555E] py-[6px] no-underline border-b-2 border-verdant-deep/40 transition-colors duration-[120ms] hover:text-ink hover:border-verdant-deep"
+              className="inline-block font-mono text-[12.5px] text-[#7A848E] py-[6px] no-underline border-b-2 border-verdant/40 transition-colors duration-[120ms] hover:text-snow hover:border-verdant"
             >
               {ctaLabel}
             </a>

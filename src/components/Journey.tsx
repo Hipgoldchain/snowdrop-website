@@ -32,9 +32,9 @@ const svg3 = `<svg viewBox="0 0 556 404" xmlns="http://www.w3.org/2000/svg" widt
 
 export default function Journey() {
   return (
-    <section id="journey" className="bg-snow pt-[60px] pb-[100px] px-8 max-[600px]:pt-12 max-[600px]:pb-16 max-[600px]:px-5">
+    <section id="journey" className="bg-[#191E26] pt-[60px] pb-[100px] px-8 max-[600px]:pt-12 max-[600px]:pb-16 max-[600px]:px-5">
       <div className="max-w-[1220px] mx-auto">
-        <span className="font-mono text-[11px] font-medium lowercase tracking-[0.1em] text-verdant-deep mb-10 block text-center">
+        <span className="font-mono text-[11px] font-medium lowercase tracking-[0.1em] text-verdant mb-10 block text-center">
           how it works
         </span>
 
@@ -103,12 +103,12 @@ Most consultants sell you a plan. Most agencies sell you a build. You get both."
               href={CALENDLY_AUDIT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-[13px] text-ink/55 no-underline border-b border-dashed border-ink/25 pb-px transition-colors duration-200 hover:text-verdant-deep hover:border-verdant-deep"
+              className="inline-block text-[13px] text-[#7A848E] no-underline border-b border-dashed border-[#7A848E]/40 pb-px transition-colors duration-200 hover:text-verdant hover:border-verdant"
             >
               Already sold? Skip ahead and book the £500 roadmap →
             </a>
           </div>
-          <div className="mt-[18px] font-mono text-[11px] lowercase tracking-[0.08em] text-ink/50">
+          <div className="mt-[18px] font-mono text-[11px] lowercase tracking-[0.08em] text-[#7A848E]">
             no pitch · no prep · we'll only sell you the roadmap if it's a fit
           </div>
         </div>

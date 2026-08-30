@@ -2,20 +2,20 @@ import Image from "next/image";
 
 export default function BrandMoment() {
   return (
-    <section className="bg-ink text-snow py-[140px] px-8 relative overflow-hidden text-center max-[600px]:py-24 max-[600px]:px-6">
+    <section className="bg-[#151A20] text-snow py-[140px] px-8 relative overflow-hidden text-center max-[600px]:py-24 max-[600px]:px-6 border-t border-[#2A313B]">
       {/* Snowdrop photo background */}
       <Image
         src="/snowdrop-bg.jpg"
         alt=""
         fill
-        className="object-cover object-[center_40%] pointer-events-none opacity-[0.18]"
+        className="object-cover object-[center_40%] pointer-events-none opacity-[0.12]"
         sizes="100vw"
         priority={false}
       />
 
       {/* Dot grid, over the photo for brand consistency */}
       <div
-        className="absolute inset-0 opacity-[0.18] pointer-events-none"
+        className="absolute inset-0 opacity-[0.12] pointer-events-none"
         style={{
           backgroundImage:
             "radial-gradient(circle, #3FE174 1px, transparent 1px)",
@@ -28,7 +28,7 @@ export default function BrandMoment() {
         className="absolute left-0 right-0 bottom-0 h-1/2 pointer-events-none"
         style={{
           background:
-            "linear-gradient(180deg, transparent 0%, rgba(43, 184, 92, 0.06) 100%)",
+            "linear-gradient(180deg, transparent 0%, rgba(43, 184, 92, 0.04) 100%)",
         }}
       />
 

@@ -56,8 +56,8 @@
 
   body {
     font-family: var(--font-sans);
-    background: var(--color-snow);
-    color: var(--color-ink);
+    background: #191E26;
+    color: var(--color-snow);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
