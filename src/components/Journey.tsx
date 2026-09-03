@@ -43,7 +43,7 @@ export default function Journey() {
             svgContent={svg1}
             number="01 · Free discovery call, 15 minutes"
             title="Free discovery call"
-            description="Fifteen minutes. We find the one job eating the most of your week, and we name it. Then you get one fix you can build yourself, whether or not you ever pay us.
+            description="We find your biggest bottleneck live, and tell you straight whether the audit's worth it.
 
 Most free audits are just sales demos for a bigger payment further down the line. This one isn't."
             ctaLabel="Book Your Free Discovery Call"

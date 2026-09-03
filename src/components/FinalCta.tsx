@@ -35,7 +35,7 @@ export default function FinalCta() {
           Ready to use AI to grow your business?
         </h2>
         <p className="text-xl text-[#A8B2BC] mb-8 max-w-[600px] mx-auto">
-          Fifteen minutes, free. You&apos;ll leave knowing your biggest bottleneck, and one fix you can build yourself that week.
+          Fifteen minutes, free. You&apos;ll leave knowing your biggest bottleneck, and whether the audit&apos;s worth your money.
         </p>
         <div className="font-mono text-[11px] lowercase tracking-[0.08em] text-verdant mb-12">
           no pitch · no prep · we&apos;ll only sell you the roadmap if it&apos;s a fit
