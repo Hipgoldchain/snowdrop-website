@@ -57,7 +57,7 @@ export default function Journey() {
           <JourneyCard
             svgContent={svg2}
             number="02 · Your Growth Roadmap"
-            title="Turn it into growth"
+            title="Cut your admin, grow your business"
             description="A 45-minute audit call. Your roadmap, costed, in 48 hours, every opportunity we found, priced and ranked. **Your first AI agent built, deployed and live. Included.** Most consultants sell you a plan. Most agencies sell you a build. You get both."
             ctaLabel="Already sold? Skip ahead and book the £500 roadmap →"
             ctaHref={CALENDLY_AUDIT_URL}
