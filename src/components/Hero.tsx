@@ -27,7 +27,7 @@ export default function Hero() {
           className="font-mono lowercase text-verdant mb-4 block tracking-[0.1em] max-[390px]:text-[13px] max-[390px]:tracking-[0.08em]"
           style={{ fontSize: "clamp(13px, 1.1vw, 15px)" }}
         >
-          practical ai for growing businesses
+          the ai audit · for growing businesses
         </span>
 
         <h1
@@ -38,21 +38,28 @@ export default function Hero() {
         </h1>
 
         <p
-          className="text-[#A8B2BC] leading-[1.55] max-w-[540px] mx-auto mb-8"
+          className="text-[#A8B2BC] leading-[1.55] max-w-[560px] mx-auto mb-8"
           style={{ fontSize: "clamp(17px, 1.5vw, 19px)" }}
         >
-          We find what&apos;s eating your time, use AI to take it off your plate, and turn it into growth. First fix live in a week.
+          The AI Audit finds what&apos;s eating your time, prices what it&apos;s costing you, and gives you a roadmap to fix it, with your first fix built and live in a week.
         </p>
 
-        {/* Value pill */}
-        <div className="bg-[#191E26] border border-[#2A313B] rounded-xl py-4 px-6 inline-block mb-10">
-          <span className="font-mono text-[12px] lowercase tracking-[0.06em] text-[#A8B2BC]">
-            free 15-min call · your biggest bottleneck named · one fix you can build yourself
+        {/* Pricing block */}
+        <div className="mb-10">
+          <div className="text-snow mb-2" style={{ fontSize: "clamp(20px, 2vw, 26px)" }}>
+            <span className="font-semibold">The AI Audit</span>
+            <span className="mx-2">—</span>
+            <span className="line-through text-[#7A848E]">£750</span>
+            {" "}
+            <span className="font-bold text-snow">£500</span>
+          </div>
+          <span className="font-mono text-[11px] uppercase tracking-[0.14em] font-bold text-butter bg-butter/15 border border-butter/30 py-[5px] px-3 rounded-full inline-block">
+            launch price · save £250
           </span>
         </div>
 
         {/* CTA */}
-        <div className="mb-7">
+        <div className="mb-5">
           <a
             href={CALENDLY_DISCOVERY_URL}
             target="_blank"
@@ -61,6 +68,13 @@ export default function Hero() {
           >
             Book Your Free Discovery Call
           </a>
+        </div>
+
+        {/* Fit-check pill */}
+        <div className="mb-7">
+          <span className="font-mono text-[12px] lowercase tracking-[0.04em] text-[#7A848E]">
+            not sure yet? free 15-min call, we&apos;ll find your biggest bottleneck and tell you if the audit&apos;s worth it
+          </span>
         </div>
 
         {/* Reassure */}
