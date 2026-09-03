@@ -72,7 +72,7 @@ export default function Journey() {
           <JourneyCard
             svgContent={svg3}
             number="03 · Custom builds & growth systems"
-            title="Build the rest"
+            title="Build the systems for sustainable growth"
             description="Custom AI agents, connected workflows, and the systems that keep growth running. Scoped together, priced per build, no retainer required."
             ctaLabel="Know what you need? Get in touch →"
             ctaHref="mailto:hello@snowdropgrowth.com"
