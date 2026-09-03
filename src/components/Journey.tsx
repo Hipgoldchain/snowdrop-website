@@ -42,10 +42,8 @@ export default function Journey() {
           <JourneyCard
             svgContent={svg1}
             number="01 · Free discovery call, 15 minutes"
-            title="Free discovery call"
-            description="We find your biggest bottleneck live, and tell you straight whether the audit's worth it.
-
-Most free audits are just sales demos for a bigger payment further down the line. This one isn't."
+            title="Find what's holding you back"
+            description="Fifteen minutes. We find the one job eating the most of your week, and tell you what it's costing you, and whether the audit is worth your money. Most free calls are sales demos. This one isn't."
             ctaLabel="Book Your Free Discovery Call"
             ctaHref={CALENDLY_DISCOVERY_URL}
             ctaStyle="solid"
@@ -59,10 +57,8 @@ Most free audits are just sales demos for a bigger payment further down the line
           <JourneyCard
             svgContent={svg2}
             number="02 · Your Growth Roadmap"
-            title="Your Growth Roadmap"
-            description="A 45 minute AI audit call. Your roadmap, costed, in 48 hours. An activation call to walk you through it. **Your first AI agent built, deployed and live. Included.**
-
-Most consultants sell you a plan. Most agencies sell you a build. You get both."
+            title="Turn it into growth"
+            description="A 45-minute audit call. Your roadmap, costed, in 48 hours, every opportunity we found, priced and ranked. **Your first AI agent built, deployed and live. Included.** Most consultants sell you a plan. Most agencies sell you a build. You get both."
             ctaLabel="Already sold? Skip ahead and book the £500 roadmap →"
             ctaHref={CALENDLY_AUDIT_URL}
             ctaStyle="outline"
@@ -75,16 +71,17 @@ Most consultants sell you a plan. Most agencies sell you a build. You get both."
 
           <JourneyCard
             svgContent={svg3}
-            number="03 · Going forward"
-            title="Going forward"
-            description="Custom agents, more workflows, or ongoing advice. We scope it together once the roadmap is live."
-            ctaLabel=""
+            number="03 · Custom builds & growth systems"
+            title="Build the rest"
+            description="Custom AI agents, connected workflows, and the systems that keep growth running. Scoped together, priced per build, no retainer required."
+            ctaLabel="Know what you need? Get in touch →"
             ctaHref="mailto:hello@snowdropgrowth.com"
-            ctaStyle="text"
+            ctaStyle="outline"
             pricing={{
               main: "",
               subtext: "",
-              variant: "custom"            }}
+              variant: "custom"
+            }}
           />
         </div>
 
