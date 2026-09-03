@@ -31,26 +31,25 @@ export default function Hero() {
         </span>
 
         <h1
-          className="font-sans font-bold leading-[1.05] tracking-[-0.03em] text-snow mb-6"
-          style={{ fontSize: "clamp(38px, 5.5vw, 64px)" }}
+          className="font-sans font-bold leading-[1.05] tracking-[-0.03em] text-snow mb-6 max-w-[680px] mx-auto"
+          style={{ fontSize: "clamp(36px, 5.2vw, 58px)" }}
         >
-          Your first AI fix, <span className="text-verdant">built and running</span> in a week.
+          Too busy running the business to <span className="text-verdant">grow it.</span>
         </h1>
 
         <p
           className="text-[#A8B2BC] leading-[1.55] max-w-[540px] mx-auto mb-8"
           style={{ fontSize: "clamp(17px, 1.5vw, 19px)" }}
         >
-          One real solution, live in your business, helping it grow. No deck, no follow-up sale.
+          We find what&apos;s eating your time, use AI to take it off your plate, and turn it into growth. First fix live in a week.
         </p>
 
-        {/* Free-call pill */}
-        <p
-          className="text-[#A8B2BC] leading-[1.55] max-w-[500px] mx-auto mb-10"
-          style={{ fontSize: "clamp(15px, 1.2vw, 16px)" }}
-        >
-          Free 15 minute call. You&apos;ll leave knowing your biggest bottleneck, and one fix you can build yourself that week.
-        </p>
+        {/* Value pill */}
+        <div className="bg-[#191E26] border border-[#2A313B] rounded-xl py-4 px-6 inline-block mb-10">
+          <span className="font-mono text-[12px] lowercase tracking-[0.06em] text-[#A8B2BC]">
+            free 15-min call · your biggest bottleneck named · one fix you can build yourself
+          </span>
+        </div>
 
         {/* CTA */}
         <div className="mb-7">
