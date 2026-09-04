@@ -1,0 +1,429 @@
+{
+  "page": "/",
+  "pageType": "landing-page",
+  "version": "v1-baseline-2026-09-04",
+  "primaryConversion": "Book free 15-minute discovery call via Calendly",
+  "secondaryConversion": "Book £500 AI Audit directly (skip-ahead)",
+  "tertiaryConversion": "Email inquiry for custom builds",
+
+  "pageDefinition": {
+    "path": "/",
+    "pageType": "landing-page",
+    "primaryAudience": "UK small business owners (1–20 employees) who are busy, profitable enough to invest, but operationally overwhelmed",
+    "visitorIntent": "Understand whether Snowdrop can help reduce admin burden and grow their business using AI",
+    "primaryConversion": "Book free 15-minute discovery call",
+    "secondaryConversions": [
+      "Book £500 AI Audit directly",
+      "Email for custom build inquiry"
+    ],
+    "mustUnderstand": [
+      "Snowdrop audits small businesses to find what AI can automate",
+      "The audit produces a costed roadmap with the first fix built",
+      "It costs £500 (discounted from £750)",
+      "There is a free 15-minute call to determine fit first",
+      "The founder has serious enterprise credentials"
+    ],
+    "mustBelieve": [
+      "This is legitimate and not a sales demo disguised as a free call",
+      "The founder understands real businesses, not just tech",
+      "The results shown (£17k–£230k found) are credible",
+      "This will work for my specific type of business",
+      "£500 is reasonable for what you get"
+    ],
+    "mustDo": [
+      "Click 'Book Your Free Discovery Call' or the Calendly embed"
+    ]
+  },
+
+  "conversionArchitecture": {
+    "primaryFunnel": [
+      "Ad/organic → Landing page",
+      "Hero CTA or Nav CTA → Calendly discovery call",
+      "Discovery call → £500 audit booking",
+      "Audit → Custom build engagement"
+    ],
+    "ctaTouchpoints": {
+      "discovery": {
+        "count": 5,
+        "locations": [
+          "Nav: 'Book Free Call'",
+          "Hero: 'Book Your Free Discovery Call'",
+          "Journey Card 01 CTA",
+          "Journey section footer primary CTA",
+          "FinalCta: Calendly embed"
+        ]
+      },
+      "audit": {
+        "count": 2,
+        "locations": [
+          "Journey Card 02: 'Skip ahead, book the £500 audit'",
+          "Journey section footer secondary link"
+        ]
+      },
+      "email": {
+        "count": 3,
+        "locations": [
+          "Journey Card 03: 'Know what you need? Get in touch'",
+          "FinalCta fallback: mailto link",
+          "Footer: hello@snowdropgrowth.com"
+        ]
+      }
+    },
+    "trackingEvents": {
+      "metaPixel": ["PageView (all pages)", "Lead (on /booked only)"],
+      "missing": [
+        "No CTA click tracking",
+        "No scroll depth tracking",
+        "No section visibility tracking",
+        "No Calendly widget interaction tracking",
+        "No Google Analytics",
+        "No heatmaps/session recording"
+      ]
+    }
+  },
+
+  "score": {
+    "totalScore": 71,
+    "maxPossible": 100,
+    "dimensions": [
+      {
+        "dimensionId": "message-clarity",
+        "score": 11,
+        "maxScore": 15,
+        "positives": [
+          "H1 'Too busy running the business to grow it.' is specific, emotional, and immediately relevant to the target audience",
+          "Subhead explains the product concretely: finds time waste, costs it, builds roadmap, first fix live in a week",
+          "Section headings are scannable and tell a coherent story when read in sequence",
+          "Eyebrow 'the ai audit · for growing businesses' categorises the product clearly"
+        ],
+        "negatives": [
+          "The page conflates three different products (free call, audit/roadmap, custom builds) without a clear hierarchy of what someone should do FIRST",
+          "'Your Growth Roadmap' product name appears inconsistently — sometimes 'The AI Audit', sometimes 'Your Growth Roadmap', sometimes just 'the audit'",
+          "BrandMoment section ('Snowdrop.') adds no comprehension value mid-page — it interrupts persuasion sequence with pure brand",
+          "The relationship between the free call and the paid audit is unclear from the hero alone"
+        ],
+        "reasoning": "The hero headline is genuinely strong. The subhead does real work explaining the product. But naming inconsistency and a confusing three-tier offer structure dilute clarity in the mid-page. A visitor who skims headings would understand the problem but might not understand the product hierarchy."
+      },
+      {
+        "dimensionId": "value-proposition",
+        "score": 9,
+        "maxScore": 12,
+        "positives": [
+          "Case study numbers are specific and compelling: £17k, £130k, £230k found",
+          "Price anchoring works well: £750 struck through, £500 with 'launch price · save £250'",
+          "Concrete deliverables: roadmap in 48 hours, first AI agent built and live, included",
+          "'Most consultants sell you a plan. Most agencies sell you a build. You get both.' is a strong differentiator"
+        ],
+        "negatives": [
+          "The value proposition is spread across too many sections — no single moment delivers the complete case",
+          "No clear articulation of the cost of inaction: what happens if you DON'T do this",
+          "Case study ROI is impressive but appears deep in the page — below multiple sections"
+        ],
+        "reasoning": "The proposition is genuinely strong content. The problem is architectural rather than content quality: the best evidence appears too late, and the complete value case requires reading multiple sections to assemble."
+      },
+      {
+        "dimensionId": "audience-relevance",
+        "score": 7,
+        "maxScore": 8,
+        "positives": [
+          "Language matches small business vocabulary: 'quotes', 'enquiries', 'admin', 'hire'",
+          "Case studies span property, construction, travel/leisure — diverse enough to feel relevant",
+          "'Built for small businesses, not the FTSE 100' directly addresses the audience",
+          "WhatClientsFind section names exact problems the audience has: quotes at 9pm, enquiries going nowhere",
+          "Pricing (£500) is calibrated to small business budgets"
+        ],
+        "negatives": [
+          "No explicit mention of business size range (1–20 employees? 5–50?)",
+          "FTSE 100 credentials (Tesco, GSK, Haleon, EasyJet) may intimidate rather than reassure some small business owners"
+        ],
+        "reasoning": "Audience relevance is a strength. The language, examples, and pricing all signal 'this is for you' to the target. The only risk is that enterprise credentials might create doubt ('is this person too big-time for my small business?'), but the 'not the FTSE 100' line addresses it."
+      },
+      {
+        "dimensionId": "information-hierarchy",
+        "score": 6,
+        "maxScore": 10,
+        "positives": [
+          "Hero H1 dominates attention correctly",
+          "Verdant green used consistently for primary actions — creates clear visual action language",
+          "Pricing block in hero gets appropriate prominence",
+          "Card-based layouts create clear grouping for case studies"
+        ],
+        "negatives": [
+          "Page has 9 major sections before the final CTA — persuasion sequence feels flat in the middle",
+          "BrandMoment section is the most visually dominant section on the page (200px type) but contains the least conversion value",
+          "Social proof (case studies) appears after 3-4 sections of explanation — too late for early objection handling",
+          "Journey cards have competing CTA styles (solid, outline, outline) that may confuse the primary action",
+          "WhatClientsFind and AuditExperience cover similar ground — problem articulation appears twice",
+          "The strongest trust signal (£230k found for Bangers) is in the 6th section down"
+        ],
+        "reasoning": "The hierarchy within sections is mostly good. The hierarchy BETWEEN sections is the weakness. The page presents information in a logical sequence (problem → solution → proof → about → CTA), but the mid-page sags: BrandMoment adds visual weight without conversion value, and the strongest evidence appears too late."
+      },
+      {
+        "dimensionId": "cta-clarity",
+        "score": 8,
+        "maxScore": 12,
+        "positives": [
+          "Hero CTA 'Book Your Free Discovery Call' is specific and low-commitment",
+          "Verdant button has strong contrast against dark background — immediately visible",
+          "Nav CTA persists on scroll — always accessible",
+          "Free positioning ('Free' + 'No prep required') reduces commitment anxiety",
+          "FinalCta provides Calendly embed directly — can book without leaving page"
+        ],
+        "negatives": [
+          "5 discovery call CTAs may be excessive — reduces individual prominence",
+          "Journey section has 3 different CTA actions in close proximity (book call, book audit, email) — creates choice paralysis",
+          "Journey section footer repeats two CTAs that already appear on cards above it",
+          "Between TrustBand and FinalCta (approximately 4-5 viewport heights), there is no CTA — visitor motivation may peak and decay",
+          "Card 02's 'Skip ahead' CTA targets a different audience state than Card 01 — placed at the same visual level, they compete",
+          "Mobile: Hero CTA may sit below fold at 390px depending on exact rendering"
+        ],
+        "reasoning": "CTA clarity is decent but CTA architecture is confused. The site presents three different conversion actions (free call, paid audit, email inquiry) with near-equal visual weight in the Journey section, which creates decision friction rather than a clear primary path."
+      },
+      {
+        "dimensionId": "friction",
+        "score": 8,
+        "maxScore": 10,
+        "positives": [
+          "No forms to fill — Calendly handles booking externally",
+          "No account creation required",
+          "Free call removes price barrier to first action",
+          "'No prep required' explicitly reduces perceived effort",
+          "'No pitch' messaging reduces sales anxiety",
+          "Single page — no multi-page navigation required"
+        ],
+        "negatives": [
+          "Page is very long — approximately 8-10 viewport heights — considerable scroll to absorb full proposition",
+          "Three-tier offer (free call → audit → builds) requires the visitor to understand a multi-step engagement model before committing to step one",
+          "Calendly embed in FinalCta loads client-side — may show loading state briefly"
+        ],
+        "reasoning": "Friction is generally low. The service model (free call, Calendly booking, no forms) is inherently low-friction. The main friction is cognitive: understanding the three-tier offer and deciding which CTA to click."
+      },
+      {
+        "dimensionId": "trust-evidence",
+        "score": 7,
+        "maxScore": 10,
+        "positives": [
+          "6 real client logos — all clickable, verifiable businesses",
+          "3 detailed audit case studies with specific numbers (£17k, £130k, £230k)",
+          "3 build case studies with live products visitors can check",
+          "Founder's enterprise credentials (Tesco, GSK, Haleon, EasyJet) provide authority",
+          "'6 businesses helped, 4 sectors, 1 founder' stats provide transparency",
+          "'No pitch · no prep · we'll only sell you the roadmap if it's a fit' reduces sales pressure"
+        ],
+        "negatives": [
+          "No direct quotes or testimonials from any client",
+          "No photo of Sasha — 'trust a person, not a brand' is particularly important for solopreneurs",
+          "Logo carousel at 60% opacity with brightness inversion — logos aren't immediately recognisable",
+          "Enterprise credentials appear very late (section 8 of 9) — too late for early trust building"
+        ],
+        "reasoning": "Evidence quality is good — real businesses, real numbers, real live products. But the page lacks the most persuasive form of social proof (direct testimonials) and doesn't put a human face on the founder. Enterprise credentials appearing late means they can't reduce early-page trust anxiety."
+      },
+      {
+        "dimensionId": "objection-handling",
+        "score": 4,
+        "maxScore": 6,
+        "positives": [
+          "'Most free calls are sales demos. This one isn't.' — directly handles the #1 free-call objection",
+          "'We'll only sell you the roadmap if it's a fit.' — reduces commitment anxiety",
+          "'No tool you'll never log into again.' — addresses implementation skepticism",
+          "'Built for small businesses, not the FTSE 100.' — addresses relevance concern"
+        ],
+        "negatives": [
+          "No guarantee or risk-reversal on the £500 audit",
+          "No FAQ section or explicit objection handling",
+          "'What happens after I book?' is unanswered — the Calendly form appears but the process isn't explained"
+        ],
+        "reasoning": "Core objections are handled through copy naturally, which is stylistically good. But the £500 commitment has no explicit risk-reversal, and the post-booking process is opaque."
+      },
+      {
+        "dimensionId": "visual-quality",
+        "score": 5,
+        "maxScore": 6,
+        "positives": [
+          "Dark palette is cohesive and premium-feeling",
+          "Typography hierarchy is clear: Poppins for headings, JetBrains Mono for labels",
+          "Verdant green accent is distinctive and used consistently",
+          "Interactive dot grid adds visual interest without overwhelming content",
+          "Card treatments are consistent across sections",
+          "3D tilt on Journey cards adds perceived quality"
+        ],
+        "negatives": [
+          "BrandMoment feels disconnected — enormous decorative type breaks page rhythm",
+          "Three different dark background shades (#191E26, #20262F, #151A20) create visual rhythm, but section differentiation is subtle"
+        ],
+        "reasoning": "Visual quality is high. The dark theme with verdant accents feels intentional and premium. The only significant issue is the BrandMoment section disrupting mid-page flow."
+      },
+      {
+        "dimensionId": "mobile-ux",
+        "score": 3,
+        "maxScore": 5,
+        "positives": [
+          "Responsive breakpoints are thorough",
+          "Case study carousels with arrow controls work well on mobile",
+          "Typography scales with clamp() — no text overflow issues",
+          "Nav CTA ('Book Free Call') remains visible on mobile"
+        ],
+        "negatives": [
+          "Hero card content may push primary CTA below fold at 390px — visitor sees proposition but not the action",
+          "Page length on mobile is extremely long — 12+ screens of scroll",
+          "Journey cards stack vertically with no carousel on mobile — three full cards create a very long section",
+          "No internal nav links on mobile (<768px) — visitor can only scroll or use the one nav CTA"
+        ],
+        "reasoning": "Mobile layout is functional but the page length is a conversion concern. A visitor on 390px faces an enormous amount of scrolling, and critical CTAs may not appear at natural motivation peaks."
+      },
+      {
+        "dimensionId": "accessibility",
+        "score": 2,
+        "maxScore": 3,
+        "positives": [
+          "Focus states defined globally (verdant-deep outline)",
+          "Reduced motion respected (disables all animation)",
+          "Semantic heading hierarchy (H1 → H2 → H3)",
+          "Alt text on images"
+        ],
+        "negatives": [
+          "No skip-navigation link",
+          "Some gray text (#7A848E on #191E26) is at the AA threshold boundary — borderline at 4.5:1",
+          "Logo carousel has no aria-label or role",
+          "Canvas-based dot grid provides no fallback"
+        ],
+        "reasoning": "Fundamentals are covered. The main gaps are around navigation shortcuts and some contrast edge cases. No critical accessibility failures."
+      },
+      {
+        "dimensionId": "performance",
+        "score": 1,
+        "maxScore": 3,
+        "positives": [
+          "Next.js font optimization (self-hosted via next/font)",
+          "Image optimization via next/image",
+          "Static generation (no server-side computation per request)"
+        ],
+        "negatives": [
+          "Three large SVG strings embedded inline in Journey.tsx — adds significant bundle weight to a single component",
+          "Canvas animation (InteractiveDotGrid) runs continuously even when off-screen",
+          "Calendly widget loads external JS on every page visit (even if visitor never scrolls to embed)",
+          "No lazy loading of below-fold sections"
+        ],
+        "reasoning": "The site is statically generated and uses Next.js optimizations, but inline SVGs and continuous canvas animation are performance concerns, especially on mobile."
+      }
+    ]
+  },
+
+  "topFiveIssues": [
+    {
+      "id": "issue-01",
+      "title": "Social proof appears too late in the persuasion sequence",
+      "description": "The strongest conversion evidence (£17k–£230k found, real case studies, live products) appears in sections 5-6 of 9. By the time a visitor sees proof, they may have already bounced. Social proof should appear closer to the first moment of commitment (hero CTA or immediately after).",
+      "rubricDimension": "information-hierarchy",
+      "severity": "high",
+      "confidence": "high",
+      "expectedConversionImpact": "Visitors who see credible evidence before their first CTA exposure are more likely to click. Moving proof earlier could improve hero CTA engagement.",
+      "implementationEffort": "medium",
+      "affectedComponent": "Page section ordering (page.tsx) and TrustBand.tsx",
+      "suggestedChange": "Move a concise proof element (strongest case study number or client quote) closer to the hero. Consider a single 'proof pill' near the hero CTA: '£230k in growth found for Bangers London' or similar.",
+      "reasoning": "In heuristic CRO, early trust signals correlate with reduced bounce and higher engagement with the first CTA. The current architecture front-loads the proposition but back-loads the evidence."
+    },
+    {
+      "id": "issue-02",
+      "title": "Journey section creates choice paralysis with three competing CTAs",
+      "description": "The Journey section presents three cards with three different actions (book free call, book paid audit, email for builds) at near-equal visual weight. This forces the visitor to evaluate three options simultaneously rather than following one clear path.",
+      "rubricDimension": "cta-clarity",
+      "severity": "high",
+      "confidence": "high",
+      "expectedConversionImpact": "Choice reduction typically increases conversion. Making the free call the overwhelmingly dominant action, with the audit skip-ahead as a clearly secondary option, should reduce decision friction.",
+      "implementationEffort": "small",
+      "affectedComponent": "Journey.tsx, JourneyCard.tsx",
+      "suggestedChange": "Visually de-emphasise Card 03's CTA (it serves a niche audience). Ensure Card 01's solid CTA is clearly the primary action. Consider whether Card 02's 'skip ahead' needs equal prominence or can be text-link level.",
+      "reasoning": "The free call is the primary conversion. Visitors ready for the £500 audit are a subset. Visitors ready for custom builds are a smaller subset still. The hierarchy should reflect this."
+    },
+    {
+      "id": "issue-03",
+      "title": "BrandMoment section breaks persuasion flow without adding conversion value",
+      "description": "The BrandMoment section displays 'Snowdrop.' at approximately 200px and the tagline. It sits between BuildExperience (capability proof) and About (credentials). It adds no new information, handles no objection, and provides no evidence. It is the most visually dominant element on the page but contributes the least to conversion.",
+      "rubricDimension": "information-hierarchy",
+      "severity": "medium",
+      "confidence": "high",
+      "expectedConversionImpact": "Removing or replacing this section with conversion-relevant content (FAQ, guarantee, process explanation, or a CTA) would maintain page rhythm without wasting a full viewport.",
+      "implementationEffort": "small",
+      "affectedComponent": "BrandMoment.tsx, page.tsx",
+      "suggestedChange": "Replace with a conversion-functional element: a process summary ('Here's how it works'), a guarantee statement, a testimonial highlight, or simply remove it and let BuildExperience flow directly into About.",
+      "reasoning": "Every section on a conversion page should earn its place. Pure brand statements are valuable on brand sites. On a lead-generation landing page, the conversion cost of an empty viewport is measurable."
+    },
+    {
+      "id": "issue-04",
+      "title": "No testimonials or direct client quotes anywhere on the page",
+      "description": "Despite having 6 client relationships and detailed case studies, the page contains zero direct quotes from any client. Case study data is strong but presented entirely in Snowdrop's voice. First-person evidence from a peer is more persuasive than third-person claims.",
+      "rubricDimension": "trust-evidence",
+      "severity": "high",
+      "confidence": "high",
+      "expectedConversionImpact": "Even one specific, attributed testimonial near a major CTA would likely improve trust at the moment of commitment. This is one of the most commonly validated CRO improvements.",
+      "implementationEffort": "small",
+      "affectedComponent": "Would require new content (real quotes from clients), then component creation",
+      "suggestedChange": "Collect 1-3 short, specific quotes from existing clients. Place at least one near the hero or Journey section. A quote like 'We found £130k we didn't know we were leaving on the table' attributed to a real person would be more persuasive than Snowdrop stating the same number.",
+      "reasoning": "This is not a design change — it's a content gap. The data structure and placement can be designed now. The quotes need to be collected from real clients."
+    },
+    {
+      "id": "issue-05",
+      "title": "No risk-reversal or guarantee on the £500 audit",
+      "description": "The £500 audit is the core revenue product. Visitors must commit money after a 15-minute call. There is no guarantee, refund policy, or risk-reversal statement. For a first-time buyer from an unknown solopreneur, £500 is a real decision that benefits from explicit risk reduction.",
+      "rubricDimension": "objection-handling",
+      "severity": "medium",
+      "confidence": "medium",
+      "expectedConversionImpact": "A guarantee on the audit (e.g., 'If the roadmap doesn't identify at least £X in opportunity, you pay nothing') would reduce perceived risk for the £500 commitment. Impact depends on how many visitors reach this decision point.",
+      "implementationEffort": "trivial",
+      "affectedComponent": "Journey Card 02, potentially Hero pricing block",
+      "suggestedChange": "Add a one-line guarantee or risk-reversal statement near the £500 pricing. This is a business decision, not a design decision — the founder needs to decide what guarantee they can offer.",
+      "reasoning": "Risk-reversal is one of the highest-impact, lowest-effort CRO interventions. Even 'Full refund if we don't find at least £5k in opportunity' dramatically changes the risk calculus for a £500 purchase from an unfamiliar provider."
+    }
+  ],
+
+  "remainingRisks": [
+    "No analytics beyond Meta Pixel — cannot measure which sections drive engagement or where visitors drop off",
+    "No A/B testing infrastructure — improvements cannot be experimentally validated",
+    "Inline SVGs in Journey.tsx add significant weight — may affect mobile load performance",
+    "Canvas animation runs continuously — potential battery and performance concern on mobile",
+    "No structured data (JSON-LD) — limits rich search result potential",
+    "Product naming inconsistency ('AI Audit' vs 'Growth Roadmap') may confuse repeat visitors or those arriving from different ad campaigns"
+  ],
+
+  "dataRequests": [
+    {
+      "metric": "Hero CTA click-through rate",
+      "purpose": "Determine what percentage of visitors engage with the primary conversion action above the fold",
+      "source": "Google Analytics 4 or Mixpanel event tracking",
+      "priority": "high"
+    },
+    {
+      "metric": "Scroll depth distribution",
+      "purpose": "Understand how far visitors scroll — identifies whether mid-page content is being seen",
+      "source": "GA4 scroll tracking or Hotjar",
+      "priority": "high"
+    },
+    {
+      "metric": "Section visibility timing",
+      "purpose": "Determine which sections visitors spend time on vs. scroll past",
+      "source": "Intersection Observer + custom events",
+      "priority": "medium"
+    },
+    {
+      "metric": "Calendly widget interaction rate",
+      "purpose": "Measure how many visitors who see the embed actually interact with it",
+      "source": "Calendly analytics or custom tracking",
+      "priority": "medium"
+    },
+    {
+      "metric": "Device-segmented conversion rate",
+      "purpose": "Determine whether mobile visitors convert at a materially different rate",
+      "source": "GA4 with conversion events",
+      "priority": "high"
+    },
+    {
+      "metric": "Traffic source → booking correlation",
+      "purpose": "Understand which acquisition channels produce qualified bookings",
+      "source": "Meta Ads Manager + Calendly UTM tracking",
+      "priority": "medium"
+    }
+  ],
+
+  "timestamp": "2026-09-04T00:00:00Z"
+}
