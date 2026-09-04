@@ -78,65 +78,67 @@ export default function JourneyCard({
           dangerouslySetInnerHTML={{ __html: parseDescription(description) }}
         />
 
-        {pricing && pricing.main && (
-          <div className={`
-            rounded-xl py-3 px-4 mb-4
-            ${pricing.variant === "free" ? "bg-verdant/10 border border-verdant/25" : ""}
-            ${pricing.variant === "discounted" ? "bg-[#2A2520] border border-[#4A3D2A]" : ""}
-            ${pricing.variant === "custom" ? "bg-[#252A30] border border-[#2A313B]" : ""}
-          `}>
+        <div className="mt-auto">
+          {pricing && (
             <div className={`
-              font-bold text-base
-              ${pricing.variant === "free" ? "text-verdant" : ""}
-              ${pricing.variant === "discounted" ? "text-butter" : ""}
-              ${pricing.variant === "custom" ? "text-[#A8B2BC]" : ""}
+              rounded-xl py-3 px-4 mb-4
+              ${pricing.variant === "free" ? "bg-verdant/10 border border-verdant/25" : ""}
+              ${pricing.variant === "discounted" ? "bg-[#2A2520] border border-[#4A3D2A]" : ""}
+              ${pricing.variant === "custom" ? "bg-[#1A1F25] border border-[#2A313B]" : ""}
             `}>
-              {pricing.main}
-            </div>
-            {pricing.subtext && (
               <div className={`
-                text-xs font-medium mt-0.5
-                ${pricing.variant === "free" ? "text-verdant/70" : ""}
-                ${pricing.variant === "discounted" ? "text-butter/70" : ""}
-                ${pricing.variant === "custom" ? "text-[#7A848E]" : ""}
+                font-bold text-base
+                ${pricing.variant === "free" ? "text-verdant" : ""}
+                ${pricing.variant === "discounted" ? "text-butter" : ""}
+                ${pricing.variant === "custom" ? "text-snow" : ""}
               `}>
-                {pricing.subtext}
+                {pricing.main}
               </div>
+              {pricing.subtext && (
+                <div className={`
+                  text-xs font-medium mt-0.5
+                  ${pricing.variant === "free" ? "text-verdant/70" : ""}
+                  ${pricing.variant === "discounted" ? "text-butter/70" : ""}
+                  ${pricing.variant === "custom" ? "text-[#7A848E]" : ""}
+                `}>
+                  {pricing.subtext}
+                </div>
+              )}
+            </div>
+          )}
+
+          <div className="min-h-[48px] flex items-center">
+            {ctaStyle === "solid" && ctaLabel && (
+              <a
+                href={ctaHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center bg-verdant text-ink py-[13px] px-6 rounded-[13px] font-bold text-[14px] no-underline transition-transform duration-[120ms] ease-out hover:-translate-y-px shadow-[0_2px_0_rgba(0,0,0,0.25)] hover:shadow-[0_4px_10px_rgba(43,184,92,0.35)]"
+              >
+                {ctaLabel}
+              </a>
+            )}
+
+            {ctaStyle === "outline" && ctaLabel && (
+              <a
+                href={ctaHref}
+                target={ctaHref.startsWith("mailto:") ? undefined : "_blank"}
+                rel={ctaHref.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+                className="block w-full text-center border-2 border-verdant text-snow py-[11px] px-6 rounded-[13px] font-bold text-[14px] no-underline bg-transparent transition-all duration-[120ms] ease-out hover:-translate-y-px hover:bg-verdant/12"
+              >
+                {ctaLabel}
+              </a>
+            )}
+
+            {ctaStyle === "text" && ctaLabel && (
+              <a
+                href={ctaHref}
+                className="inline-block font-mono text-[12.5px] text-[#7A848E] py-[6px] no-underline border-b-2 border-verdant/40 transition-colors duration-[120ms] hover:text-snow hover:border-verdant"
+              >
+                {ctaLabel}
+              </a>
             )}
           </div>
-        )}
-
-        <div className="mt-auto">
-          {ctaStyle === "solid" && ctaLabel && (
-            <a
-              href={ctaHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full text-center bg-verdant text-ink py-[13px] px-[22px] rounded-[13px] font-bold text-[14.5px] no-underline transition-transform duration-[120ms] ease-out hover:-translate-y-px shadow-[0_2px_0_rgba(0,0,0,0.25)] hover:shadow-[0_4px_10px_rgba(43,184,92,0.35)]"
-            >
-              {ctaLabel}
-            </a>
-          )}
-
-          {ctaStyle === "outline" && ctaLabel && (
-            <a
-              href={ctaHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block border-2 border-verdant text-snow py-[11px] px-5 rounded-[13px] font-bold text-sm no-underline bg-transparent transition-all duration-[120ms] ease-out hover:-translate-y-px hover:bg-verdant/12"
-            >
-              {ctaLabel}
-            </a>
-          )}
-
-          {ctaStyle === "text" && ctaLabel && (
-            <a
-              href={ctaHref}
-              className="inline-block font-mono text-[12.5px] text-[#7A848E] py-[6px] no-underline border-b-2 border-verdant/40 transition-colors duration-[120ms] hover:text-snow hover:border-verdant"
-            >
-              {ctaLabel}
-            </a>
-          )}
         </div>
       </div>
     </div>

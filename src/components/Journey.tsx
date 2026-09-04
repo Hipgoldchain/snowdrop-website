@@ -59,7 +59,7 @@ export default function Journey() {
             number="02 · Your Growth Roadmap"
             title="Cut your admin, grow your business"
             description="A 45-minute audit call. Your roadmap, costed, in 48 hours, every opportunity we found, priced and ranked. **Your first AI agent built, deployed and live. Included.** Most consultants sell you a plan. Most agencies sell you a build. You get both."
-            ctaLabel="Already sold? Skip ahead and book the £500 roadmap →"
+            ctaLabel="Skip ahead, book the £500 audit →"
             ctaHref={CALENDLY_AUDIT_URL}
             ctaStyle="outline"
             pricing={{
@@ -78,8 +78,8 @@ export default function Journey() {
             ctaHref="mailto:hello@snowdropgrowth.com"
             ctaStyle="outline"
             pricing={{
-              main: "",
-              subtext: "",
+              main: "Priced per build",
+              subtext: "Scoped together, no retainer",
               variant: "custom"
             }}
           />
