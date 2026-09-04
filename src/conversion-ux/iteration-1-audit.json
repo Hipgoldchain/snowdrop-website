@@ -1,0 +1,269 @@
+{
+  "page": "/",
+  "pageType": "landing-page",
+  "version": "v2-iteration-1-2026-09-04",
+  "primaryConversion": "Book free 15-minute discovery call via Calendly",
+  "previousVersion": "v1-baseline-2026-09-04",
+  "previousScore": 71,
+
+  "changesMade": [
+    {
+      "id": "change-01",
+      "hypothesisId": "hyp-issue-01",
+      "description": "Added proof line near hero CTA: '£130k found for a solo builder · £230k for a London restaurant group'. Positioned between fit-check pill and reassure line, using subdued mono styling at 70% opacity to avoid competing with the CTA.",
+      "filesModified": ["src/components/Hero.tsx"],
+      "beforeScore": 71,
+      "afterScore": null
+    },
+    {
+      "id": "change-02",
+      "hypothesisId": "hyp-issue-02",
+      "description": "Downgraded Card 03 CTA from 'outline' to 'text' style. Card 01 remains the only solid CTA. Card 02 remains outline (skip-ahead). Card 03 now uses subdued text-link treatment. Also removed the redundant skip-ahead link from Journey section footer, leaving a single primary CTA there.",
+      "filesModified": ["src/components/Journey.tsx"],
+      "beforeScore": 71,
+      "afterScore": null
+    },
+    {
+      "id": "change-03",
+      "hypothesisId": "hyp-issue-03",
+      "description": "Replaced BrandMoment from a pure decorative brand statement ('Snowdrop.' at 200px) with a mid-page CTA breaker. New content: 'Seen enough?' headline, free-call subtext, primary CTA button, reassure line. Catches visitors who are ready to convert after proof sections (AuditExperience + BuildExperience) without requiring them to scroll to FinalCta.",
+      "filesModified": ["src/components/BrandMoment.tsx"],
+      "beforeScore": 71,
+      "afterScore": null
+    }
+  ],
+
+  "score": {
+    "totalScore": 79,
+    "maxPossible": 100,
+    "dimensions": [
+      {
+        "dimensionId": "message-clarity",
+        "score": 12,
+        "maxScore": 15,
+        "positives": [
+          "H1 remains strong and specific",
+          "Subhead explains the product concretely",
+          "Section headings scannable",
+          "Proof line adds credibility directly in the hero context"
+        ],
+        "negatives": [
+          "Product naming inconsistency remains (AI Audit vs Growth Roadmap)",
+          "Three-tier offer still requires comprehension, though hierarchy is now clearer"
+        ],
+        "reasoning": "Proof line in hero adds specificity. BrandMoment replacement improves mid-page clarity. +1 from baseline."
+      },
+      {
+        "dimensionId": "value-proposition",
+        "score": 10,
+        "maxScore": 12,
+        "positives": [
+          "Case study numbers now appear in the hero — earliest possible exposure",
+          "£130k and £230k figures are immediately compelling",
+          "Proof line uses relatable descriptions ('solo builder', 'London restaurant group')"
+        ],
+        "negatives": [
+          "No cost-of-inaction framing yet",
+          "Full case study detail still deep in page"
+        ],
+        "reasoning": "Moving proof to hero significantly strengthens early value perception. Visitor sees outcome evidence before being asked to act. +1 from baseline."
+      },
+      {
+        "dimensionId": "audience-relevance",
+        "score": 7,
+        "maxScore": 8,
+        "positives": [
+          "Proof line mentions 'solo builder' and 'London restaurant group' — relatable archetypes",
+          "Language remains well-calibrated to small business vocabulary"
+        ],
+        "negatives": [
+          "No explicit business size range"
+        ],
+        "reasoning": "Unchanged from baseline. The proof line reinforces relevance through relatable examples but doesn't fundamentally change audience targeting."
+      },
+      {
+        "dimensionId": "information-hierarchy",
+        "score": 8,
+        "maxScore": 10,
+        "positives": [
+          "BrandMoment replacement puts a CTA at the mid-page motivation peak — after proof, before credentials",
+          "Journey CTA hierarchy is now clear: solid (primary), outline (skip-ahead), text (tertiary)",
+          "Removal of duplicate skip-ahead link from Journey footer reduces visual noise",
+          "Proof line in hero is appropriately subdued — doesn't compete with CTA"
+        ],
+        "negatives": [
+          "Page still has 9 sections — overall length unchanged",
+          "Case study sections (AuditExperience + BuildExperience) back-to-back may feel repetitive"
+        ],
+        "reasoning": "Significant improvement. The mid-page CTA catches motivated visitors who would otherwise have to scroll through About + FinalCta. CTA hierarchy in Journey is now unambiguous. +2 from baseline."
+      },
+      {
+        "dimensionId": "cta-clarity",
+        "score": 10,
+        "maxScore": 12,
+        "positives": [
+          "Clear single primary CTA hierarchy: solid verdant button everywhere",
+          "Journey Card 03 no longer competes visually with Card 01",
+          "Mid-page CTA breaker catches post-proof motivation",
+          "Journey footer now has single CTA instead of two competing actions",
+          "Discovery call touchpoints: Nav, Hero, Journey Card 01, Journey footer, BrandMoment CTA, FinalCta — well-distributed"
+        ],
+        "negatives": [
+          "6 discovery call CTAs total — potentially one too many, but placement is well-distributed across the scroll",
+          "Card 02's skip-ahead still requires understanding the multi-tier offer"
+        ],
+        "reasoning": "Major improvement. Choice paralysis in Journey section is resolved. Mid-page CTA adds a well-timed conversion point. +2 from baseline."
+      },
+      {
+        "dimensionId": "friction",
+        "score": 8,
+        "maxScore": 10,
+        "positives": [
+          "Same low-friction booking model (Calendly, no forms)",
+          "Reduced choice complexity in Journey section"
+        ],
+        "negatives": [
+          "Page length unchanged",
+          "Three-tier offer model still requires comprehension"
+        ],
+        "reasoning": "Unchanged from baseline. The CTA hierarchy improvement reduces decision friction but doesn't change the fundamental interaction model."
+      },
+      {
+        "dimensionId": "trust-evidence",
+        "score": 8,
+        "maxScore": 10,
+        "positives": [
+          "Proof line in hero provides early trust signal before first CTA",
+          "£130k and £230k figures are specific and credible",
+          "Relatable business types reduce 'is this for me?' anxiety"
+        ],
+        "negatives": [
+          "Still no direct client quotes/testimonials",
+          "Still no photo of Sasha",
+          "Enterprise credentials still appear late"
+        ],
+        "reasoning": "Moving proof earlier is a meaningful trust improvement. Visitor now encounters credible evidence before being asked to click. +1 from baseline."
+      },
+      {
+        "dimensionId": "objection-handling",
+        "score": 4,
+        "maxScore": 6,
+        "positives": [
+          "Same objection-handling copy",
+          "Mid-page CTA includes reassure line"
+        ],
+        "negatives": [
+          "Still no guarantee on £500 audit",
+          "Still no FAQ",
+          "Still no post-booking process explanation"
+        ],
+        "reasoning": "Unchanged. Issues #4 and #5 (testimonials, guarantee) require content/business decisions that are flagged but not implemented."
+      },
+      {
+        "dimensionId": "visual-quality",
+        "score": 5,
+        "maxScore": 6,
+        "positives": [
+          "Dark palette remains cohesive",
+          "Mid-page CTA breaker uses existing design language (dot grid, same button style)",
+          "Proof line styling is consistent with mono label system"
+        ],
+        "negatives": [
+          "Mid-page CTA section is visually simpler than the original BrandMoment — less distinctive as a section break"
+        ],
+        "reasoning": "Slight trade-off: the conversion-functional replacement is less visually dramatic than the 200px brand statement, but it earns its place commercially. Net unchanged."
+      },
+      {
+        "dimensionId": "mobile-ux",
+        "score": 4,
+        "maxScore": 5,
+        "positives": [
+          "Mid-page CTA provides a conversion point before the extremely long mobile scroll to FinalCta",
+          "Proof line adds value without significant vertical space"
+        ],
+        "negatives": [
+          "Page length unchanged on mobile",
+          "Hero CTA position at 390px still dependent on card content"
+        ],
+        "reasoning": "The mid-page CTA is particularly valuable on mobile where the scroll distance to FinalCta is 10+ screens. +1 from baseline."
+      },
+      {
+        "dimensionId": "accessibility",
+        "score": 2,
+        "maxScore": 3,
+        "positives": [
+          "No accessibility regressions from changes",
+          "New CTA link has clear text and adequate contrast"
+        ],
+        "negatives": [
+          "Same baseline gaps (no skip-nav, borderline grays)"
+        ],
+        "reasoning": "Unchanged from baseline."
+      },
+      {
+        "dimensionId": "performance",
+        "score": 1,
+        "maxScore": 3,
+        "positives": [
+          "BrandMoment replacement is simpler — no 200px clamp font rendering"
+        ],
+        "negatives": [
+          "Same inline SVGs, canvas animation, Calendly widget loading issues"
+        ],
+        "reasoning": "Unchanged from baseline. Performance issues are structural and require larger architectural changes."
+      }
+    ]
+  },
+
+  "comparison": {
+    "before": 71,
+    "after": 79,
+    "delta": 8,
+    "improved": [
+      "message-clarity: 11 → 12 (+1)",
+      "value-proposition: 9 → 10 (+1)",
+      "information-hierarchy: 6 → 8 (+2)",
+      "cta-clarity: 8 → 10 (+2)",
+      "trust-evidence: 7 → 8 (+1)",
+      "mobile-ux: 3 → 4 (+1)"
+    ],
+    "regressed": [],
+    "unchanged": [
+      "audience-relevance: 7",
+      "friction: 8",
+      "objection-handling: 4",
+      "visual-quality: 5",
+      "accessibility: 2",
+      "performance: 1"
+    ]
+  },
+
+  "criticLoop": {
+    "question": "What is currently the single biggest thing stopping the right visitor from converting?",
+    "answer": "No direct social proof from actual clients. The case study numbers are credible, but they are stated in Snowdrop's voice. A single attributed quote from a real client near a CTA would be the highest-impact addition possible. This is a content gap, not a design gap.",
+    "secondBiggest": "No risk-reversal on the £500 audit. The free call is low-risk, but the audit requires trusting an unknown solopreneur with £500. A guarantee would materially change this calculus.",
+    "thirdBiggest": "Enterprise credentials (Tesco, GSK, Haleon, EasyJet) appear in section 8 of 9. This trust signal could be much more impactful if a brief mention appeared earlier."
+  },
+
+  "shouldContinue": {
+    "continue": true,
+    "reason": "Score 79/100, iteration 1/5. Delta +8 exceeds minimum threshold of 3. Remaining high-confidence issues exist (testimonials, guarantee, credential placement)."
+  },
+
+  "remainingRisks": [
+    "No client testimonials — highest remaining trust gap",
+    "No guarantee on £500 audit — highest remaining objection-handling gap",
+    "Enterprise credentials appear too late — trust signal placement",
+    "No analytics beyond Meta Pixel",
+    "No A/B testing to validate these heuristic improvements",
+    "Product naming inconsistency persists"
+  ],
+
+  "nextIterationPlan": [
+    "Issue #4: Add testimonial component (requires real client quotes — flagged to user)",
+    "Issue #5: Add guarantee line near £500 pricing (requires business decision — flagged to user)",
+    "Move a brief credential mention earlier (e.g., 'From the person who led AI strategy at Haleon' near the hero or TrustBand)"
+  ],
+
+  "timestamp": "2026-09-04T00:00:00Z"
+}

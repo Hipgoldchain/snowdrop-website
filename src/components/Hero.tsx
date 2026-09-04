@@ -71,10 +71,15 @@ export default function Hero() {
         </div>
 
         {/* Fit-check pill */}
-        <div className="mb-7">
+        <div className="mb-5">
           <span className="font-mono text-[12px] lowercase tracking-[0.04em] text-[#7A848E]">
             not sure yet? free 15-min call, we&apos;ll find your biggest bottleneck and tell you if the audit&apos;s worth it
           </span>
+        </div>
+
+        {/* Proof line — strongest case study numbers, early trust */}
+        <div className="mb-5 font-mono text-[11px] lowercase tracking-[0.04em] text-[#A8B2BC]/70">
+          £130k found for a solo builder · £230k for a London restaurant group
         </div>
 
         {/* Reassure */}

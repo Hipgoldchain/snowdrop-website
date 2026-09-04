@@ -76,7 +76,7 @@ export default function Journey() {
             description="Custom AI agents, connected workflows, and the systems that keep growth running. Scoped together, priced per build, no retainer required."
             ctaLabel="Know what you need? Get in touch →"
             ctaHref="mailto:hello@snowdropgrowth.com"
-            ctaStyle="outline"
+            ctaStyle="text"
             pricing={{
               main: "Priced per build",
               subtext: "Scoped together, no retainer",
@@ -85,7 +85,7 @@ export default function Journey() {
           />
         </div>
 
-        {/* Section footer */}
+        {/* Section footer — single primary CTA, no competing skip-ahead */}
         <div className="pt-12 text-center">
           <a
             href={CALENDLY_DISCOVERY_URL}
@@ -95,18 +95,8 @@ export default function Journey() {
           >
             Book Your Free Discovery Call
           </a>
-          <div className="mt-4">
-            <a
-              href={CALENDLY_AUDIT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-[13px] text-[#7A848E] no-underline border-b border-dashed border-[#7A848E]/40 pb-px transition-colors duration-200 hover:text-verdant hover:border-verdant"
-            >
-              Already sold? Skip ahead and book the £500 roadmap →
-            </a>
-          </div>
           <div className="mt-[18px] font-mono text-[11px] lowercase tracking-[0.08em] text-[#7A848E]">
-            no pitch · no prep · we'll only sell you the roadmap if it's a fit
+            no pitch · no prep · we&apos;ll only sell you the roadmap if it&apos;s a fit
           </div>
         </div>
       </div>
