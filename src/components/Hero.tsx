@@ -41,7 +41,7 @@ export default function Hero() {
           className="text-[#A8B2BC] leading-[1.55] max-w-[560px] mx-auto mb-8"
           style={{ fontSize: "clamp(17px, 1.5vw, 19px)" }}
         >
-          The AI Audit finds what&apos;s eating your time, prices what it&apos;s costing you, and gives you a roadmap to fix it, with your first fix built and live in a week.
+          The AI Audit finds what&apos;s eating your time, works out what it&apos;s costing you every week, and builds you a personal roadmap to fix it, with your first AI fix built and live in a week.
         </p>
 
         {/* Pricing block */}
