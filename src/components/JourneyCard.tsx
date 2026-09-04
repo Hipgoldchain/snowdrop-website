@@ -13,6 +13,7 @@ interface JourneyCardProps {
   pricing?: {
     main: string;
     subtext?: string;
+    guarantee?: string;
     variant?: "free" | "discounted" | "custom";
   };
 }
@@ -102,6 +103,11 @@ export default function JourneyCard({
                   ${pricing.variant === "custom" ? "text-[#7A848E]" : ""}
                 `}>
                   {pricing.subtext}
+                </div>
+              )}
+              {pricing.guarantee && (
+                <div className="text-[11px] font-medium mt-1.5 text-verdant/80">
+                  {pricing.guarantee}
                 </div>
               )}
             </div>

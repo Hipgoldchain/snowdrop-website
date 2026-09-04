@@ -29,6 +29,9 @@ export default function Hero() {
         >
           the ai audit · for growing businesses
         </span>
+        <span className="font-mono text-[11px] lowercase tracking-[0.04em] text-[#A8B2BC]/60 mb-6 block">
+          from the person who led AI strategy at a FTSE 30 company
+        </span>
 
         <h1
           className="font-sans font-bold leading-[1.05] tracking-[-0.03em] text-snow mb-6 max-w-[680px] mx-auto"
@@ -56,6 +59,9 @@ export default function Hero() {
           <span className="font-mono text-[11px] uppercase tracking-[0.14em] font-bold text-butter bg-butter/15 border border-butter/30 py-[5px] px-3 rounded-full inline-block">
             launch price · save £250
           </span>
+          <div className="mt-3 font-mono text-[11px] lowercase tracking-[0.04em] text-verdant/80">
+            if we don&apos;t find at least £5k in opportunity, you pay nothing
+          </div>
         </div>
 
         {/* CTA */}

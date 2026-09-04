@@ -65,6 +65,7 @@ export default function Journey() {
             pricing={{
               main: "£500",
               subtext: "Launch price · Save £250",
+              guarantee: "If we don't find at least £5k in opportunity, you pay nothing",
               variant: "discounted"
             }}
           />
